@@ -19,7 +19,6 @@ let videoloop,
 	label,
 	labelCont,
 	paragraph,
-	greenLine,
 	titleH2,
 	createdSubTitle,
 	span,
@@ -33,6 +32,7 @@ let videoloop,
 	backButtonContainerRotation,
 	buttonGridContainer,
 	buttonFontvar,
+	bigButtonFontvar,
 	globalFontvar,
 	containVideoWidth,
 	containVideoHeight,
@@ -115,25 +115,13 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 
 // var buttonsText = []
 
-// mainMenuB.forEach((e, i) => {
-// const splitText = e.textContent.trim().split('\n')
-// const splitText = e.textContent
-// 	.replace(/[\n\r]+|[\s]{2,}/g, ' ')
-// 	.trim()
-// 	.split(' ')
-// splitText[1]
-// 	? (buttonsText[i] =
-// 			splitText[0].toLowerCase() + splitText[1].substring(0, 2))
-// 	: (buttonsText[i] = splitText[0].toLowerCase())
-// console.log(buttonsText[i])
-// })
-
 const buttonContent = {
-	turnlock10: {
+	gas: {
 		textLeft: '0%',
 		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>FULL HEIGHT</span>  <span>TURNSTILE</span></span>`,
-		subTitle: `Turnlock 100`,
+		title: `<span><span style = 'font-weight:bold'>GAS / OIL</span>  <span>TURNSTILE</span></span>`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
 		content: [
 			`Deter unauthorized entry `,
 			`Prevent unauthorized entry with optional\nBE Secure Overhead Sensor System`,
@@ -142,7 +130,7 @@ const buttonContent = {
 			`Integrates with any ACS or multi-factor schema`,
 		],
 		inputButtonGrid: [
-			`Standard\nOperation`,
+			`TriView\nMarker Post`,
 			`Piggybacking\nPrevention`,
 			`Emergency\nEgress`,
 			`Finish\nOptions`,
@@ -451,8 +439,6 @@ const buttonContent = {
 				delay: [1, 6, 11, 16],
 			},
 		},
-
-		// src: buttonsText[1],
 	},
 	tourlock18: {
 		textLeft: '0%',
@@ -587,8 +573,6 @@ const buttonContent = {
 				delay: [1, 5, 11, 17],
 			},
 		},
-
-		// src: buttonsText[1],
 	},
 	lifelineSw: {
 		textLeft: '0%',
@@ -735,15 +719,11 @@ function HideShowCont() {
 function animations() {
 	console.trace()
 	if (pCont) {
-		// paragraph.style.animation = 'fadein 0.5s ease-in-out forwards'
-
 		const elementContainers = document.querySelectorAll('.elementContainer')
 
 		titleH2.style.animation =
 			'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
-		greenLine.style.animation =
-			'growWide 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
-		greenLine.style.animationDelay = '0.4s'
+
 		createdSubTitle.style.animation =
 			'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
 		createdSubTitle.style.animationDelay = '0.4s'
@@ -901,7 +881,7 @@ function animations() {
 		buttonGridContainer.style.animation =
 			'slideFromBottom 0.5s ease-out forwards'
 		buttonGridContainer.style.animationDelay = `${counter}s`
-		backButtonContainer.style.animation = 'slideFromTop 0.5s ease-out forwards'
+		backButtonContainer.style.animation = 'show 0.5s ease-out forwards'
 		brandIcon.style.animation = 'show 0.5s ease-out forwards'
 		brandIcon.style.animationDelay = `${counter}s`
 		backButtonContainer.style.animationDelay = `${counter}s`
@@ -973,7 +953,7 @@ function createSubVideos(source1, source2, source3) {
 		subVideo1.classList.add('video')
 		subVideo1.style.opacity = 0
 		subVideo1.pause()
-		// loopContainer.appendChild(subVideo1)
+
 		subVideo1Container.appendChild(subVideo1)
 	}
 
@@ -1143,7 +1123,7 @@ function createContent(obj, parent) {
 								subVideo1.play()
 								subVideo1.addEventListener('ended', () => {
 									console.log('subVideo1 ending')
-									// createBackButton()
+
 									animations()
 									InterpolateVideo(video3, subVideo1, subVideo2)
 
@@ -1161,18 +1141,10 @@ function createContent(obj, parent) {
 		pCont = document.createElement('div')
 		pCont.classList.add('pCont')
 
-		// list = document.createElement('ul')
 		titleH2 = document.createElement('span')
 		titleH2.classList.add('title1')
 		titleH2.style.fontSize = globalBigTitleFontvar
 		titleH2.innerHTML = labelTitle
-		greenLine = document.createElement('hr')
-		paragraph = document.createElement('p')
-		titleH2.appendChild(greenLine)
-
-		// paragraph.textContent = pContent
-		// titleH2.style.fontSize = globalFontvar
-		paragraph.style.fontSize = globalFontvar
 
 		if (subTitle) {
 			createdSubTitle = document.createElement('span')
@@ -1183,141 +1155,132 @@ function createContent(obj, parent) {
 			titleH2.appendChild(createdSubTitle)
 		}
 		// el unico vivo
-		createBackButton()
-		if (Array.isArray(pContent)) {
-			if (delayInput) {
-				delay = delayInput
-			}
-			console.log(currentButton)
-			pContent.forEach((e) => {
-				if (Number.isInteger(e)) {
-					elementContainer = document.createElement('span')
-					elementContainer.classList.add('elementContainer', 'imageContainer')
-					for (let i = 0; i < e; i++) {
-						let image = document.createElement('img')
-						image.classList.add('tableImg')
-						if (
-							currentButton === 'tourlock18' ||
-							currentButton === 'tourlock182' ||
-							currentButton === 'circlelockSo' ||
-							currentButton === 'circlelockSo2'
-						) {
-							image.src = `assets/${parent}/${currentButton}/${currentButton}${
-								i + 1
-							}.png`
-							if (isMobile) {
-								image.style.width = '20em'
-							} else {
-								image.style.width = '24em'
-							}
-						} else {
-							image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
-								i + 1
-							}.png`
-							if (isMobile) {
-								image.style.width = '6em'
-							} else {
-								image.style.width = '6em'
-							}
-						}
 
-						elementContainer.appendChild(image)
-						paragraph.appendChild(elementContainer)
-					}
-				} else {
-					elementContainer = document.createElement('span')
-					elementContainer.classList.add('elementContainer')
-					elementContainer.setAttribute('id', 'pCont1')
+		// if (Array.isArray(pContent)) {
+		// 	if (delayInput) {
+		// 		delay = delayInput
+		// 	}
+		// 	console.log(currentButton)
+		// 	pContent.forEach((e) => {
+		// 		if (Number.isInteger(e)) {
+		// 			elementContainer = document.createElement('span')
+		// 			elementContainer.classList.add('elementContainer', 'imageContainer')
+		// 			for (let i = 0; i < e; i++) {
+		// 				let image = document.createElement('img')
+		// 				image.classList.add('tableImg')
+		// 				if (
+		// 					currentButton === 'tourlock18' ||
+		// 					currentButton === 'tourlock182' ||
+		// 					currentButton === 'circlelockSo' ||
+		// 					currentButton === 'circlelockSo2'
+		// 				) {
+		// 					image.src = `assets/${parent}/${currentButton}/${currentButton}${
+		// 						i + 1
+		// 					}.png`
+		// 					if (isMobile) {
+		// 						image.style.width = '20em'
+		// 					} else {
+		// 						image.style.width = '24em'
+		// 					}
+		// 				} else {
+		// 					image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
+		// 						i + 1
+		// 					}.png`
+		// 					if (isMobile) {
+		// 						image.style.width = '6em'
+		// 					} else {
+		// 						image.style.width = '6em'
+		// 					}
+		// 				}
 
-					icon = document.createElement('img')
-					icon.src = 'assets/icons/bp.png'
-					icon.style.width = '1.3em'
+		// 				elementContainer.appendChild(image)
+		// 				paragraph.appendChild(elementContainer)
+		// 			}
+		// 		} else {
+		// 			elementContainer = document.createElement('span')
+		// 			elementContainer.classList.add('elementContainer')
+		// 			elementContainer.setAttribute('id', 'pCont1')
 
-					element = document.createElement('span')
-					element.textContent = e
-					element.style.fontSize = globalFontvar
-					elementContainer.appendChild(icon)
-					elementContainer.appendChild(element)
-					paragraph.appendChild(elementContainer)
-				}
-			})
-		}
+		// 			icon = document.createElement('img')
+		// 			icon.src = 'assets/icons/bp.png'
+		// 			icon.style.width = '1.3em'
 
-		if (pContent2) {
-			if (Array.isArray(pContent2)) {
-				if (delayInput) {
-					delay = delayInput
-				}
-				console.log(currentButton)
-				pContent2.forEach((e) => {
-					if (Number.isInteger(e)) {
-						elementContainer = document.createElement('span')
-						elementContainer.classList.add('elementContainer', 'imageContainer')
-						for (let i = 0; i < e; i++) {
-							let image = document.createElement('img')
-							image.classList.add('extraImg')
-							if (
-								currentButton === 'tourlock18' ||
-								currentButton === 'tourlock182' ||
-								currentButton === 'circlelockSo' ||
-								currentButton === 'circlelockSo2'
-							) {
-								image.src = `assets/${parent}/${currentButton}/${currentButton}${
-									i + 1
-								}.png`
-								if (isMobile) {
-									image.style.width = '20em'
-								} else {
-									image.style.width = '25em'
-								}
-							} else {
-								image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
-									i + 1
-								}.png`
-								if (isMobile) {
-									image.style.width = '8em'
-								} else {
-									image.style.width = '6em'
-								}
-							}
+		// 			element = document.createElement('span')
+		// 			element.textContent = e
+		// 			element.style.fontSize = globalFontvar
+		// 			elementContainer.appendChild(icon)
+		// 			elementContainer.appendChild(element)
+		// 			paragraph.appendChild(elementContainer)
+		// 		}
+		// 	})
+		// }
 
-							elementContainer.appendChild(image)
-							paragraph.appendChild(elementContainer)
-						}
-					} else {
-						elementContainer = document.createElement('span')
-						elementContainer.classList.add('elementContainer')
-						elementContainer.setAttribute('id', 'pCont2')
-						icon = document.createElement('img')
-						icon.src = 'assets/icons/bp.png'
-						icon.style.width = '1.3em'
+		// if (pContent2) {
+		// 	if (Array.isArray(pContent2)) {
+		// 		if (delayInput) {
+		// 			delay = delayInput
+		// 		}
+		// 		console.log(currentButton)
+		// 		pContent2.forEach((e) => {
+		// 			if (Number.isInteger(e)) {
+		// 				elementContainer = document.createElement('span')
+		// 				elementContainer.classList.add('elementContainer', 'imageContainer')
+		// 				for (let i = 0; i < e; i++) {
+		// 					let image = document.createElement('img')
+		// 					image.classList.add('extraImg')
+		// 					if (
+		// 						currentButton === 'tourlock18' ||
+		// 						currentButton === 'tourlock182' ||
+		// 						currentButton === 'circlelockSo' ||
+		// 						currentButton === 'circlelockSo2'
+		// 					) {
+		// 						image.src = `assets/${parent}/${currentButton}/${currentButton}${
+		// 							i + 1
+		// 						}.png`
+		// 						if (isMobile) {
+		// 							image.style.width = '20em'
+		// 						} else {
+		// 							image.style.width = '25em'
+		// 						}
+		// 					} else {
+		// 						image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
+		// 							i + 1
+		// 						}.png`
+		// 						if (isMobile) {
+		// 							image.style.width = '8em'
+		// 						} else {
+		// 							image.style.width = '6em'
+		// 						}
+		// 					}
 
-						element = document.createElement('span')
-						element.textContent = e
-						element.style.fontSize = globalFontvar
-						elementContainer.appendChild(icon)
-						elementContainer.appendChild(element)
-						paragraph.appendChild(elementContainer)
-					}
-				})
-			}
-		}
+		// 					elementContainer.appendChild(image)
+		// 					paragraph.appendChild(elementContainer)
+		// 				}
+		// 			} else {
+		// 				elementContainer = document.createElement('span')
+		// 				elementContainer.classList.add('elementContainer')
+		// 				elementContainer.setAttribute('id', 'pCont2')
+		// 				icon = document.createElement('img')
+		// 				icon.src = 'assets/icons/bp.png'
+		// 				icon.style.width = '1.3em'
+
+		// 				element = document.createElement('span')
+		// 				element.textContent = e
+		// 				element.style.fontSize = globalFontvar
+		// 				elementContainer.appendChild(icon)
+		// 				elementContainer.appendChild(element)
+		// 				paragraph.appendChild(elementContainer)
+		// 			}
+		// 		})
+		// 	}
+		// }
 		pCont.appendChild(titleH2)
-		pCont.appendChild(paragraph)
+
 		textContent.appendChild(pCont)
 	}
 
 	firstPage.appendChild(textContent)
 	buttonGridContainer.appendChild(buttonGrid)
-	if (pageIndex === 'mainMenuFront') {
-		threesixty = document.createElement('img')
-		threesixty.classList.add('threesixty')
-		threesixty.src = 'assets/icons/threesixtyLogo.png'
-		threesixty.addEventListener('click', () => {
-			createRotation()
-		})
-		buttonGridContainer.appendChild(threesixty)
-	}
 
 	firstPage.appendChild(buttonGridContainer)
 
@@ -1325,21 +1288,22 @@ function createContent(obj, parent) {
 
 	centerContainerMade.appendChild(textContainerMade)
 	textContainerMade.appendChild(firstPage)
+	createBackButton()
 }
 // asd
 // Create the svgs for the showCont div / 4 first parameters are the x and y points of the first and second point respectively, last 2 are the x and y points of the dot
 function setFontSizes() {
 	const button = document.querySelectorAll('.button')
+	const mainButtons = document.querySelectorAll('.mainMenuB')
 
 	const titulo = document.querySelector('.titulo')
 	const mainTextBox = document.querySelector('.mainTextBox')
-	const mainBoxText = document.querySelector('.mainBoxText')
 
-	globalFontvar = `calc(6px + (18 - 6) * ((${
+	globalFontvar = `calc(6px + (16 - 6) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
-	globalTitleFontvar = `calc(14px + (27 - 14) * ((${
+	globalTitleFontvar = `calc(8px + (18 - 8) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 	globalMediumTitleFontvar = `calc(7px + (35 - 7) * ((${
@@ -1349,36 +1313,32 @@ function setFontSizes() {
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
-	buttonFontvar = `calc(4px + (15 - 4) * ((${
+	buttonFontvar = `calc(6px + (18 - 6) * ((${
+		containVideoWidth + 'px'
+	} - 320px) / (1440 - 320)))`
+	bigButtonFontvar = `calc(8px + (22 - 8) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
 	mainTextBox.style.fontSize = globalFontvar
 
 	for (let i = 0; i < button.length; i++) {
-		button[i].style.fontSize = globalFontvar
+		button[i].style.fontSize = buttonFontvar
 	}
-	// titulo.style.fontSize = globalTitleFontvar
 
-	for (let i = 0; i < button.length; i++) {
-		button[i].style.fontSize = globalFontvar
-		// button[i].style.width = `calc(85px + (220 - 85) * ((${
-		// 	containVideoWidth + 'px'
-		// } - 320px) / (1440 - 320)))`
+	for (let i = 0; i < mainButtons.length; i++) {
+		mainButtons[i].style.fontSize = bigButtonFontvar
 	}
 }
 
 function createRotation() {
 	console.log(currentButton)
 	console.log(pageIndex)
-	// if (rotation) {
-	// 	rotation.innerHTML = ''
-	// }
+
 	loader.classList.remove('short-vanish')
 	loader.style.zIndex = '2'
 	initial.style.zIndex = '1'
 	initial.classList.remove('short-vanish')
-	// initial.classList.add('show')
 
 	HideShowCont()
 	$('#product-reel')
@@ -1441,7 +1401,6 @@ function backButtonFunction() {
 	loop.currentTime = 0
 	loop.pause()
 	video3.addEventListener('ended', () => {
-		// video3.classList.add('short-vanish')
 		loop.classList.remove('short-vanish')
 		loop.classList.add('show')
 		loop.play()
@@ -1548,13 +1507,8 @@ function backButtonFunctionBack() {
 
 		pageIndex = 'mainMenuBack'
 		createContent(buttonContent[dataId[1]], dataId[1])
-		// backButton.style.pointerEvents = 'all'
 
-		// createBackButton()
 		HideShowCont()
-		// subVideo1.remove()
-		// subVideo2.remove()
-		// subVideo3.remove()
 	})
 }
 
@@ -1563,7 +1517,7 @@ function createBackButton(param) {
 	if (param === 'rotationPage') {
 		const centerContainerMade = document.createElement('div')
 		centerContainerMade.classList.add('centerContainer')
-		// centerContainerMade.style.pointerEvents = 'none'
+
 		centerContainerMade.setAttribute('id', 'centerContainer_text')
 		const textContainerMade = document.createElement('div')
 		textContainerMade.classList.add('textContainer')
@@ -1586,7 +1540,7 @@ function createBackButton(param) {
 		backButtonRotation.style.pointerEvents = 'all'
 		backButtonContainer = document.createElement('div')
 		brandIcon = document.createElement('img')
-		brandIcon.src = 'assets/icons/onefiftyLogo.png'
+		brandIcon.src = 'assets/icons/tridentLogoW.png'
 		brandIcon.classList.add('brandIcon', 'brandIconR')
 		backButtonContainer.classList.add('viewRContainer')
 		rotation.appendChild(centerContainerMade)
@@ -1598,49 +1552,28 @@ function createBackButton(param) {
 		backButtonContainer.appendChild(brandIcon)
 		centerContainerMade.setAttribute('id', 'rotation_backButton')
 	} else {
-		// const centerContainerMade = document.createElement('div')
-		// centerContainerMade.classList.add('centerContainer')
-		// centerContainerMade.setAttribute('id', 'centerContainer_backButton')
-		// buttonContainerMade = document.createElement('div')
-		// buttonContainerMade.classList.add('buttonContainer')
-		// buttonContainerMade.style.width = containVideoWidth + 'px'
-		// buttonContainerMade.style.height = containVideoHeight + 'px'
 		backButton = document.createElement('button')
 		backButton.classList.add('backButton')
-		backButton.style.fontSize = buttonFontvar
+		backButton.style.fontSize = bigButtonFontvar
 
-		backButton.style.width = `calc(47px + (147 - 47) * ((${
+		backButton.style.width = `calc(45px + (140 - 45) * ((${
 			containVideoWidth + 'px'
 		} - 320px) / (1440 - 320)))`
-		// if (buttonDimensions !== 0) {
-
-		// 	backButton.style.width = buttonDimensions.offsetWidth + 'px'
-		// 	backButton.style.height = buttonDimensions.offsetHeight + 'px'
-		// }
 
 		backButton.classList.add('button')
 
 		backButton.textContent = 'Back'
 		backButtonContainer = document.createElement('div')
 		brandIcon = document.createElement('img')
-		brandIcon.src = 'assets/icons/onefiftyLogo.png'
+		brandIcon.src = 'assets/icons/tridentLogoW.png'
 		brandIcon.classList.add('brandIcon')
 		backButtonContainer.classList.add('backButtonContainer')
-		// if (pos) {
-		// 	backButtonContainer.style.justifyContent = 'flex-end'
-		// 	backButton.style.marginRight = '4%'
-		// }
-		// showCont.appendChild(centerContainerMade)
-		// centerContainerMade.append(buttonContainerMade)
+
 		firstPage.appendChild(backButtonContainer)
 
-		backButtonContainer.appendChild(backButton)
 		backButtonContainer.appendChild(brandIcon)
+		backButtonContainer.appendChild(backButton)
 		if (param === 'rotation') {
-			// rotation.appendChild(centerContainerMade)
-			// rotation.appendChild(centerContainerMade)
-			// backButton.style.pointerEvents = 'all'
-			// centerContainerMade.setAttribute('id', 'rotation_backButton')
 		} else if (
 			pageIndex === 'standardO' ||
 			pageIndex === 'piggybackingP' ||
@@ -1679,7 +1612,7 @@ function ArreglarLineas() {
 		buttonContainer[i].style.width = containVideoWidth + 'px'
 		buttonContainer[i].style.height = containVideoHeight + 'px'
 	}
-	// mainButtons.style.opacity = '0'
+
 	if (!mainButtons.classList.contains('disabled')) {
 		mainButtons.classList.add('show')
 	}
@@ -1778,7 +1711,6 @@ window.addEventListener('resize', function () {
 			window.scrollTo(0, document.body.scrollHeight)
 		}
 	}
-	// if(){}
 })
 
 ////////// Event Listeners for the main buttons //////////
@@ -1800,14 +1732,8 @@ fullscreen_button.addEventListener('click', function (e) {
 mainMenuB.forEach((e, i) => {
 	dataId[i] = e.dataset.id
 	dataVariant[i] = e.dataset.variant
-	// console.log(dataId[i])
-	// console.log(dataVariant)
-	e.addEventListener('click', function (e) {
-		// if (dataId[i] === 'view3') {
-		// 	console.log('perraje')
-		// 	return
-		// }
 
+	e.addEventListener('click', function (e) {
 		pageIndex = 'mainMenuFront'
 		currentButton = dataId[i]
 		HideShowMainButtons()
@@ -1817,7 +1743,6 @@ mainMenuB.forEach((e, i) => {
 				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}2.mp4`,
 				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}3.mp4`
 			)
-			// console.log(dataVariant[i])
 		} else {
 			createVideos(
 				`assets/${dataId[i]}/${dataId[i]}1.mp4`,
@@ -1825,8 +1750,6 @@ mainMenuB.forEach((e, i) => {
 				`assets/${dataId[i]}/${dataId[i]}3.mp4`
 			)
 		}
-
-		/////////////////////////// CURRENT
 
 		if (showCont.innerHTML !== '') {
 			setTimeout(() => {
@@ -1845,7 +1768,6 @@ mainMenuB.forEach((e, i) => {
 				)
 				textContainer.remove()
 
-				// backButtonContainer.remove()
 				console.log(pageIndex)
 				if (pageIndex === 'mainMenuFront') {
 					console.log(globalParent)
@@ -1863,12 +1785,6 @@ mainMenuB.forEach((e, i) => {
 					subVideo2.currentTime = 0
 					subVideo2.play()
 				}
-
-				// if (buttonsText[i] === 'whyF') {
-				// 	createBackButton('pos')
-				// } else {
-				// createBackButton()
-				// }
 			}
 		})
 		check1()
@@ -1901,12 +1817,6 @@ mainMenuB.forEach((e, i) => {
 					setTimeout(() => {
 						video1.play()
 						video1.addEventListener('ended', () => {
-							// if (buttonsText[i] === 'whyF') {
-							// 	createBackButton('pos')
-							// } else {
-							// createBackButton()
-							// }
-
 							animations()
 
 							InterpolateVideo(loop, video1, video2)
@@ -1929,7 +1839,6 @@ mainMenuB.forEach((e, i) => {
 				}
 			}
 		}
-		// a
 	})
 })
 

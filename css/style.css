@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
-	font-family: IBMP;
-	src: url('../assets/fonts/IBMPlexSans-Bold.ttf');
+	font-family: BankGothic;
+	src: url('../assets/fonts/BankGothic.ttf');
 	font-weight: bold;
 }
 @font-face {
-	font-family: IBMP;
-	src: url('../assets/fonts/IBMPlexSans-Light.ttf');
-	font-weight: lighter;
+	font-family: Helvetica;
+	src: url('../assets/fonts/Helvetica-Roman.ttf');
+	font-weight: normal;
 }
 @font-face {
 	font-family: Rhuma;
@@ -25,7 +25,6 @@
 }
 
 * {
-	font-family: IBMP, sans-serif;
 	/* font-weight: bold; */
 }
 .titulo {
@@ -80,10 +79,12 @@ line {
 .mainB {
 	padding: 0.1rem;
 	display: flex;
-	width: 9em;
+	width: 7em;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+
+	font-family: BankGothic, sans-serif !important;
 }
 .textButtonContainer {
 	padding: 4% 4%;
@@ -151,6 +152,7 @@ line {
 	background-color: #2f2e30;
 }
 body {
+	font-family: Helvetica, sans-serif;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -186,27 +188,22 @@ html {
 .mainLogo {
 	/* position: absolute; */
 	display: flex;
-	flex-direction: column;
+	justify-content: flex-end;
 	/* right: 4%;
 	top: 4%; */
 	/* height: 15%; */
-	width: 15%;
 }
 .logo {
+	width: 15vw;
 }
 .mainBox {
-	/* position: absolute; */
 	display: flex;
-
 	flex-direction: column;
-	max-width: 25%;
-	/* left: 3%;
-	top: 4%; */
-	/* height: 15%; */
+	max-width: 85%;
 }
 .mainTextBox {
 	background-color: hsla(0, 0%, 0%, 0.6);
-	padding: 1rem;
+	padding: 0.8rem;
 	border-radius: 1rem;
 	color: white;
 }
@@ -214,8 +211,7 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	flex: 1;
-	gap: 0.5rem;
+	gap: 1vw;
 }
 .mainBoxText {
 	text-align: start;
@@ -287,23 +283,21 @@ video::slotted::-webkit-media-controls-container {
 
 .button {
 	text-align: center;
-	border-radius: 0.5vh;
+	border-radius: 0.7vh;
 	font-weight: bold;
-	/* position: absolute; */
 	border: none;
-	/* padding: 5% 5%; */
+	font-family: Helvetica, sans-serif;
 	color: white;
 	cursor: pointer;
-	/* pointer-events: all; */
+
 	z-index: 2;
 	overflow: hidden;
-	/* background: #018c3c; */
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	box-shadow: rgba(0, 0, 0, 0.24) 4px 4px 4px;
 }
 
 .pageButton {
@@ -347,26 +341,21 @@ h2 {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 1.5vh;
-	/* background-color: black; */
-	right: 3%;
-	bottom: 5%;
-	margin-top: 1.5rem;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	margin-top: 1.5rem;
 	padding: 0rem 2rem;
-	/* height: 32%; */
 }
 .threeButtons {
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	gap: 2.5vw;
-	/* align-items: center; */
-
-	/* grid-template-columns: 1fr 1fr; */
-	/* gap: 1.5vh 2vh; */
-	/* gap: 2.5vw; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* Equal-width columns */
+	/* or justify-content: space-between; depending on your desired spacing */
+	align-items: flex-start;
+	gap: 1.5vw;
+	/* display: flex;
+	justify-content: space-between;
+	gap: 1.5vw; */
 }
 
 a {
@@ -444,7 +433,7 @@ a {
 	top: 50%;
 }
 .brandIcon {
-	width: 10%;
+	width: 15%;
 	margin-right: 2%;
 	/* margin-top: -4%;
 	 */
@@ -669,11 +658,12 @@ li:last-child {
 }
 
 .backButton {
-	background: hsla(0, 0%, 58%, 90%);
+	background: hsla(0, 0%, 58%, 100%);
 	/* padding: 1% 1%; */
 	/* pointer-events: all; */
 	height: 80%;
-	margin-left: 8%;
+	/* margin-left: 8%; */
+	color: black;
 	/* position: absolute; */
 	/* margin-left: 5%;
 	margin-top: 3%; */
