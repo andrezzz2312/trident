@@ -118,39 +118,59 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 const machineButtonLayout = {
 	gas: [
 		{
-			textRight: '70.5%',
-			textTop: '14%',
-			title: 'Reliable Positioning for Picking',
+			textLeft: '15%',
+			textTop: '35%',
+			title: `TriView\u00AE\nMarker Post`,
 		},
 		{
-			textLeft: '47.5%',
-			textTop: '9%',
-			title: 'Reliable Opening of Knockdowns',
+			textLeft: '25.5%',
+			textBottom: '43%',
+			title: `Detectable\nWarning Tape`,
 		},
 		{
-			textLeft: '78%',
-			textTop: '10.5%',
-			title: 'Fast Changeover',
+			textLeft: '39%',
+			textBottom: '34%',
+			title: `PRO-TRACE\u00AE\nTracer Wire`,
 		},
 		{
-			textLeft: '70%',
-			textTop: '59%',
-			title: 'Consistently Square Cases',
+			textLeft: '51%',
+			textBottom: '39%',
+			title: `HideOut\u2122\nTest Station`,
 		},
 		{
-			textLeft: '58%',
-			textTop: '80%',
-			title: 'Vertical Case Forming',
+			textRight: '35%',
+			textBottom: '31%',
+			title: `ISO-Switch\u2122`,
 		},
 		{
-			textRight: '58%',
-			textTop: '87%',
-			title: 'Reliable Closing and Sealing',
+			textRight: '52%',
+			textBottom: '8.5%',
+			title: `PRO-TRACE\u00AE\nGronding Rod`,
 		},
 		{
-			textRight: '78%',
-			textTop: '76%',
-			title: 'Sealing Options',
+			textRight: '23%',
+			textBottom: '15%',
+			title: `Durable\nWire Connector`,
+		},
+		{
+			textRight: '13%',
+			textTop: '12%',
+			title: `TracerLet\nTest Station`,
+		},
+		{
+			textRight: '17%',
+			textTop: '22%',
+			title: `SoilMarkers\u2122`,
+		},
+		{
+			textRight: '22%',
+			textTop: '28%',
+			title: `Utility\nMarking Flags`,
+		},
+		{
+			textRight: '26%',
+			textTop: '45%',
+			title: `Curb Markers`,
 		},
 	],
 	pack: [
@@ -262,6 +282,202 @@ const machineButtonLayout = {
 		},
 	],
 }
+const machineSvgLayout = {
+	gas: [
+		{
+			x1: '11%',
+			y1: '43%',
+			x2: '18%',
+			y2: '38%',
+		},
+		{
+			x1: '28%',
+			y1: '66%',
+			x2: '30%',
+			y2: '54%',
+		},
+		{
+			x1: '41%',
+			y1: '72.5%',
+			x2: '44%',
+			y2: '60%',
+		},
+		{
+			x1: '53.8%',
+			y1: '73.5%',
+			x2: '53%',
+			y2: '55%',
+		},
+		{
+			x1: '53.8%',
+			y1: '76%',
+			x2: '60%',
+			y2: '65%',
+		},
+		{
+			x1: '51.3%',
+			y1: '83%',
+			x2: '46%',
+			y2: '90%',
+		},
+		{
+			x1: '59.8%',
+			y1: '83.5%',
+			x2: '68%',
+			y2: '81%',
+		},
+		{
+			x1: '77.8%',
+			y1: '43.2%',
+			x2: '73%',
+			y2: '47%',
+		},
+		{
+			x1: '82%',
+			y1: '34.7%',
+			x2: '77%',
+			y2: '32%',
+		},
+		{
+			x1: '87.5%',
+			y1: '24.5%',
+			x2: '81%',
+			y2: '24%',
+		},
+		{
+			x1: '90%',
+			y1: '18%',
+			x2: '85%',
+			y2: '15%',
+		},
+	],
+	pack: [
+		{
+			x1: '20%',
+			y1: '14%',
+			x2: '24.5%',
+			y2: '30.8%',
+		},
+		{
+			x1: '25%',
+			y1: '56%',
+			x2: '35%',
+			y2: '37%',
+		},
+		{
+			x1: '41%',
+			y1: '82%',
+			x2: '49.7%',
+			y2: '68%',
+		},
+		{
+			x1: '27%',
+			y1: '75.5%',
+			x2: '47.6%',
+			y2: '51%',
+		},
+		{
+			x1: '75.5%',
+			y1: '17%',
+			x2: '63.7%',
+			y2: '46.6%',
+		},
+		{
+			x1: '69%',
+			y1: '86%',
+			x2: '54.6%',
+			y2: '44%',
+		},
+		{
+			x1: '49.5%',
+			y1: '13%',
+			x2: '38.5%',
+			y2: '38%',
+		},
+	],
+	seal: [
+		{
+			x1: '22%',
+			y1: '29%',
+			x2: '39.5%',
+			y2: '45%',
+		},
+		{
+			x1: '57%',
+			y1: '15%',
+			x2: '57.3%',
+			y2: '47%',
+		},
+		{
+			x1: '77.5%',
+			y1: '31%',
+			x2: '71.5%',
+			y2: '46.6%',
+		},
+		{
+			x1: '76%',
+			y1: '75%',
+			x2: '61%',
+			y2: '49%',
+		},
+		{
+			x1: '56%',
+			y1: '80%',
+			x2: '48%',
+			y2: '55%',
+		},
+		{
+			x1: '29%',
+			y1: '80.5%',
+			x2: '37.5%',
+			y2: '63%',
+		},
+	],
+	palletize: [
+		{
+			x1: '22.5%',
+			y1: '16%',
+			x2: '25.7%',
+			y2: '26.5%',
+		},
+		{
+			x1: '22%',
+			y1: '50%',
+			x2: '43.5%',
+			y2: '45%',
+		},
+		{
+			x1: '69.5%',
+			y1: '15%',
+			x2: '52.5%',
+			y2: '33%',
+		},
+		{
+			x1: '24.5%',
+			y1: '86%',
+			x2: '35%',
+			y2: '70%',
+		},
+		{
+			x1: '77%',
+			y1: '45.5%',
+			x2: '49%',
+			y2: '36%',
+		},
+		{
+			x1: '62%',
+			y1: '82%',
+			x2: '52.5%',
+			y2: '57.2%',
+		},
+		{
+			x1: '73%',
+			y1: '74%',
+			x2: '56%',
+			y2: '52.5%',
+		},
+	],
+}
 const buttonContent = {
 	gas: {
 		textLeft: '0%',
@@ -282,7 +498,19 @@ const buttonContent = {
 			`Emergency\nEgress`,
 			`Finish\nOptions`,
 		],
-		inputButtonId: [`standardO`, `piggybackingP`, `emergencyE`, `finishO`],
+		inputButtonId: [
+			`triviewM`,
+			`detectableW`,
+			`protraceT`,
+			`hideoutT`,
+			`isoS`,
+			`durableW`,
+			`protraceG`,
+			`curbM`,
+			`utilityM`,
+			`soilM`,
+			`tracerletT`,
+		],
 		boxInfo: {
 			standardO: {
 				textLeft: '0%',
@@ -738,7 +966,19 @@ const buttonContent = {
 			`Emergency\nEgress`,
 			`Glass\nOptions`,
 		],
-		inputButtonId: [`standardO`, `tailgatingP`, `emergencyE`, `glassO`],
+		inputButtonId: [
+			`triviewM`,
+			`detectableW`,
+			`protraceT`,
+			`hideoutT`,
+			`isoS`,
+			`durableW`,
+			`protraceG`,
+			`curbM`,
+			`UtilityM`,
+			`soilM`,
+			`tracerletT`,
+		],
 		boxInfo: {
 			standardO: {
 				textLeft: '0%',
@@ -834,6 +1074,7 @@ if (!isMobile) {
 // }
 
 // Set which videos are going to swap
+
 function createButtons(e, i) {
 	const centerContainer = document.createElement('div')
 	const buttonContainer = document.createElement('div')
@@ -845,7 +1086,7 @@ function createButtons(e, i) {
 		'subButton'
 		// , 'mainMenuB'
 	)
-
+	createdButton.style.fontSize = globalFontvar
 	createdButton.textContent = e.title
 	createdButton.style.left = e.textLeft
 	createdButton.style.right = e.textRight
@@ -857,6 +1098,44 @@ function createButtons(e, i) {
 	buttonContainer.appendChild(createdButton)
 }
 
+function createSvgs(e, i) {
+	const centerContainer = document.createElement('div')
+	const svgContainer = document.createElement('div')
+	const createdSvg = document.createElementNS(
+		'http://www.w3.org/2000/svg',
+		'svg'
+	)
+	const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+	// const circle = document.createElementNS(
+	// 	'http://www.w3.org/2000/svg',
+	// 	'circle'
+	// )
+
+	centerContainer.classList.add('centerContainer')
+	svgContainer.classList.add('svgContainer')
+	createdSvg.classList.add('svg')
+	createdSvg.style.width = '100%'
+	createdSvg.style.height = '100%'
+
+	line.setAttribute('stroke', '#ffff')
+	line.setAttribute('stroke-width', '3')
+	line.setAttribute('x1', e.x1)
+	line.setAttribute('y1', e.y1)
+	line.setAttribute('x2', e.x2)
+	line.setAttribute('y2', e.y2)
+
+	// circle.classList.add('svgDot')
+	// circle.setAttribute('r', '6px')
+	// circle.setAttribute('fill', '#f04923')
+	// circle.setAttribute('
+	// circle.setAttribute('cy', e.cy)
+
+	buttonGridContainer.appendChild(centerContainer)
+	centerContainer.appendChild(svgContainer)
+	svgContainer.appendChild(createdSvg)
+	createdSvg.appendChild(line)
+	// createdSvg.appendChild(circle)
+}
 function InterpolateVideo(videoToPause, videoToVanish, videoToPlay) {
 	if (videoToPause) {
 		videoToPause.pause()
@@ -891,14 +1170,12 @@ function animations() {
 	if (pCont) {
 		const elementContainers = document.querySelectorAll('.elementContainer')
 
-		titleH2.style.animation =
-			'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
+		titleH2.style.animation = 'show 0.5s ease-out forwards'
 
-		createdSubTitle.style.animation =
-			'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
-		createdSubTitle.style.animationDelay = '0.4s'
-		let counter = 0.3
-		console.log(delay)
+		createdSubTitle.style.animation = 'show 0.5s ease-out forwards'
+		// createdSubTitle.style.animationDelay = '0.4s'
+		// let counter = 0.3
+
 		if (delay) {
 			console.log(delay)
 			let inputArray = []
@@ -1025,9 +1302,9 @@ function animations() {
 
 					elementContainersArray.forEach((element, i) => {
 						element.style.animation =
-							'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
-						element.style.animationDelay = `${counter}s`
-						counter += 0.2
+							'fadein 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards'
+						// element.style.animationDelay = `${counter}s`
+						// counter += 0.2
 					})
 					bool = true
 				}
@@ -1037,10 +1314,10 @@ function animations() {
 
 			elementContainers.forEach((element, i) => {
 				element.style.animation =
-					'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
+					'fadein 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards'
 
-				element.style.animationDelay = `${counter}s`
-				counter += 0.1
+				// element.style.animationDelay = `${counter}s`
+				// counter += 0.1
 
 				// setTimeout(() => {
 				// 	element.style.animation = 'fadein 0.5s ease-in-out forwards'
@@ -1048,13 +1325,12 @@ function animations() {
 			})
 		}
 
-		buttonGridContainer.style.animation =
-			'slideFromBottom 0.5s ease-out forwards'
-		buttonGridContainer.style.animationDelay = `${counter}s`
+		// buttonGridContainer.style.animation = 'show 0.5s ease-out forwards'
+		// buttonGridContainer.style.animationDelay = `${counter}s`
 		backButtonContainer.style.animation = 'show 0.5s ease-out forwards'
 		brandIcon.style.animation = 'show 0.5s ease-out forwards'
-		brandIcon.style.animationDelay = `${counter}s`
-		backButtonContainer.style.animationDelay = `${counter}s`
+		// brandIcon.style.animationDelay = `${counter}s`
+		// backButtonContainer.style.animationDelay = `${counter}s`
 	}
 
 	if (boxVideo) {
@@ -1309,22 +1585,6 @@ function createContent(obj, parent) {
 		title1.classList.add('title1')
 		title1.textContent = labelTitle
 
-		switch (labelTitle) {
-			case 'GAS / OIL':
-				title1.style.backgroundColor = '#efe329'
-				break
-			case 'WATER':
-				console.log("It's an apple.")
-				break
-			case 'TELECOM':
-				console.log("It's an orange.")
-				break
-			case 'ELECTRIC':
-				console.log("It's an orange.")
-				break
-			default:
-				console.log("It's something else.")
-		}
 		titleH2.appendChild(title1)
 		if (subTitle) {
 			createdSubTitle = document.createElement('span')
@@ -1473,7 +1733,100 @@ function createContent(obj, parent) {
 	machineButtonLayout[parent].forEach((element, i) => {
 		createButtons(element, i)
 	})
+	machineSvgLayout[parent].forEach((element, i) => {
+		createSvgs(element, i)
+	})
+	const subButtons = document.querySelectorAll('.subButton')
+	subButtons.forEach((element, i) => {
+		element.addEventListener('click', function () {
+			HideShowCont()
+
+			setTimeout(() => {
+				showCont.innerHTML = ''
+			}, 500)
+			buttonShort[i] = inputButtonId[i]
+			pageIndex = buttonShort[i]
+			// 	// Con esto veo que boton es /////////////////////////////////
+			console.log(buttonShort[i])
+			createSubVideos(
+				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}1.mp4`,
+				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}2.mp4`,
+				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}3.mp4`
+			)
+			check1()
+			let videosCheck = false
+			function check1() {
+				clearcheck = setInterval(repeatcheck, 600)
+				function repeatcheck() {
+					if (
+						subVideo1.readyState === 4 &&
+						subVideo2.readyState === 4 &&
+						subVideo3.readyState === 4
+					) {
+						videosCheck = true
+					}
+					setTimeout(() => {
+						if (!videosCheck) {
+							loader.style.zIndex = '200'
+							loader.classList.add('show')
+						}
+					}, 3000)
+					if (videosCheck) {
+						loader.classList.remove('show')
+						loader.classList.add('short-vanish')
+						loader.style.zIndex = '-200'
+						clearInterval(clearcheck)
+						// console.log('creando contenido')
+						// console.log(parent)
+						globalParent = parent
+
+						createContent(
+							buttonContent[parent].boxInfo[pageIndex],
+
+							parent
+						)
+						textContent.style.height = '100%'
+						video2.classList.add('short-vanish')
+						subVideo1.style.opacity = 1
+						setTimeout(() => {
+							subVideo1.play()
+							subVideo1.addEventListener('ended', () => {
+								console.log('subVideo1 ending')
+
+								animations()
+								InterpolateVideo(video3, subVideo1, subVideo2)
+
+								HideShowCont()
+							})
+						}, 0)
+					}
+				}
+			}
+		})
+	})
+
 	ArreglarLineas()
+	switch (labelTitle) {
+		case 'GAS / OIL':
+			title1.style.backgroundColor = '#efe329'
+			const subButton = document.querySelectorAll('.subButton')
+			subButton.forEach((element) => {
+				console.log(element)
+				element.style.backgroundColor = '#efe329'
+			})
+			break
+		case 'WATER':
+			console.log("It's an apple.")
+			break
+		case 'TELECOM':
+			console.log("It's an orange.")
+			break
+		case 'ELECTRIC':
+			console.log("It's an orange.")
+			break
+		default:
+			console.log("It's something else.")
+	}
 }
 // asd
 // Create the svgs for the showCont div / 4 first parameters are the x and y points of the first and second point respectively, last 2 are the x and y points of the dot
@@ -1575,7 +1928,7 @@ function exitRotation() {
 
 function backButtonFunction() {
 	ArreglarLineas()
-	buttonGrid.style.pointerEvents = 'none'
+	buttonGridContainer.style.pointerEvents = 'none'
 	backButton.style.pointerEvents = 'none'
 
 	InterpolateVideo(video2, video2, video3)
@@ -1787,6 +2140,7 @@ function createBackButton(param) {
 }
 
 function ArreglarLineas() {
+	const svgContainer = document.querySelectorAll('.svgContainer')
 	const buttonContainer = document.querySelectorAll('.buttonContainer')
 	for (let i = 0; i < svgContainer.length; i++) {
 		svgContainer[i].style.width = containVideoWidth + 'px'
@@ -1952,6 +2306,7 @@ mainMenuB.forEach((e, i) => {
 					'#centerContainer_backButton'
 				)
 				textContainer.remove()
+				showCont.innerHTML = ''
 
 				console.log(pageIndex)
 				if (pageIndex === 'mainMenuFront') {

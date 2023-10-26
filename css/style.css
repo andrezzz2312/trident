@@ -332,13 +332,14 @@ video::slotted::-webkit-media-controls-container {
 	position: absolute;
 	border: none;
 	padding: 0.5% 0.8%;
-	color: white;
-	background-color: #ff4500;
+	color: black;
+	font-family: Helvetica, sans-serif;
+	/* background-color: #ff4500; */
 	cursor: pointer;
 	z-index: 2;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	animation: morph 2s ease-in-out infinite;
+	/* animation: morph 2s ease-in-out infinite; */
 }
 .pageButton:hover,
 .button:hover {
