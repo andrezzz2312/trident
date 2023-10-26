@@ -504,15 +504,15 @@ const buttonContent = {
 			`protraceT`,
 			`hideoutT`,
 			`isoS`,
-			`durableW`,
 			`protraceG`,
-			`curbM`,
-			`utilityM`,
-			`soilM`,
+			`durableW`,
 			`tracerletT`,
+			`soilM`,
+			`utilityM`,
+			`curbM`,
 		],
 		boxInfo: {
-			standardO: {
+			triviewM: {
 				textLeft: '0%',
 				textTop: '0%',
 				title: `<span style = 'font-weight:bold' data-subId = 'standardO'>Standard Operation</span>`,
@@ -1730,12 +1730,22 @@ function createContent(obj, parent) {
 	centerContainerMade.appendChild(textContainerMade)
 	textContainerMade.appendChild(firstPage)
 	createBackButton()
-	machineButtonLayout[parent].forEach((element, i) => {
-		createButtons(element, i)
-	})
-	machineSvgLayout[parent].forEach((element, i) => {
-		createSvgs(element, i)
-	})
+	if (inputButtonGrid) {
+		machineButtonLayout[parent].forEach((e, i) => {
+			console.log(e)
+			createButtons(e, i)
+		})
+		machineSvgLayout[parent].forEach((element, i) => {
+			createSvgs(element, i)
+		})
+	}
+	// machineButtonLayout[parent].forEach((element, i) => {
+	// 	// console.log(element)
+	// 	// createButtons(element, i)
+	// })
+	// machineSvgLayout[parent].forEach((element, i) => {
+	// 	createSvgs(element, i)
+	// })
 	const subButtons = document.querySelectorAll('.subButton')
 	subButtons.forEach((element, i) => {
 		element.addEventListener('click', function () {
@@ -1780,11 +1790,7 @@ function createContent(obj, parent) {
 						// console.log(parent)
 						globalParent = parent
 
-						createContent(
-							buttonContent[parent].boxInfo[pageIndex],
-
-							parent
-						)
+						createContent(buttonContent[parent].boxInfo[pageIndex], parent)
 						textContent.style.height = '100%'
 						video2.classList.add('short-vanish')
 						subVideo1.style.opacity = 1
@@ -1811,7 +1817,6 @@ function createContent(obj, parent) {
 			title1.style.backgroundColor = '#efe329'
 			const subButton = document.querySelectorAll('.subButton')
 			subButton.forEach((element) => {
-				console.log(element)
 				element.style.backgroundColor = '#efe329'
 			})
 			break

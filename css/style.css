@@ -339,6 +339,7 @@ video::slotted::-webkit-media-controls-container {
 	z-index: 2;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 	/* animation: morph 2s ease-in-out infinite; */
 }
 .pageButton:hover,
@@ -495,6 +496,7 @@ a {
 	top: 0;
 	width: 100%;
 	height: 100%;
+	pointer-events: none;
 }
 .buttonGrid {
 	display: flex;
@@ -522,7 +524,7 @@ a {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	pointer-events: all;
+	/* pointer-events: all; */
 }
 .threesixty {
 	margin-right: 2%;
