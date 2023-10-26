@@ -20,6 +20,7 @@ let videoloop,
 	labelCont,
 	paragraph,
 	titleH2,
+	title1,
 	createdSubTitle,
 	span,
 	line,
@@ -119,7 +120,7 @@ const buttonContent = {
 	gas: {
 		textLeft: '0%',
 		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>GAS / OIL</span>  <span>TURNSTILE</span></span>`,
+		title: `GAS / OIL`,
 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
 		`,
 		content: [
@@ -1142,16 +1143,35 @@ function createContent(obj, parent) {
 		pCont.classList.add('pCont')
 
 		titleH2 = document.createElement('span')
-		titleH2.classList.add('title1')
+		titleH2.classList.add('header')
 		titleH2.style.fontSize = globalBigTitleFontvar
-		titleH2.innerHTML = labelTitle
+		title1 = document.createElement('span')
+		title1.classList.add('title1')
+		title1.textContent = labelTitle
 
+		switch (labelTitle) {
+			case 'GAS / OIL':
+				title1.style.backgroundColor = '#efe329'
+				break
+			case 'WATER':
+				console.log("It's an apple.")
+				break
+			case 'TELECOM':
+				console.log("It's an orange.")
+				break
+			case 'ELECTRIC':
+				console.log("It's an orange.")
+				break
+			default:
+				console.log("It's something else.")
+		}
+		titleH2.appendChild(title1)
 		if (subTitle) {
 			createdSubTitle = document.createElement('span')
 			createdSubTitle.classList.add('createdSubtitle')
 			createdSubTitle.textContent = subTitle
 			createdSubTitle.style.fontWeight = 'bold'
-			createdSubTitle.style.fontSize = globalMediumTitleFontvar
+			createdSubTitle.style.fontSize = globalFontvar
 			titleH2.appendChild(createdSubTitle)
 		}
 		// el unico vivo
@@ -1575,7 +1595,7 @@ function createBackButton(param) {
 		backButtonContainer.appendChild(backButton)
 		if (param === 'rotation') {
 		} else if (
-			pageIndex === 'standardO' ||
+			pageIndex === 'gas' ||
 			pageIndex === 'piggybackingP' ||
 			pageIndex === 'emergencyE' ||
 			pageIndex === 'finishO' ||
