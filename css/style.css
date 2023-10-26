@@ -181,9 +181,12 @@ html {
 	position: relative;
 	pointer-events: none;
 }
-.buttonContainer,
+
 .boxContainer {
 	overflow: hidden;
+	position: relative;
+}
+.buttonContainer {
 	position: relative;
 }
 .mainLogo {
@@ -321,6 +324,21 @@ video::slotted::-webkit-media-controls-container {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 	/* animation: morph 2s ease-in-out infinite; */
+}
+.subButton {
+	white-space: pre-wrap;
+	text-align: center;
+	border-radius: 1vh;
+	position: absolute;
+	border: none;
+	padding: 0.5% 0.8%;
+	color: white;
+	background-color: #ff4500;
+	cursor: pointer;
+	z-index: 2;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	animation: morph 2s ease-in-out infinite;
 }
 .pageButton:hover,
 .button:hover {
@@ -483,10 +501,11 @@ a {
 	height: 100%;
 	margin-left: 7%;
 	align-items: center;
-	/* width: 100%; */
+
 	gap: 0.7vw;
 }
-.buttonGridContainer {
+
+/* .buttonGridContainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -497,6 +516,12 @@ a {
 	width: 100%;
 	opacity: 0;
 	pointer-events: none;
+} */
+.buttonGridContainer {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	pointer-events: all;
 }
 .threesixty {
 	margin-right: 2%;
@@ -651,6 +676,8 @@ li:last-child {
 	height: 80%;
 	/* margin-left: 8%; */
 	color: black;
+	z-index: 10;
+
 	/* position: absolute; */
 	/* margin-left: 5%;
 	margin-top: 3%; */

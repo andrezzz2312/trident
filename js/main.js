@@ -68,7 +68,7 @@ const videoHolder = document.querySelector('#videoHolder')
 const mainButtons = document.querySelector('#mainButtons')
 const showCont = document.querySelector('#showCont')
 const svgContainer = document.querySelectorAll('.svgContainer')
-const buttonContainer = document.querySelectorAll('.buttonContainer')
+// const buttonContainer = document.querySelectorAll('.buttonContainer')
 const mainContainer = document.querySelector('.container')
 const loader = document.querySelector('.loader')
 const viewR_button = document.querySelector('#viewR_button')
@@ -115,7 +115,153 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 }
 
 // var buttonsText = []
+const machineButtonLayout = {
+	gas: [
+		{
+			textRight: '70.5%',
+			textTop: '14%',
+			title: 'Reliable Positioning for Picking',
+		},
+		{
+			textLeft: '47.5%',
+			textTop: '9%',
+			title: 'Reliable Opening of Knockdowns',
+		},
+		{
+			textLeft: '78%',
+			textTop: '10.5%',
+			title: 'Fast Changeover',
+		},
+		{
+			textLeft: '70%',
+			textTop: '59%',
+			title: 'Consistently Square Cases',
+		},
+		{
+			textLeft: '58%',
+			textTop: '80%',
+			title: 'Vertical Case Forming',
+		},
+		{
+			textRight: '58%',
+			textTop: '87%',
+			title: 'Reliable Closing and Sealing',
+		},
+		{
+			textRight: '78%',
+			textTop: '76%',
+			title: 'Sealing Options',
+		},
+	],
+	pack: [
+		{
+			textRight: '79.5%',
+			textTop: '10%',
+			title: 'Fast Changeover',
+		},
+		{
+			textRight: '74%',
+			textTop: '53%',
+			title: 'Reliable Product\nAcquisition and Packing',
+		},
+		{
+			textRight: '58%',
+			textTop: '80%',
+			title: 'Scalable',
+		},
+		{
+			textRight: '71%',
+			textTop: '71%',
+			title: 'Superior Case Control',
+		},
+		{
+			textLeft: '75%',
+			textTop: '13.5%',
+			title: 'Reliable Operation',
+		},
+		{
+			textLeft: '68.5%',
+			textTop: '83%',
+			title: 'Secure Product Containment',
+		},
+		{
+			textLeft: '49%',
+			textTop: '9%',
+			title: 'Dual Functioning Delta Robot',
+		},
+	],
+	seal: [
+		{
+			textRight: '77.5%',
+			textTop: '25%',
+			title: 'Easy Changeover',
+		},
+		{
+			textRight: '41.5%',
+			textTop: '11.2%',
+			title: 'Detect Tape Related Errors',
+		},
+		{
+			textLeft: '77%',
+			textTop: '28%',
+			title: 'Bypass Option',
+		},
+		{
+			textLeft: '75%',
+			textTop: '72%',
+			title: 'Sealing Options',
+		},
+		{
+			textLeft: '55%',
+			textTop: '80%',
+			title: 'Case Squareness',
+		},
+		{
+			textRight: '70.5%',
+			textTop: '80%',
+			title: 'Optimal Case Infeed',
+		},
+	],
+	palletize: [
+		{
+			textRight: '77%',
+			textTop: '13%',
+			title: 'Compact FootPrint',
+		},
 
+		{
+			textLeft: '69%',
+			textTop: '13%',
+			title: 'Easy Changeover',
+		},
+		{
+			textLeft: '77%',
+			textTop: '43%',
+			title: 'Maximum Uptime',
+		},
+		{
+			textLeft: '72%',
+			textTop: '70.5%',
+			title: 'Optional Base/Tier Sheets',
+		},
+		{
+			textLeft: '62%',
+			textTop: '79.5%',
+			title: 'Quick Start-Up',
+		},
+		{
+			textRight: '75%',
+			textTop: '84%',
+			title: 'Continous Operation',
+		},
+
+		{
+			textRight: '77.5%',
+			textTop: '46%',
+			title: 'Intuitive HMI with\nPallet Configuration',
+		},
+	],
+}
 const buttonContent = {
 	gas: {
 		textLeft: '0%',
@@ -688,6 +834,29 @@ if (!isMobile) {
 // }
 
 // Set which videos are going to swap
+function createButtons(e, i) {
+	const centerContainer = document.createElement('div')
+	const buttonContainer = document.createElement('div')
+	const createdButton = document.createElement('button')
+
+	centerContainer.classList.add('centerContainer')
+	buttonContainer.classList.add('buttonContainer')
+	createdButton.classList.add(
+		'subButton'
+		// , 'mainMenuB'
+	)
+
+	createdButton.textContent = e.title
+	createdButton.style.left = e.textLeft
+	createdButton.style.right = e.textRight
+	createdButton.style.top = e.textTop
+	createdButton.style.bottom = e.textBottom
+
+	buttonGridContainer.appendChild(centerContainer)
+	centerContainer.appendChild(buttonContainer)
+	buttonContainer.appendChild(createdButton)
+}
+
 function InterpolateVideo(videoToPause, videoToVanish, videoToPlay) {
 	if (videoToPause) {
 		videoToPause.pause()
@@ -1038,105 +1207,96 @@ function createContent(obj, parent) {
 	textContent.classList.add('text')
 	buttonGridContainer = document.createElement('div')
 	buttonGridContainer.classList.add('buttonGridContainer')
-	buttonGrid = document.createElement('div')
+	// buttonGrid = document.createElement('div')
 
-	buttonGrid.classList.add('buttonGrid')
+	// buttonGrid.classList.add('buttonGrid')
 
 	// let buttonShort = []
 
-	if (inputButtonGrid) {
-		inputButtonGrid.forEach((e, i) => {
-			// console.log(e)
-			// const splitText = e
-			// 	.replace(/[\n\r]+|[\s]{2,}/g, ' ')
-			// 	.trim()
-			// 	.split(' ')
+	// if (inputButtonGrid) {
+	// 	inputButtonGrid.forEach((e, i) => {
+	// 		buttonShort[i] = inputButtonId[i]
 
-			// splitText[1]
-			// 	? (buttonShort[i] =
-			// 			splitText[0].toLowerCase() + splitText[1].substring(0, 1))
-			// 	: (buttonShort[i] = splitText[0].toLowerCase())
+	// 		const subButton = document.createElement('button')
+	// 		subButton.classList.add('pageButton')
+	// 		subButton.style.width = `calc(40px + (145 - 40) * ((${
+	// 			containVideoWidth + 'px'
+	// 		} - 320px) / (1440 - 320)))`
+	// 		subButton.textContent = e
+	// 		subButton.style.fontSize = buttonFontvar
+	// 		buttonGrid.appendChild(subButton)
+	// 		buttonDimensions = subButton
 
-			buttonShort[i] = inputButtonId[i]
+	// 		// subbutton function
+	// 		subButton.addEventListener('click', function () {
+	// 			HideShowCont()
 
-			const subButton = document.createElement('button')
-			subButton.classList.add('pageButton')
-			subButton.style.width = `calc(40px + (145 - 40) * ((${
-				containVideoWidth + 'px'
-			} - 320px) / (1440 - 320)))`
-			subButton.textContent = e
-			subButton.style.fontSize = buttonFontvar
-			buttonGrid.appendChild(subButton)
-			buttonDimensions = subButton
+	// 			setTimeout(() => {
+	// 				showCont.innerHTML = ''
+	// 			}, 500)
 
-			// subbutton function
-			subButton.addEventListener('click', function () {
-				HideShowCont()
+	// 			pageIndex = buttonShort[i]
+	// 			// 	// Con esto veo que boton es /////////////////////////////////
+	// 			console.log(buttonShort[i])
+	// 			createSubVideos(
+	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}1.mp4`,
+	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}2.mp4`,
+	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}3.mp4`
+	// 			)
+	// 			check1()
+	// 			let videosCheck = false
+	// 			function check1() {
+	// 				clearcheck = setInterval(repeatcheck, 600)
+	// 				function repeatcheck() {
+	// 					if (
+	// 						subVideo1.readyState === 4 &&
+	// 						subVideo2.readyState === 4 &&
+	// 						subVideo3.readyState === 4
+	// 					) {
+	// 						videosCheck = true
+	// 					}
+	// 					setTimeout(() => {
+	// 						if (!videosCheck) {
+	// 							loader.style.zIndex = '200'
+	// 							loader.classList.add('show')
+	// 						}
+	// 					}, 3000)
+	// 					if (videosCheck) {
+	// 						loader.classList.remove('show')
+	// 						loader.classList.add('short-vanish')
+	// 						loader.style.zIndex = '-200'
+	// 						clearInterval(clearcheck)
+	// 						// console.log('creando contenido')
+	// 						// console.log(parent)
+	// 						globalParent = parent
 
-				setTimeout(() => {
-					showCont.innerHTML = ''
-				}, 500)
+	// 						createContent(
+	// 							buttonContent[parent].boxInfo[pageIndex],
 
-				pageIndex = buttonShort[i]
-				// 	// Con esto veo que boton es /////////////////////////////////
-				console.log(buttonShort[i])
-				createSubVideos(
-					`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}1.mp4`,
-					`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}2.mp4`,
-					`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}3.mp4`
-				)
-				check1()
-				let videosCheck = false
-				function check1() {
-					clearcheck = setInterval(repeatcheck, 600)
-					function repeatcheck() {
-						if (
-							subVideo1.readyState === 4 &&
-							subVideo2.readyState === 4 &&
-							subVideo3.readyState === 4
-						) {
-							videosCheck = true
-						}
-						setTimeout(() => {
-							if (!videosCheck) {
-								loader.style.zIndex = '200'
-								loader.classList.add('show')
-							}
-						}, 3000)
-						if (videosCheck) {
-							loader.classList.remove('show')
-							loader.classList.add('short-vanish')
-							loader.style.zIndex = '-200'
-							clearInterval(clearcheck)
-							// console.log('creando contenido')
-							// console.log(parent)
-							globalParent = parent
+	// 							parent
+	// 						)
+	// 						textContent.style.height = '100%'
+	// 						video2.classList.add('short-vanish')
+	// 						subVideo1.style.opacity = 1
+	// 						setTimeout(() => {
+	// 							subVideo1.play()
+	// 							subVideo1.addEventListener('ended', () => {
+	// 								console.log('subVideo1 ending')
 
-							createContent(
-								buttonContent[parent].boxInfo[pageIndex],
+	// 								animations()
+	// 								InterpolateVideo(video3, subVideo1, subVideo2)
 
-								parent
-							)
-							textContent.style.height = '100%'
-							video2.classList.add('short-vanish')
-							subVideo1.style.opacity = 1
-							setTimeout(() => {
-								subVideo1.play()
-								subVideo1.addEventListener('ended', () => {
-									console.log('subVideo1 ending')
-
-									animations()
-									InterpolateVideo(video3, subVideo1, subVideo2)
-
-									HideShowCont()
-								})
-							}, 0)
-						}
-					}
-				}
-			})
-		})
-	}
+	// 								HideShowCont()
+	// 							})
+	// 						}, 0)
+	// 					}
+	// 				}
+	// 			}
+	// 		})
+	// 	})
+	// }
+	console.log(parent)
+	console.log(machineButtonLayout[parent])
 
 	if (pContent) {
 		pCont = document.createElement('div')
@@ -1294,21 +1454,26 @@ function createContent(obj, parent) {
 		// 		})
 		// 	}
 		// }
+
 		pCont.appendChild(titleH2)
 
 		textContent.appendChild(pCont)
 	}
 
 	firstPage.appendChild(textContent)
-	buttonGridContainer.appendChild(buttonGrid)
+	// buttonGridContainer.appendChild(buttonGrid)
 
-	firstPage.appendChild(buttonGridContainer)
+	showCont.appendChild(buttonGridContainer)
 
 	showCont.appendChild(centerContainerMade)
 
 	centerContainerMade.appendChild(textContainerMade)
 	textContainerMade.appendChild(firstPage)
 	createBackButton()
+	machineButtonLayout[parent].forEach((element, i) => {
+		createButtons(element, i)
+	})
+	ArreglarLineas()
 }
 // asd
 // Create the svgs for the showCont div / 4 first parameters are the x and y points of the first and second point respectively, last 2 are the x and y points of the dot
@@ -1407,10 +1572,8 @@ function exitRotation() {
 	HideShowCont()
 	window.removeEventListener('resize', resizeRotation)
 }
-function backButtonFunction() {
-	console.log('backbuttonfunction')
-	console.log(buttonGridContainer)
 
+function backButtonFunction() {
 	ArreglarLineas()
 	buttonGrid.style.pointerEvents = 'none'
 	backButton.style.pointerEvents = 'none'
@@ -1624,18 +1787,20 @@ function createBackButton(param) {
 }
 
 function ArreglarLineas() {
+	const buttonContainer = document.querySelectorAll('.buttonContainer')
 	for (let i = 0; i < svgContainer.length; i++) {
 		svgContainer[i].style.width = containVideoWidth + 'px'
 		svgContainer[i].style.height = containVideoHeight + 'px'
 	}
+
 	for (let i = 0; i < buttonContainer.length; i++) {
 		buttonContainer[i].style.width = containVideoWidth + 'px'
 		buttonContainer[i].style.height = containVideoHeight + 'px'
 	}
 
-	if (!mainButtons.classList.contains('disabled')) {
-		mainButtons.classList.add('show')
-	}
+	// if (!mainButtons.classList.contains('disabled')) {
+	// 	mainButtons.classList.add('show')
+	// }
 }
 
 function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
