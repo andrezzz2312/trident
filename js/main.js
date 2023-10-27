@@ -41,7 +41,9 @@ let videoloop,
 	pCont2,
 	list,
 	globalParent,
-	pageIndex
+	pageIndex,
+	pContent,
+	pContent2
 
 let boxVideo = []
 let buttonShort = []
@@ -292,7 +294,7 @@ const machineSvgLayout = {
 		},
 		{
 			x1: '28%',
-			y1: '66%',
+			y1: '65.5%',
 			x2: '30%',
 			y2: '54%',
 		},
@@ -485,13 +487,7 @@ const buttonContent = {
 		title: `GAS / OIL`,
 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
 		`,
-		content: [
-			`Deter unauthorized entry `,
-			`Prevent unauthorized entry with optional\nBE Secure Overhead Sensor System`,
-			`2-way traffic, one direction at a time`,
-			`High capacity - 200 people in 10 minutes (in one direction)`,
-			`Integrates with any ACS or multi-factor schema`,
-		],
+
 		inputButtonGrid: [
 			`TriView\nMarker Post`,
 			`Piggybacking\nPrevention`,
@@ -515,7 +511,7 @@ const buttonContent = {
 			triviewM: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'standardO'>Standard Operation</span>`,
+				title: `TriwView\u00AE Marker Post`,
 
 				content: [
 					`Credential or biometric is presented`,
@@ -525,7 +521,7 @@ const buttonContent = {
 					`Exiting can also be set up as free out, requiring no credentials`,
 					`Turnstile does not allow tailgating as it only rotates 120\u00B0 then relocks`,
 				],
-				delay: [1, 5, 10, 16],
+				// delay: [1, 5, 10, 16],
 			},
 			piggybackingP: {
 				textLeft: '0%',
@@ -1481,6 +1477,10 @@ function createContent(obj, parent) {
 
 	textContent = document.createElement('div')
 	textContent.classList.add('text')
+	console.log(pageIndex)
+	if (pageIndex !== 'mainMenuFront') {
+		textContent.style.justifyContent = 'flex-end'
+	}
 	buttonGridContainer = document.createElement('div')
 	buttonGridContainer.classList.add('buttonGridContainer')
 	// buttonGrid = document.createElement('div')
@@ -1574,7 +1574,7 @@ function createContent(obj, parent) {
 	console.log(parent)
 	console.log(machineButtonLayout[parent])
 
-	if (pContent) {
+	if (labelTitle) {
 		pCont = document.createElement('div')
 		pCont.classList.add('pCont')
 
@@ -1594,128 +1594,134 @@ function createContent(obj, parent) {
 			createdSubTitle.style.fontSize = globalFontvar
 			titleH2.appendChild(createdSubTitle)
 		}
+		pCont.appendChild(titleH2)
 		// el unico vivo
 
-		// if (Array.isArray(pContent)) {
-		// 	if (delayInput) {
-		// 		delay = delayInput
-		// 	}
-		// 	console.log(currentButton)
-		// 	pContent.forEach((e) => {
-		// 		if (Number.isInteger(e)) {
-		// 			elementContainer = document.createElement('span')
-		// 			elementContainer.classList.add('elementContainer', 'imageContainer')
-		// 			for (let i = 0; i < e; i++) {
-		// 				let image = document.createElement('img')
-		// 				image.classList.add('tableImg')
-		// 				if (
-		// 					currentButton === 'tourlock18' ||
-		// 					currentButton === 'tourlock182' ||
-		// 					currentButton === 'circlelockSo' ||
-		// 					currentButton === 'circlelockSo2'
-		// 				) {
-		// 					image.src = `assets/${parent}/${currentButton}/${currentButton}${
-		// 						i + 1
-		// 					}.png`
-		// 					if (isMobile) {
-		// 						image.style.width = '20em'
-		// 					} else {
-		// 						image.style.width = '24em'
-		// 					}
-		// 				} else {
-		// 					image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
-		// 						i + 1
-		// 					}.png`
-		// 					if (isMobile) {
-		// 						image.style.width = '6em'
-		// 					} else {
-		// 						image.style.width = '6em'
-		// 					}
-		// 				}
+		if (Array.isArray(pContent)) {
+			paragraph = document.createElement('p')
+			if (delayInput) {
+				delay = delayInput
+			}
+			console.log(currentButton)
+			pContent.forEach((e) => {
+				if (Number.isInteger(e)) {
+					elementContainer = document.createElement('span')
+					elementContainer.classList.add('elementContainer', 'imageContainer')
+					for (let i = 0; i < e; i++) {
+						let image = document.createElement('img')
+						image.classList.add('tableImg')
+						if (
+							currentButton === 'tourlock18' ||
+							currentButton === 'tourlock182' ||
+							currentButton === 'circlelockSo' ||
+							currentButton === 'circlelockSo2'
+						) {
+							image.src = `assets/${parent}/${currentButton}/${currentButton}${
+								i + 1
+							}.png`
+							if (isMobile) {
+								image.style.width = '20em'
+							} else {
+								image.style.width = '24em'
+							}
+						} else {
+							image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
+								i + 1
+							}.png`
+							if (isMobile) {
+								image.style.width = '6em'
+							} else {
+								image.style.width = '6em'
+							}
+						}
 
-		// 				elementContainer.appendChild(image)
-		// 				paragraph.appendChild(elementContainer)
-		// 			}
-		// 		} else {
-		// 			elementContainer = document.createElement('span')
-		// 			elementContainer.classList.add('elementContainer')
-		// 			elementContainer.setAttribute('id', 'pCont1')
+						elementContainer.appendChild(image)
+						paragraph.appendChild(elementContainer)
+						pCont.appendChild(paragraph)
+					}
+				} else {
+					elementContainer = document.createElement('span')
+					elementContainer.classList.add('elementContainer')
+					elementContainer.setAttribute('id', 'pCont1')
 
-		// 			icon = document.createElement('img')
-		// 			icon.src = 'assets/icons/bp.png'
-		// 			icon.style.width = '1.3em'
+					// icon = document.createElement('img')
+					// icon.src = 'assets/icons/bp.png'
+					// icon.style.width = '1.3em'
+					icon = document.createElement('span')
+					icon.textContent = `\u2022`
 
-		// 			element = document.createElement('span')
-		// 			element.textContent = e
-		// 			element.style.fontSize = globalFontvar
-		// 			elementContainer.appendChild(icon)
-		// 			elementContainer.appendChild(element)
-		// 			paragraph.appendChild(elementContainer)
-		// 		}
-		// 	})
-		// }
+					element = document.createElement('span')
+					element.textContent = e
+					element.style.fontSize = globalFontvar
+					elementContainer.appendChild(icon)
+					elementContainer.appendChild(element)
+					paragraph.appendChild(elementContainer)
+					pCont.appendChild(paragraph)
+				}
+			})
+		}
 
-		// if (pContent2) {
-		// 	if (Array.isArray(pContent2)) {
-		// 		if (delayInput) {
-		// 			delay = delayInput
-		// 		}
-		// 		console.log(currentButton)
-		// 		pContent2.forEach((e) => {
-		// 			if (Number.isInteger(e)) {
-		// 				elementContainer = document.createElement('span')
-		// 				elementContainer.classList.add('elementContainer', 'imageContainer')
-		// 				for (let i = 0; i < e; i++) {
-		// 					let image = document.createElement('img')
-		// 					image.classList.add('extraImg')
-		// 					if (
-		// 						currentButton === 'tourlock18' ||
-		// 						currentButton === 'tourlock182' ||
-		// 						currentButton === 'circlelockSo' ||
-		// 						currentButton === 'circlelockSo2'
-		// 					) {
-		// 						image.src = `assets/${parent}/${currentButton}/${currentButton}${
-		// 							i + 1
-		// 						}.png`
-		// 						if (isMobile) {
-		// 							image.style.width = '20em'
-		// 						} else {
-		// 							image.style.width = '25em'
-		// 						}
-		// 					} else {
-		// 						image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
-		// 							i + 1
-		// 						}.png`
-		// 						if (isMobile) {
-		// 							image.style.width = '8em'
-		// 						} else {
-		// 							image.style.width = '6em'
-		// 						}
-		// 					}
+		if (pContent2) {
+			if (Array.isArray(pContent2)) {
+				if (delayInput) {
+					delay = delayInput
+				}
+				console.log(currentButton)
+				pContent2.forEach((e) => {
+					if (Number.isInteger(e)) {
+						elementContainer = document.createElement('span')
+						elementContainer.classList.add('elementContainer', 'imageContainer')
+						for (let i = 0; i < e; i++) {
+							let image = document.createElement('img')
+							image.classList.add('extraImg')
+							if (
+								currentButton === 'tourlock18' ||
+								currentButton === 'tourlock182' ||
+								currentButton === 'circlelockSo' ||
+								currentButton === 'circlelockSo2'
+							) {
+								image.src = `assets/${parent}/${currentButton}/${currentButton}${
+									i + 1
+								}.png`
+								if (isMobile) {
+									image.style.width = '20em'
+								} else {
+									image.style.width = '25em'
+								}
+							} else {
+								image.src = `assets/${parent}/${pageIndex}/${pageIndex}${
+									i + 1
+								}.png`
+								if (isMobile) {
+									image.style.width = '8em'
+								} else {
+									image.style.width = '6em'
+								}
+							}
 
-		// 					elementContainer.appendChild(image)
-		// 					paragraph.appendChild(elementContainer)
-		// 				}
-		// 			} else {
-		// 				elementContainer = document.createElement('span')
-		// 				elementContainer.classList.add('elementContainer')
-		// 				elementContainer.setAttribute('id', 'pCont2')
-		// 				icon = document.createElement('img')
-		// 				icon.src = 'assets/icons/bp.png'
-		// 				icon.style.width = '1.3em'
+							elementContainer.appendChild(image)
+							paragraph.appendChild(elementContainer)
+						}
+					} else {
+						console.log('else')
+						elementContainer = document.createElement('span')
+						elementContainer.classList.add('elementContainer')
+						elementContainer.setAttribute('id', 'pCont2')
+						icon = document.createElement('img')
+						icon.src = 'assets/icons/bp.png'
+						icon.style.width = '1.3em'
 
-		// 				element = document.createElement('span')
-		// 				element.textContent = e
-		// 				element.style.fontSize = globalFontvar
-		// 				elementContainer.appendChild(icon)
-		// 				elementContainer.appendChild(element)
-		// 				paragraph.appendChild(elementContainer)
-		// 			}
-		// 		})
-		// 	}
-		// }
-
-		pCont.appendChild(titleH2)
+						element = document.createElement('span')
+						element.textContent = e
+						element.style.fontSize = globalFontvar
+						elementContainer.appendChild(icon)
+						elementContainer.appendChild(element)
+						paragraph.appendChild(elementContainer)
+						pCont.appendChild(paragraph)
+					}
+				})
+			}
+		}
 
 		textContent.appendChild(pCont)
 	}

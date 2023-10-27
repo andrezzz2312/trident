@@ -647,6 +647,7 @@ p {
 	align-items: flex-start;
 	justify-content: flex-start;
 	gap: 0.7rem;
+	font-family: Helvetica, sans-serif;
 	opacity: 0;
 }
 .imageContainer {
