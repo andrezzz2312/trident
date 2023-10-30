@@ -514,12 +514,14 @@ const buttonContent = {
 				title: `TriwView\u00AE Marker Post`,
 
 				content: [
-					`Credential or biometric is presented`,
-					`Valid credential turns LED green,\nunlocks turnstile and provides tone/voice`,
-					`Turnstile rotates 120\u00B0, relocks, and sends a door closure signal,\nlogging the user into the space  `,
-					`An authorized user can exit after the authorized user has entered`,
-					`Exiting can also be set up as free out, requiring no credentials`,
-					`Turnstile does not allow tailgating as it only rotates 120\u00B0 then relocks`,
+					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+					`360-degree visibility`,
+					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+					`Patented TriGrip™ Anchor for locking post into ground`,
+					`Performs in temperatures ranging from -40° F to +150° F`,
+					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+					`Available as a test station with removable cap that offers easy access to tracer wire`,
 				],
 				// delay: [1, 5, 10, 16],
 			},
@@ -1166,11 +1168,11 @@ function animations() {
 	if (pCont) {
 		const elementContainers = document.querySelectorAll('.elementContainer')
 
-		titleH2.style.animation = 'show 0.5s ease-out forwards'
+		// titleH2.style.animation = 'show 0.5s ease-out forwards'
 
 		createdSubTitle.style.animation = 'show 0.5s ease-out forwards'
 		// createdSubTitle.style.animationDelay = '0.4s'
-		// let counter = 0.3
+		let counter = 0.3
 
 		if (delay) {
 			console.log(delay)
@@ -1307,17 +1309,22 @@ function animations() {
 			})
 		} else {
 			console.log('else delay')
+			console.log(pageIndex)
+			if (pageIndex === 'mainMenuFront') {
+				titleH2.style.animation = 'show 0.5s ease-out forwards'
+			} else {
+				titleH2.style.animation =
+					'fadein 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards'
+				titleH2.style.animationDelay = `${counter}s`
+				counter += 0.1
+			}
 
 			elementContainers.forEach((element, i) => {
 				element.style.animation =
 					'fadein 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards'
 
-				// element.style.animationDelay = `${counter}s`
-				// counter += 0.1
-
-				// setTimeout(() => {
-				// 	element.style.animation = 'fadein 0.5s ease-in-out forwards'
-				// }, 2000)
+				element.style.animationDelay = `${counter}s`
+				counter += 0.1
 			})
 		}
 
@@ -1584,6 +1591,10 @@ function createContent(obj, parent) {
 		title1 = document.createElement('span')
 		title1.classList.add('title1')
 		title1.textContent = labelTitle
+		if (pageIndex !== 'mainMenuFront') {
+			createBackButton()
+			firstPage.style.flexDirection = 'row'
+		}
 
 		titleH2.appendChild(title1)
 		if (subTitle) {
@@ -1647,13 +1658,13 @@ function createContent(obj, parent) {
 					// icon = document.createElement('img')
 					// icon.src = 'assets/icons/bp.png'
 					// icon.style.width = '1.3em'
-					icon = document.createElement('span')
-					icon.textContent = `\u2022`
+					// icon = document.createElement('span')
+					// icon.textContent = `\u2022`
 
 					element = document.createElement('span')
 					element.textContent = e
 					element.style.fontSize = globalFontvar
-					elementContainer.appendChild(icon)
+					// elementContainer.appendChild(icon)
 					elementContainer.appendChild(element)
 					paragraph.appendChild(elementContainer)
 					pCont.appendChild(paragraph)
@@ -1735,7 +1746,10 @@ function createContent(obj, parent) {
 
 	centerContainerMade.appendChild(textContainerMade)
 	textContainerMade.appendChild(firstPage)
-	createBackButton()
+	if (pageIndex === 'mainMenuFront') {
+		createBackButton()
+	}
+
 	if (inputButtonGrid) {
 		machineButtonLayout[parent].forEach((e, i) => {
 			console.log(e)
@@ -1820,7 +1834,11 @@ function createContent(obj, parent) {
 	ArreglarLineas()
 	switch (labelTitle) {
 		case 'GAS / OIL':
+			title1.style.padding = '0.25em 0.5em'
+			title1.style.fontSize = globalMediumTitleFontvar
+			title1.style.color = 'black'
 			title1.style.backgroundColor = '#efe329'
+			textContent.style.alignItems = 'flex-start'
 			const subButton = document.querySelectorAll('.subButton')
 			subButton.forEach((element) => {
 				element.style.backgroundColor = '#efe329'
@@ -1848,7 +1866,7 @@ function setFontSizes() {
 	const titulo = document.querySelector('.titulo')
 	const mainTextBox = document.querySelector('.mainTextBox')
 
-	globalFontvar = `calc(6px + (16 - 6) * ((${
+	globalFontvar = `calc(6px + (18 - 6) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
@@ -1858,7 +1876,7 @@ function setFontSizes() {
 	globalMediumTitleFontvar = `calc(7px + (35 - 7) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	globalBigTitleFontvar = `calc(8px + (35 - 8) * ((${
+	globalBigTitleFontvar = `calc(12px + (40 - 12) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
@@ -2090,6 +2108,7 @@ function createBackButton(param) {
 		brandIcon.src = 'assets/icons/tridentLogoW.png'
 		brandIcon.classList.add('brandIcon', 'brandIconR')
 		backButtonContainer.classList.add('viewRContainer')
+
 		rotation.appendChild(centerContainerMade)
 		centerContainerMade.appendChild(textContainerMade)
 
@@ -2103,9 +2122,9 @@ function createBackButton(param) {
 		backButton.classList.add('backButton')
 		backButton.style.fontSize = bigButtonFontvar
 
-		backButton.style.width = `calc(45px + (140 - 45) * ((${
-			containVideoWidth + 'px'
-		} - 320px) / (1440 - 320)))`
+		// backButton.style.width = `calc(45px + (140 - 45) * ((${
+		// 	containVideoWidth + 'px'
+		// } - 320px) / (1440 - 320)))`
 
 		backButton.classList.add('button')
 
@@ -2115,14 +2134,19 @@ function createBackButton(param) {
 		brandIcon.src = 'assets/icons/tridentLogoW.png'
 		brandIcon.classList.add('brandIcon')
 		backButtonContainer.classList.add('backButtonContainer')
-
+		console.log(pageIndex)
+		if (pageIndex !== 'mainMenuFront') {
+			backButtonContainer.style.height = '100%'
+			backButtonContainer.style.flexDirection = 'column'
+			backButtonContainer.style.alignItems = 'flex-start'
+		}
 		firstPage.appendChild(backButtonContainer)
 
 		backButtonContainer.appendChild(brandIcon)
 		backButtonContainer.appendChild(backButton)
 		if (param === 'rotation') {
 		} else if (
-			pageIndex === 'gas' ||
+			pageIndex === 'triviewM' ||
 			pageIndex === 'piggybackingP' ||
 			pageIndex === 'emergencyE' ||
 			pageIndex === 'finishO' ||

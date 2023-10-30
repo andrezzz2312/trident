@@ -33,12 +33,13 @@
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5em;
+	opacity: 0;
 }
 
 .title1 {
 	border-radius: 0.25em;
-	padding: 0.25em 0.5em;
-	color: black;
+	/* padding: 0.25em 0.5em; */
+	color: #efe329;
 	font-family: BankGothic, sans-serif;
 }
 hr {
@@ -436,7 +437,7 @@ a {
 	top: 50%;
 }
 .brandIcon {
-	width: 15%;
+	width: 14vw;
 	margin-right: 2%;
 	/* margin-top: -4%;
 	 */
@@ -449,7 +450,7 @@ a {
 .backButtonContainer {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 	width: 100%;
 	height: 8%;
 	opacity: 0;
@@ -535,10 +536,10 @@ a {
 	height: 75%;
 	width: 100%;
 	display: flex;
-
+	/* padding-right: 4rem; */
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 
 	/* position: absolute; */
 	/* z-index: 1; */
@@ -571,7 +572,7 @@ a {
 .firstPage {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	position: absolute;
 	height: 100%;
@@ -611,9 +612,11 @@ a {
 	/* border-radius: 3vh; */
 	/* background: hsla(322, 50%, 21%, 90%); */
 	/* padding: 3vh; */
+
 	color: white;
-	width: 47%;
-	height: 100%;
+	padding-right: 2em;
+	/* height: 100%; */
+
 	/* width: calc(250px + (480 - 250) * ((100vw - 320px) / (1440 - 320))); */
 	/* transform: scale(0); */
 	/* overflow: hidden; */
@@ -633,7 +636,7 @@ p {
 	/* flex-wrap: wrap; */
 	flex-direction: column;
 	/* gap: 5.2%; */
-	gap: 4.5%;
+	gap: 1.2rem;
 	height: 100%;
 	/* margin-top: 4.5%; */
 	margin-top: 3%;
@@ -644,7 +647,7 @@ p {
 .elementContainer {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	gap: 0.7rem;
 	font-family: Helvetica, sans-serif;
@@ -677,7 +680,8 @@ li:last-child {
 	background: hsla(0, 0%, 58%, 100%);
 	/* padding: 1% 1%; */
 	/* pointer-events: all; */
-	height: 80%;
+
+	padding: 0.5em 1.7em;
 	/* margin-left: 8%; */
 	color: black;
 	z-index: 10;
