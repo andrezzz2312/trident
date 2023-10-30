@@ -525,39 +525,19 @@ const buttonContent = {
 				],
 				// delay: [1, 5, 10, 16],
 			},
-			piggybackingP: {
+			detectableW: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'piggybackingP'>Piggybacking Prevention</span>`,
+				title: `Detectable\nWarning Tape`,
+
 				content: [
-					`Piggybacking is an attempt to enter in same compartment`,
-					`Credential or biometric is presented`,
-					`Valid credential turns LED green, unlocks turnstile and provides audible tone/voice`,
-					`Door rotates about 30\u00B0, then stops as...`,
-					`BE Secure Overhead Sensor System detects two people`,
-					`Turnstile remains locked, forcing both people\nto exit the compartment backwards`,
-					`With optional BE Secure Overhead Sensor System, there is never a breach.\nUnauthorized user always exits to the unsecured side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention). Always in compliance`,
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
 				],
-				delay: [0, 5, 9, 14, 17, 19],
-			},
-			emergencyE: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'emergencyE'>Emergency Egress</span>`,
-				content: [
-					`Upon signal from alarm system, turnstile unlocks outbound\nallowing egress only`,
-				],
-			},
-			finishO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'finishO'>Finish Options</span>`,
-				content: [
-					`Turnstile available in galvanized steel, powder-coated steel or stainless steel`,
-					3,
-					`Tandem space-saving models available`,
-					`Metal screens can be installed in addition to horizontal bars`,
-				],
+				// delay: [1, 5, 10, 16],
 			},
 		},
 		// src: buttonsText[1],
@@ -1878,7 +1858,7 @@ function setFontSizes() {
 	globalMediumTitleFontvar = `calc(7px + (35 - 7) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	globalBigTitleFontvar = `calc(12px + (40 - 12) * ((${
+	globalBigTitleFontvar = `calc(15px + (45 - 15) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
