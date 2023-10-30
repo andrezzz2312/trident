@@ -511,7 +511,7 @@ const buttonContent = {
 			triviewM: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `TriwView\u00AE Marker Post`,
+				title: `TriView\u00AE Marker Post`,
 
 				content: [
 					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
