@@ -1658,13 +1658,15 @@ function createContent(obj, parent) {
 					// icon = document.createElement('img')
 					// icon.src = 'assets/icons/bp.png'
 					// icon.style.width = '1.3em'
-					// icon = document.createElement('span')
-					// icon.textContent = `\u2022`
+					icon = document.createElement('span')
+					icon.classList.add('icon')
+					icon.textContent = `\u2022`
+					icon.style.fontSize = globalFontvar
 
 					element = document.createElement('span')
 					element.textContent = e
 					element.style.fontSize = globalFontvar
-					// elementContainer.appendChild(icon)
+					elementContainer.appendChild(icon)
 					elementContainer.appendChild(element)
 					paragraph.appendChild(elementContainer)
 					pCont.appendChild(paragraph)
@@ -2144,32 +2146,11 @@ function createBackButton(param) {
 
 		backButtonContainer.appendChild(brandIcon)
 		backButtonContainer.appendChild(backButton)
-		if (param === 'rotation') {
-		} else if (
-			pageIndex === 'triviewM' ||
-			pageIndex === 'piggybackingP' ||
-			pageIndex === 'emergencyE' ||
-			pageIndex === 'finishO' ||
-			pageIndex === 'tailgatingP' ||
-			pageIndex === 'tailgatingP1' ||
-			pageIndex === 'tailgatingP2' ||
-			pageIndex === 'glassO' ||
-			pageIndex === 'piggybackingP1' ||
-			pageIndex === 'piggybackingP2' ||
-			pageIndex === 'operationW'
-		) {
+		if (pageIndex !== 'mainMenuFront') {
 			console.log('submenu')
 			backButton.addEventListener('click', backButtonFunctionFront)
-		} else if (
-			pageIndex === 'easyR' ||
-			pageIndex === 'ex78934S' ||
-			pageIndex === 'kr-bkzdinB'
-		) {
-			backButton.addEventListener('click', backButtonFunctionBack)
 		} else if (pageIndex === 'mainMenuFront') {
 			backButton.addEventListener('click', backButtonFunction)
-		} else if (pageIndex === 'mainMenuBack') {
-			backButton.addEventListener('click', backButtonFunctionFromBack)
 		}
 	}
 }
