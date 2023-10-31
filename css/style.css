@@ -32,7 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	margin-bottom: 5vh;
+
 	gap: 0.5em;
 	opacity: 0;
 }
@@ -541,7 +541,7 @@ a {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin-top: 1em;
+	margin-top: 3vh;
 
 	/* position: absolute; */
 	/* z-index: 1; */
@@ -638,11 +638,11 @@ p {
 	/* flex-wrap: wrap; */
 	flex-direction: column;
 	/* gap: 5.2%; */
-	gap: 4vh;
+	gap: 2vh;
 	height: 100%;
-	width: 90%;
+	width: 95%;
 	/* margin-top: 4.5%; */
-	margin-top: 3%;
+	margin-top: 2vh;
 	/* margin-bottom: 0.5em; */
 	/* opacity: 0; */
 	/*Cambiar esto tambien si se quiere separar la bullet del texto */
