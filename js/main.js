@@ -175,112 +175,52 @@ const machineButtonLayout = {
 			title: `Curb Markers`,
 		},
 	],
-	pack: [
+	telecom: [
 		{
-			textRight: '79.5%',
-			textTop: '10%',
-			title: 'Fast Changeover',
+			textLeft: '17%',
+			textTop: '7%',
+			title: `Aerial Cable Marker`,
 		},
 		{
-			textRight: '74%',
+			textLeft: '3%',
+			textTop: '22%',
+			title: `Snaparound\u00AE\nCable Marker`,
+		},
+
+		{
+			textLeft: '21%',
 			textTop: '53%',
-			title: 'Reliable Product\nAcquisition and Packing',
+			title: `Aluminum\nUtility Pole Tag`,
 		},
 		{
-			textRight: '58%',
-			textTop: '80%',
-			title: 'Scalable',
+			textRight: '71.5%',
+			textBottom: '23%',
+			title: `PRO-TRACE\u00AE\nGronding Rod`,
 		},
 		{
-			textRight: '71%',
-			textTop: '71%',
-			title: 'Superior Case Control',
+			textLeft: '34%',
+			textTop: '61%',
+			title: `TriView\u00AE\nMarker Post`,
 		},
 		{
-			textLeft: '75%',
-			textTop: '13.5%',
-			title: 'Reliable Operation',
+			textLeft: '47%',
+			textBottom: '38%',
+			title: `PRO-TRACE\u00AE\nTracer Wire`,
 		},
 		{
-			textLeft: '68.5%',
-			textTop: '83%',
-			title: 'Secure Product Containment',
+			textRight: '35%',
+			textTop: '51%',
+			title: `Curb Markers`,
 		},
 		{
-			textLeft: '49%',
-			textTop: '9%',
-			title: 'Dual Functioning Delta Robot',
-		},
-	],
-	seal: [
-		{
-			textRight: '77.5%',
-			textTop: '25%',
-			title: 'Easy Changeover',
+			textLeft: '70%',
+			textBottom: '32%',
+			title: `Detectable\nWarning Tape`,
 		},
 		{
-			textRight: '41.5%',
-			textTop: '11.2%',
-			title: 'Detect Tape Related Errors',
-		},
-		{
-			textLeft: '77%',
-			textTop: '28%',
-			title: 'Bypass Option',
-		},
-		{
-			textLeft: '75%',
-			textTop: '72%',
-			title: 'Sealing Options',
-		},
-		{
-			textLeft: '55%',
-			textTop: '80%',
-			title: 'Case Squareness',
-		},
-		{
-			textRight: '70.5%',
-			textTop: '80%',
-			title: 'Optimal Case Infeed',
-		},
-	],
-	palletize: [
-		{
-			textRight: '77%',
-			textTop: '13%',
-			title: 'Compact FootPrint',
-		},
-
-		{
-			textLeft: '69%',
-			textTop: '13%',
-			title: 'Easy Changeover',
-		},
-		{
-			textLeft: '77%',
-			textTop: '43%',
-			title: 'Maximum Uptime',
-		},
-		{
-			textLeft: '72%',
-			textTop: '70.5%',
-			title: 'Optional Base/Tier Sheets',
-		},
-		{
-			textLeft: '62%',
-			textTop: '79.5%',
-			title: 'Quick Start-Up',
-		},
-		{
-			textRight: '75%',
-			textTop: '84%',
-			title: 'Continous Operation',
-		},
-
-		{
-			textRight: '77.5%',
-			textTop: '46%',
-			title: 'Intuitive HMI with\nPallet Configuration',
+			textRight: '4%',
+			textTop: '40%',
+			title: `Utility\nMarking Flags`,
 		},
 	],
 }
@@ -353,130 +293,60 @@ const machineSvgLayout = {
 			y2: '15%',
 		},
 	],
-	pack: [
+	telecom: [
 		{
-			x1: '20%',
-			y1: '14%',
-			x2: '24.5%',
-			y2: '30.8%',
+			x1: '19%',
+			y1: '9%',
+			x2: '11%',
+			y2: '9.5%',
 		},
 		{
-			x1: '25%',
-			y1: '56%',
-			x2: '35%',
-			y2: '37%',
+			x1: '6%',
+			y1: '24%',
+			x2: '6.9%',
+			y2: '8.1%',
 		},
 		{
-			x1: '41%',
-			y1: '82%',
-			x2: '49.7%',
-			y2: '68%',
+			x1: '23%',
+			y1: '54%',
+			x2: '16.2%',
+			y2: '63.6%',
 		},
 		{
-			x1: '27%',
-			y1: '75.5%',
-			x2: '47.6%',
-			y2: '51%',
-		},
-		{
-			x1: '75.5%',
-			y1: '17%',
-			x2: '63.7%',
-			y2: '46.6%',
-		},
-		{
-			x1: '69%',
-			y1: '86%',
-			x2: '54.6%',
-			y2: '44%',
-		},
-		{
-			x1: '49.5%',
-			y1: '13%',
-			x2: '38.5%',
-			y2: '38%',
-		},
-	],
-	seal: [
-		{
-			x1: '22%',
-			y1: '29%',
-			x2: '39.5%',
-			y2: '45%',
-		},
-		{
-			x1: '57%',
-			y1: '15%',
-			x2: '57.3%',
-			y2: '47%',
-		},
-		{
-			x1: '77.5%',
-			y1: '31%',
-			x2: '71.5%',
-			y2: '46.6%',
-		},
-		{
-			x1: '76%',
+			x1: '23%',
 			y1: '75%',
-			x2: '61%',
-			y2: '49%',
+			x2: '26.3%',
+			y2: '81.1%',
 		},
 		{
-			x1: '56%',
-			y1: '80%',
-			x2: '48%',
-			y2: '55%',
+			x1: '39%',
+			y1: '64%',
+			x2: '31.5%',
+			y2: '73%',
 		},
 		{
-			x1: '29%',
-			y1: '80.5%',
-			x2: '37.5%',
-			y2: '63%',
-		},
-	],
-	palletize: [
-		{
-			x1: '22.5%',
-			y1: '16%',
-			x2: '25.7%',
-			y2: '26.5%',
-		},
-		{
-			x1: '22%',
-			y1: '50%',
-			x2: '43.5%',
-			y2: '45%',
-		},
-		{
-			x1: '69.5%',
-			y1: '15%',
-			x2: '52.5%',
-			y2: '33%',
-		},
-		{
-			x1: '24.5%',
-			y1: '86%',
-			x2: '35%',
-			y2: '70%',
-		},
-		{
-			x1: '77%',
-			y1: '45.5%',
-			x2: '49%',
-			y2: '36%',
-		},
-		{
-			x1: '62%',
-			y1: '82%',
-			x2: '52.5%',
-			y2: '57.2%',
-		},
-		{
-			x1: '73%',
-			y1: '74%',
+			x1: '53%',
+			y1: '60%',
 			x2: '56%',
-			y2: '52.5%',
+			y2: '67.6%',
+		},
+		{
+			x1: '75%',
+			y1: '65%',
+			x2: '68%',
+			y2: '57.1%',
+		},
+		{
+			x1: '64%',
+			y1: '54%',
+			x2: '71.9%',
+			y2: '46.2%',
+		},
+		{
+			x1: '93%',
+			y1: '42%',
+			x2: '86%',
+			y2: '34%',
 		},
 	],
 }
@@ -489,12 +359,6 @@ const buttonContent = {
 		`,
 
 		inputButtonGrid: [
-			`TriView\nMarker Post`,
-			`Piggybacking\nPrevention`,
-			`Emergency\nEgress`,
-			`Finish\nOptions`,
-		],
-		inputButtonId: [
 			`triviewM`,
 			`detectableW`,
 			`protraceT`,
@@ -523,7 +387,6 @@ const buttonContent = {
 					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
 					`Available as a test station with removable cap that offers easy access to tracer wire`,
 				],
-				// delay: [1, 5, 10, 16],
 			},
 			detectableW: {
 				textLeft: '0%',
@@ -545,11 +408,11 @@ const buttonContent = {
 
 				content: [
 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-					`Has a 50% higher break-load, minimizing damage during installation and while in service.`,
-					`For installation in open-trench, plow-in, or inside conduit using one wire.`,
-					`Equal to copper in signal performance, lower in cost, and great price stability.`,
-					`RoHS Compliant and works with connectors you already use.`,
-					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting.`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
 				],
 			},
 			hideoutT: {
@@ -558,13 +421,13 @@ const buttonContent = {
 				title: `HideOut™\nTest Station`,
 
 				content: [
-					`Provides easy access to tracer wire in spots where upright posts are not practical.`,
-					`Flush-mounted test station ideal for areas where mowers are prevalent.`,
-					`Telescoping terminal board provides easy access to terminals for locators.`,
-					`Comes standard with two terminals and features industry-standard 11-hole pattern.`,
-					`Locking lid with metal plate makes HideOut™ easy to locate.`,
-					`Hot-stamped graphics.`,
-					`Patented TriGrip Anchor™ for securing HideOut™ into the ground.`,
+					`Provides easy access to tracer wire in spots where upright posts are not practical`,
+					`Flush-mounted test station ideal for areas where mowers are prevalent`,
+					`Telescoping terminal board provides easy access to terminals for locators`,
+					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
+					`Locking lid with metal plate makes HideOut™ easy to locate`,
+					`Hot-stamped graphics`,
+					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
 				],
 			},
 			isoS: {
@@ -573,10 +436,10 @@ const buttonContent = {
 				title: `ISO-Switch™`,
 
 				content: [
-					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch.`,
-					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware.`,
-					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware.`,
-					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more.`,
+					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
+					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
+					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
+					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
 				],
 			},
 			protraceG: {
@@ -585,11 +448,11 @@ const buttonContent = {
 				title: `PRO-TRACE®\nGrounding Rod`,
 
 				content: [
-					`Grounds the dead end of tracer wire to complete the circuit for accurate location.`,
-					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems.`,
-					`Twist-on connector included to splice lead wire to tracer wire.`,
-					`20 feet of built-in lead wire allows for placement flexibility.`,
-					`HDPW cap improves drivability into the earth and is simple to install.`,
+					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+					`Twist-on connector included to splice lead wire to tracer wire`,
+					`20 feet of built-in lead wire allows for placement flexibility`,
+					`HDPW cap improves drivability into the earth and is simple to install`,
 				],
 			},
 			durableW: {
@@ -598,14 +461,14 @@ const buttonContent = {
 				title: `Durable Wire\nConnectors`,
 
 				content: [
-					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs.`,
-					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires.`,
-					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required.`,
-					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting.`,
-					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install.`,
-					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline.`,
-					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices.`,
-					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications.`,
+					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
 				],
 			},
 			curbM: {
@@ -614,12 +477,12 @@ const buttonContent = {
 				title: `Curb Markers`,
 
 				content: [
-					`Durable surface markers that can be attached to almost any surface.`,
-					`Can be printed on reflective or non-reflective substrates.`,
-					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome.`,
-					`Easily installed with our industrial adhesive.`,
-					`Temperature and UV stable.`,
-					`Impact and abrasion resistant.`,
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
 				],
 			},
 			utilityM: {
@@ -628,10 +491,10 @@ const buttonContent = {
 				title: `Utility Marking Flags`,
 
 				content: [
-					`Ensure consistent communication and long-lasting visibility for your project.`,
-					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project.`,
-					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel.`,
-					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths.`,
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
 				],
 			},
 			soilM: {
@@ -640,12 +503,12 @@ const buttonContent = {
 				title: `7-Inch SoilMarkers™`,
 
 				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it.`,
-					`7” round disk with a 13” stake that has two barbs.`,
-					`Temperature stable/UV stable.`,
-					`Impact-resistant polypropylene disk.`,
-					`Reinforced polypropylene thermoplastic stake.`,
-					`Hot-stamped warning legend is molded into the disk.`,
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
 				],
 			},
 			tracerletT: {
@@ -654,488 +517,156 @@ const buttonContent = {
 				title: `TracerLet Test Station`,
 
 				content: [
-					`Above-ground test station head for mounting on new or existing PVC conduit.`,
-					`Protects tracer wire ends from corrosion and the elements.`,
-					`Made with high strength polycarbonate.`,
-					`Use with any 1” PVC conduit.`,
-					`Ideal for end of service termination and aesthetics.`,
-					`Available with 1-4 terminals.`,
-					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners).`,
+					`Above-ground test station head for mounting on new or existing PVC conduit`,
+					`Protects tracer wire ends from corrosion and the elements`,
+					`Made with high strength polycarbonate`,
+					`Use with any 1” PVC conduit`,
+					`Ideal for end of service termination and aesthetics`,
+					`Available with 1-4 terminals`,
+					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
 				],
 			},
 		},
 	},
-	turnlock15: {
+	telecom: {
 		textLeft: '0%',
 		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>FULL HEIGHT</span> <span>TURNSTILE</span></span>`,
-		subTitle: `Turnlock 150`,
-		content: [
-			`Deter unauthorized entry `,
-			`Prevent unauthorized entry with optional\nBE Secure Overhead Sensor System`,
-			`2-way traffic, one direction at a time`,
-			`High capacity - 200 people in 10 minutes (in one direction)`,
-			`Integrates with any ACS or multi-factor schema`,
-		],
+		title: `TELECOM`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
 		inputButtonGrid: [
-			`Standard\nOperation`,
-			`Operation With\nMetal Detector`,
-			`Piggybacking\nPrevention`,
-			`Emergency\nEgress`,
-			`Finish\nOptions`,
-		],
-		inputButtonId: [
-			`standardO`,
-			`operationW`,
-			`piggybackingP`,
-			`emergencyE`,
-			`finishO`,
-		],
-		boxInfo: {
-			standardO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'standardO'>Standard Operation</span>`,
-
-				content: [
-					`Credential or biometric is presented`,
-					`Valid credential turns LED green,\nunlocks turnstile and provides tone/voice`,
-					`Turnstile rotates 120\u00B0, relocks, and sends a door closure signal,\nlogging the user into the space  `,
-					`An authorized user can exit after the authorized user has entered`,
-					`Exiting can also be set up as free out, requiring no credentials`,
-					`Turnstile does not allow tailgating as it only rotates 120\u00B0 then relocks`,
-				],
-				delay: [1, 5, 11, 16],
-			},
-			operationW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'standardO'>Operation with Metal Detector</span>`,
-
-				content: [
-					`Credential or biometric is presented`,
-					`Valid credential turns LED green, unlocks turnstile and provides audible signal (tone/voice)`,
-					`User walks through metal detector`,
-					`If no metal is detected, turnstile unlocks, rotates 120\u00B0, then stops and relocks`,
-					`If metal is detected, turnstile remains locked and alarm sounds`,
-					`User must exit the turnstile backwards to divest metal`,
-					`Configuration can be provided with a metal detector for inbound and outbound traffic flow`,
-				],
-				delay: [2, 6, 11, 14, 20, 22, 24],
-			},
-			piggybackingP: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'piggybackingP'>Piggybacking Prevention</span>`,
-				content: [
-					`Piggybacking is an attempt to enter in same compartment\n(requires collusion or force)`,
-					`Credential or biometric is presented`,
-					`Valid credential turns LED green, unlocks turnstile and provides audible tone/voice`,
-					`Door rotates about 30\u00B0, then stops as...`,
-					`BE Secure Overhead Sensor System detects two people`,
-					`Turnstile remains locked, forcing both people\nto exit the compartment backwards`,
-					`With optional BE Secure Overhead Sensor System, there is never a breach.\nUnauthorized user always exits to the unsecured side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention). Always in compliance`,
-				],
-				delay: [2, 7, 11, 16, 20, 24],
-			},
-			emergencyE: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'emergencyE'>Emergency Egress</span>`,
-				content: [
-					`Upon signal from alarm system, turnstile unlocks\noutbound allowing egress only`,
-				],
-			},
-			finishO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'finishO'>Finish Options</span>`,
-				content: [
-					`Turnstile available in anodized or painted aluminum`,
-					2,
-					`Curved metal or plexi-glass wall panels available`,
-					`Tandem space-saving models available`,
-					`Can be incorporated with metal detectors`,
-				],
-			},
-		},
-	},
-	trilock60: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>WAIST HIGH</span>  <span>TURNSTILES</span></span>`,
-		subTitle: `Trilock 60`,
-		content: [
-			`Integrates with a randomizer program and button `,
-			`Installed back-to-back for space saving`,
-			`Turnstile arms unlock and allow for one-way traffic (outbound)`,
-			`Turnstile arms relock and await next user`,
-		],
-		inputButtonGrid: [
-			`Standard\nOperation`,
-			`Emergency\nEgress`,
-			`Finish\nOptions`,
-		],
-		inputButtonId: [`standardO`, `emergencyE`, `finishO`],
-		boxInfo: {
-			standardO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'standardO'>Standard Operation</span>`,
-				content: [
-					`User presses randomizer button`,
-					`LED arrows direct user to the left or right`,
-					`Depending on lane configuration, one option sends user directly to exit; the other option sends user to secondary screening area`,
-					`Trilock arms unlock on the side to which user is directed`,
-					`User pushes arm to pass through`,
-					`Trilock relocks and waits for next user`,
-				],
-				delay: [1, 7, 12, 20, 25, 31],
-			},
-			emergencyE: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'emergencyE'>Emergency Egress</span>`,
-				content: [
-					`Upon signal from alarm system, turnstile unlocks outbound allowing egress only`,
-				],
-			},
-			finishO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold' data-subId = 'finishO'>Finish Options</span>`,
-				content: [
-					`Turnstile available in brushed stainless steel`,
-					1,
-					`Other finishes available upon request`,
-				],
-				delay: [1, 2, 3],
-			},
-		},
-	},
-	circlelockSo: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>INTERLOCKING</span> <span>SECURITY PORTAL</span></span>`,
-		subTitle: `Circlelock Solo`,
-		content: [
-			`Prevent unauthorized entry`,
-			`2-way traffic, one direction at a time`,
-			`Low capacity - 60 people in 10 minutes`,
-			`Integrates with any ACS or multi-factor schema`,
-			`Risk Score - 0.8%, Efficiency Score - 99.2%`,
-			1,
-		],
-		inputButtonGrid: [
-			`Standard\nOperation`,
-			`Piggybacking\n Prevention 1`,
-			`Piggybacking\n Prevention 2`,
-			`Emergency\nEgress`,
-			`Glass\nOptions`,
-		],
-		inputButtonId: [
-			`standardO`,
-			`piggybackingP1`,
-			`piggybackingP2`,
-			`emergencyE`,
-			`glassO`,
-		],
-		boxInfo: {
-			standardO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Standard Operation</span>`,
-
-				content: [
-					`Credential or push button is presented`,
-					`Valid credential turns LEDs green on the vertical entry post and internal\nmidpost, opens outer door and provides audible signal. Opposite side LED\nturns red until the user exits the door, and the outer door closes`,
-					`StereoVision takes sampling 1`,
-					`Door starts to close. Just prior to closure, StereoVision takes sampling 2`,
-					`An optional, internal biometric device is activated upon door closure.\nThis validates user and prevents substitution`,
-					`Interior door opens, then closes`,
-				],
-				delay: [1, 5, 17, 21, 26, 31],
-			},
-			piggybackingP1: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Piggybacking Prevention 1</span>`,
-				content: [
-					`Piggybacking is an attempt for two people to enter`,
-					`Credential or push button is presented`,
-					`Valid credential turns LEDs green on the vertical entry post and internal\nmidpost, opens outer door and provides audible signal. Opposite side LED\nturns red until the users exit the door, and the outer door closes`,
-					`StereoVision takes sampling 1`,
-					`StereoVision detects two people`,
-					`Door remains open, and voice command prompts both people\nto exit. Turns LEDs red on the vertical entry post and internal midpost,\nand provides audible signal. Opposite side LED\nturns red until the users exit the door, and the outer door closes`,
-					`After exiting, outer door closes`,
-					`Never a breach. Unauthorized user always exits to the unsecure side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention). Always in compliance`,
-				],
-				delay: [2, 5, 10, 21, 25, 28, 41, 45],
-			},
-			piggybackingP2: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Piggybacking Prevention 2</span>`,
-				content: [
-					`Piggybacking is an attempt for two people to enter`,
-					`Credential or push button is presented`,
-					`Valid credential turns LEDs green on the vertical entry post and internal\nmidpost, opens outer door and provides audible signal. Opposite side LED\nturns red until the users exit the door, and the outer door closes`,
-					`StereoVision takes sampling 1. Door closes, StereoVision takes sampling 2`,
-					`StereoVision detects two people`,
-					`Door re-opens, and voice command prompts both people to exit.\nTurns LEDs red on the vertical entry post and internal midpost,\nand provides audible signal. Opposite side LED\nturns red until the users exit the door, and the outer door closes`,
-					`After exiting, outer door closes`,
-					`Never a breach. Unauthorized user always exits to the unsecure side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention). Always in compliance`,
-				],
-				delay: [2, 7, 11, 21, 30, 35, 49, 53],
-			},
-			emergencyE: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Emergency Egress</span>`,
-				content: [
-					`Upon signal from alarm system, outer door opens`,
-					`Inner door typically remains closed and locked`,
-					`No entrapment`,
-					`No open door`,
-					`Inner door can be programmed to open also`,
-					`A side swing door is typically required to meet code`,
-				],
-				delay: [1, 5, 9, 11, 13, 15],
-			},
-			glassO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Glass Options</span>`,
-				content: [
-					`Door panel glass is \u00BC" curved clear tempered`,
-					`Wall panel glass is \u00BC" curved clear tempered `,
-					`All glass can be enhanced with vandal resistant or bullet resistant glass film`,
-					`All glass can be replaced by BR level 1 laminated glass`,
-				],
-				delay: [1, 6, 11, 16],
-			},
-		},
-	},
-	tourlock18: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>SECURITY</span> <span>REVOLVING DOOR</span></span>`,
-		subTitle: `Tourlock 180`,
-		content: [
-			`Prevent unauthorized entry`,
-			`In and out simultaneous 2-way traffic`,
-			`High throughput - 10 min. peak of 150 people, each way`,
-			`Integrates with any ACS or multi-factor schema`,
-			`Risk Score - 2.7%, Efficiency Score - 97.3%`,
-			1,
-		],
-		inputButtonGrid: [
-			`Standard\nOperation`,
-			`Piggybacking\n Prevention`,
-			`Tailgating\nPrevention 1`,
-			`Tailgating\nPrevention 2`,
-			`Emergency\nEgress`,
-			`Glass\nOptions`,
-		],
-		inputButtonId: [
-			`standardO`,
-			`piggybackingP`,
-			`tailgatingP1`,
-			`tailgatingP2`,
-			`emergencyE`,
-			`glassO`,
-		],
-		boxInfo: {
-			standardO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Standard Operation</span>`,
-
-				content: [
-					`Credential or biometric is presented`,
-					`Valid credential turns inbound LEDs green\nand provides tone/voice on authorized user side only`,
-
-					`Door does not start rotating until the authorized user\nenters and is detected`,
-					`Door rotates 180\u00B0, then stops and relocks `,
-					`Authorized users can exit while authorized users enter`,
-					`Exiting can be free out`,
-				],
-				delay: [1, 5, 11, 16, 24],
-			},
-			piggybackingP: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Piggybacking Prevention</span>`,
-				content: [
-					`Piggybacking is an attempt to enter in same compartment\n as an authorized user`,
-					`Credential or biometric is presented`,
-					`Valid credential turns inbound LEDs green\nand provides tone/voice on authorized user side only`,
-					`Door does not start rotating until the authorized user enters and is detected `,
-					`Door rotates 45\u00B0, StereoVision samples for one person only\n(door continues to rotate during StereoVision scanning)`,
-					`Door rotates another 30\u00B0; StereoVision re-samples for one person only\n(door continues to rotate during StereoVision scanning)`,
-					`If StereoVision detects authorized person alone, door rotates to 180\u00B0`,
-				],
-				content2: [
-					`If StereoVision detects unauthorized person, door stops at 90\u00B0`,
-					`LEDs turn red and provide audible message\non the unauthorized user side of the door only`,
-					`Door reverses 45\u00B0, forcing both people to exit the compartment`,
-					`Never a breach. Unauthorized user always exits to the unsecure side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention).\nAlways in compliance`,
-				],
-				delay: [0, 5, 9, 15, 19, 24, 30, 36, 44, 51, 58],
-			},
-			tailgatingP1: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Tailgating Prevention 1</span>`,
-
-				content: [
-					`An attempt to enter an empty compartment\nas an authorized user is entering`,
-					`Credential or biometric is presented`,
-					`Valid credential turns inbound LEDs green,\nprovides tone/voice on authorized user side only`,
-					`Door does not start rotating until the authorized user enters\n and is detected`,
-					`Overhead sensor detects the second person after door\nhas rotated 90\u00B0, stops and locks the door; turns LEDs red;\nprovides audible signal within the violating compartment only`,
-				],
-				content2: [
-					`Door continues to rotate another 45\u00B0, then stops and relocks`,
-					`Authorized user has successfully entered.\nUnauthorized user prevented entry`,
-					`When compartment is empty, door rotates forward an additional\n45\u00B0, repositioned to the "x" rest or home position`,
-					`Never a breach. Unauthorized user always exits to the unsecure side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention).\nAlways in compliance`,
-				],
-				delay: [0, 6, 10, 18, 23, 35, 41, 47, 53],
-			},
-			tailgatingP2: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Tailgating Prevention 2</span>`,
-
-				content: [
-					`An unauthorized user attempting to enter as an\nauthorized user is exiting from the secured side`,
-					`Free exiting; or credential or biometric is presented`,
-					`Valid credential turns outbound LEDs green and provides\naudible tone/voice on the authorized user side of the door only`,
-					`Door does not start rotating until the authorized user enters\n and is detected`,
-					`Overhead sensor detects the unauthorized person after\ndoor has rotated 45\u00B0`,
-				],
-				content2: [
-					`Unauthorized user prevented entry; authorized user\nprevented from exiting. Authorized user and the unauthorized\nuser must exit the door. Once compartments are cleared ...`,
-					`Door rotates 45\u00B0, then stops and relocks `,
-					`Authorized user re-attempts to exit`,
-					`Never a breach. Unauthorized user always exits to the unsecure side.\nEliminate DHO (door held open) and DFO (door forced open) alarms.\nAutomated resolution of issues (no human intervention).\nAlways in compliance`,
-				],
-				delay: [0, 6, 10, 18, 25, 30, 40, 44, 47],
-			},
-			emergencyE: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Emergency Egress</span>`,
-				content: [
-					`Upon signal from alarm system, door panels unlock`,
-					`Door panels can be pushed and folded, allowing egress`,
-					`Meets building codes for egress compliance`,
-					`After alarm situation, doors must be manually reset`,
-					`Building codes require a side door (lockable/alarmable)\nnext to a revolving door`,
-				],
-				delay: [0, 5, 9, 13, 17],
-			},
-			glassO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Glass Options</span>`,
-				content: [
-					`Door panel glass is \u00BC" clear tempered`,
-					`Wall panel glass is \u00BC" curved clear tempered `,
-					`All glass can be enhanced with vandal resistant or bullet resistant glass film`,
-					`All glass can be replaced by BR level 1 laminated glass`,
-				],
-				delay: [1, 5, 11, 17],
-			},
-		},
-	},
-	lifelineSw: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `<span><span style = 'font-weight:bold'>OPTICAL</span> <span>TURNSTILE</span></span>`,
-		subTitle: `Lifeline Speedlane Swing`,
-		content: [
-			`Detect unauthorized entry`,
-			`2-way traffic, one direction at a time`,
-			`High capacity - 300 people in 10 minutes in one direction`,
-			`Integrates with any ACS or multi-factor schema`,
-		],
-		inputButtonGrid: [
-			`Standard\nOperation`,
-			`Tailgating\nPrevention`,
-			`Emergency\nEgress`,
-			`Glass\nOptions`,
-		],
-		inputButtonId: [
-			`triviewM`,
-			`detectableW`,
-			`protraceT`,
-			`hideoutT`,
-			`isoS`,
-			`durableW`,
+			`aerialC`,
+			`snaparoundC`,
+			`aluminumU`,
 			`protraceG`,
+			`triviewM`,
+			`protraceT`,
 			`curbM`,
-			`UtilityM`,
-			`soilM`,
-			`tracerletT`,
+			`detectableW`,
+			`utilityM`,
 		],
-		boxInfo: {
-			standardO: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Standard Operation</span>`,
-				content: [
-					`Credential or biometric is presented`,
-					`Valid credential turns LEDs green,\nand provides audible signal (tone or voice)`,
-					`Volumetric sensor system detects authorized user`,
-					`Turnstile glass panels swing in, then close`,
-					`An authorized user can exit after the authorized user has entered`,
-					`Turnstile glass panels swing out, then close`,
-					`Exiting can also be set up as free out, requiring no credentials`,
-				],
-				delay: [2, 5, 11, 15, 19, 24, 30],
-			},
-			tailgatingP: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Tailgating Prevention</span>`,
-				content: [
-					`Tailgating is an attempt to follow an authorized user`,
-					`Credential or biometric is presented`,
-					`Valid credential turns inbound LEDs green, unlocks turnstile\nand provides audible tone/voice`,
-					`Volumetric sensor system detects authorized user`,
-					`Turnstile glass panels swing in`,
-					`Volumetric sensor system detects unauthorized person`,
-					`Unauthorized user detected, sounding alarm`,
-					`Glass panels close, provided safety sensor system not engaged`,
-					`No DHO or DFO. Automated resolution. Compliance maintained`,
-				],
-				delay: [2, 6, 10, 15, 18, 22, 26, 31, 37],
-			},
 
-			emergencyE: {
+		boxInfo: {
+			aerialC: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Emergency Egress</span>`,
+				title: `Aerial Cable Markers`,
+
 				content: [
-					`Upon signal from alarm system, turnstile panels unlock or swing out`,
+					`Easily identify aerial cables from the ground`,
+					`UV stable and outdoor durable PVC marker and label`,
+					`Adhesive strip along inside of clip ensures the marker won’t spin`,
+					`Telecommunications Orange — dimensions: 6”W x 1.625”H`,
 				],
 			},
-			glassO: {
+			snaparoundC: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `<span style = 'font-weight:bold'>Glass Options</span>`,
+				title: `Snaparound®\nCable Markers`,
+
 				content: [
-					`Glass is \u00BC" flat clear tempered`,
-					`Glass can be cabinet height or tall`,
-					`All glass can be enhanced with vandal resistant glass film`,
+					`Outdoor durable, UV, solvent, and water resistant`,
+					`Custom sizes, colors, and messaging`,
+					`Mount around metal pipes, wires, and cables`,
+					`RFID available`,
 				],
-				delay: [2, 6, 10],
+			},
+			aluminumU: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Aluminum\nUtility Pole Tags`,
+
+				content: [
+					`Clearly identify your utility poles with embossed metal characters`,
+					`Aluminum construction for outdoor durability`,
+					`Common character height: 1”, 3” and 6” tall`,
+					`1” vertical or horizontal orientation available`,
+				],
+			},
+			protraceG: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `PRO-TRACE®\nGrounding Rod`,
+
+				content: [
+					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+					`Twist-on connector included to splice lead wire to tracer wire`,
+					`20 feet of built-in lead wire allows for placement flexibility`,
+					`HDPW cap improves drivability into the earth and is simple to install`,
+				],
+			},
+			triviewM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `TriView® Marker Post`,
+
+				content: [
+					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+					`360-degree visibility`,
+					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+					`Patented TriGrip™ Anchor for locking post into ground`,
+					`Performs in temperatures ranging from -40° F to +150° F`,
+					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+					`Available as a test station with removable cap that offers easy access to tracer wire`,
+				],
+			},
+			protraceT: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			curbM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			detectableW: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			utilityM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
 			},
 		},
-
-		// src: buttonsText[1],
 	},
 }
 
@@ -1201,6 +732,7 @@ function createButtons(e, i) {
 
 function createSvgs(e, i) {
 	const centerContainer = document.createElement('div')
+	centerContainer.setAttribute('id', 'svg')
 	const svgContainer = document.createElement('div')
 	const createdSvg = document.createElementNS(
 		'http://www.w3.org/2000/svg',
@@ -1526,7 +1058,7 @@ function createSubVideos(source1, source2, source3) {
 		// 		subVideo2.loop = true
 		// 	}
 		// }
-		if (pageIndex === 'protraceG') {
+		if (pageIndex === 'protraceG' || pageIndex === 'hideoutT') {
 			subVideo2.loop = true
 		}
 
@@ -1559,7 +1091,7 @@ function createSubVideos(source1, source2, source3) {
 function createContent(obj, parent) {
 	console.trace()
 	delay = ''
-
+	console.log(obj)
 	textLeft = obj.textLeft
 	textTop = obj.textTop
 	textRight = obj.textRight
@@ -1569,7 +1101,7 @@ function createContent(obj, parent) {
 	pContent2 = obj.content2
 	subTitle = obj.subTitle
 	inputButtonGrid = obj.inputButtonGrid
-	inputButtonId = obj.inputButtonId
+	// inputButtonId = obj.inputButtonId
 	delayInput = obj.delay
 
 	const centerContainerMade = document.createElement('div')
@@ -1594,96 +1126,10 @@ function createContent(obj, parent) {
 	if (pageIndex !== 'mainMenuFront') {
 		textContent.style.justifyContent = 'flex-end'
 	}
+	textContent.style.justifyContent = 'flex-start'
 	buttonGridContainer = document.createElement('div')
 	buttonGridContainer.classList.add('buttonGridContainer')
-	// buttonGrid = document.createElement('div')
 
-	// buttonGrid.classList.add('buttonGrid')
-
-	// let buttonShort = []
-
-	// if (inputButtonGrid) {
-	// 	inputButtonGrid.forEach((e, i) => {
-	// 		buttonShort[i] = inputButtonId[i]
-
-	// 		const subButton = document.createElement('button')
-	// 		subButton.classList.add('pageButton')
-	// 		subButton.style.width = `calc(40px + (145 - 40) * ((${
-	// 			containVideoWidth + 'px'
-	// 		} - 320px) / (1440 - 320)))`
-	// 		subButton.textContent = e
-	// 		subButton.style.fontSize = buttonFontvar
-	// 		buttonGrid.appendChild(subButton)
-	// 		buttonDimensions = subButton
-
-	// 		// subbutton function
-	// 		subButton.addEventListener('click', function () {
-	// 			HideShowCont()
-
-	// 			setTimeout(() => {
-	// 				showCont.innerHTML = ''
-	// 			}, 500)
-
-	// 			pageIndex = buttonShort[i]
-	// 			// 	// Con esto veo que boton es /////////////////////////////////
-	// 			console.log(buttonShort[i])
-	// 			createSubVideos(
-	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}1.mp4`,
-	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}2.mp4`,
-	// 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}3.mp4`
-	// 			)
-	// 			check1()
-	// 			let videosCheck = false
-	// 			function check1() {
-	// 				clearcheck = setInterval(repeatcheck, 600)
-	// 				function repeatcheck() {
-	// 					if (
-	// 						subVideo1.readyState === 4 &&
-	// 						subVideo2.readyState === 4 &&
-	// 						subVideo3.readyState === 4
-	// 					) {
-	// 						videosCheck = true
-	// 					}
-	// 					setTimeout(() => {
-	// 						if (!videosCheck) {
-	// 							loader.style.zIndex = '200'
-	// 							loader.classList.add('show')
-	// 						}
-	// 					}, 3000)
-	// 					if (videosCheck) {
-	// 						loader.classList.remove('show')
-	// 						loader.classList.add('short-vanish')
-	// 						loader.style.zIndex = '-200'
-	// 						clearInterval(clearcheck)
-	// 						// console.log('creando contenido')
-	// 						// console.log(parent)
-	// 						globalParent = parent
-
-	// 						createContent(
-	// 							buttonContent[parent].boxInfo[pageIndex],
-
-	// 							parent
-	// 						)
-	// 						textContent.style.height = '100%'
-	// 						video2.classList.add('short-vanish')
-	// 						subVideo1.style.opacity = 1
-	// 						setTimeout(() => {
-	// 							subVideo1.play()
-	// 							subVideo1.addEventListener('ended', () => {
-	// 								console.log('subVideo1 ending')
-
-	// 								animations()
-	// 								InterpolateVideo(video3, subVideo1, subVideo2)
-
-	// 								HideShowCont()
-	// 							})
-	// 						}, 0)
-	// 					}
-	// 				}
-	// 			}
-	// 		})
-	// 	})
-	// }
 	console.log(parent)
 	console.log(machineButtonLayout[parent])
 
@@ -1878,6 +1324,7 @@ function createContent(obj, parent) {
 	// 	createSvgs(element, i)
 	// })
 	const subButtons = document.querySelectorAll('.subButton')
+	console.log(subButtons)
 	subButtons.forEach((element, i) => {
 		element.addEventListener('click', function () {
 			HideShowCont()
@@ -1885,7 +1332,8 @@ function createContent(obj, parent) {
 			setTimeout(() => {
 				showCont.innerHTML = ''
 			}, 500)
-			buttonShort[i] = inputButtonId[i]
+
+			buttonShort[i] = inputButtonGrid[i]
 			pageIndex = buttonShort[i]
 			// 	// Con esto veo que boton es /////////////////////////////////
 			console.log(buttonShort[i])
@@ -1943,6 +1391,7 @@ function createContent(obj, parent) {
 	})
 
 	ArreglarLineas()
+	const subButton = document.querySelectorAll('.subButton')
 	switch (labelTitle) {
 		case 'GAS / OIL':
 			title1.style.padding = '0.25em 0.5em'
@@ -1950,7 +1399,6 @@ function createContent(obj, parent) {
 			title1.style.color = 'black'
 			title1.style.backgroundColor = '#efe329'
 			textContent.style.alignItems = 'flex-start'
-			const subButton = document.querySelectorAll('.subButton')
 			subButton.forEach((element) => {
 				element.style.backgroundColor = '#efe329'
 			})
@@ -1959,6 +1407,16 @@ function createContent(obj, parent) {
 			console.log("It's an apple.")
 			break
 		case 'TELECOM':
+			title1.style.padding = '0.25em 0.5em'
+			title1.style.fontSize = globalMediumTitleFontvar
+			title1.style.color = 'black'
+			title1.style.backgroundColor = '#efa229'
+			titleH2.style.alignItems = 'flex-end'
+			textContent.style.alignItems = 'flex-start'
+			textContent.style.justifyContent = 'flex-end'
+			subButton.forEach((element) => {
+				element.style.backgroundColor = '#efa229'
+			})
 			console.log("It's an orange.")
 			break
 		case 'ELECTRIC':
@@ -1977,7 +1435,7 @@ function setFontSizes() {
 	const titulo = document.querySelector('.titulo')
 	const mainTextBox = document.querySelector('.mainTextBox')
 
-	globalFontvar = `calc(6px + (20 - 6) * ((${
+	globalFontvar = `calc(6px + (15 - 6) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
