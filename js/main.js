@@ -1403,6 +1403,10 @@ function createContent(obj, parent) {
 			if (delayInput) {
 				delay = delayInput
 			}
+			if (pageIndex === 'detectableW') {
+				paragraph.style.gap = '4vh'
+				paragraph.style.marginTop = '4vh'
+			}
 			console.log(currentButton)
 			pContent.forEach((e) => {
 				if (Number.isInteger(e)) {
