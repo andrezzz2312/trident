@@ -1374,6 +1374,9 @@ function createContent(obj, parent) {
 		if (pageIndex === 'snaparoundC') {
 			pCont.style.paddingBottom = '40%'
 		}
+		if (pageIndex === 'protraceT') {
+			pCont.style.paddingBottom = '30%'
+		}
 
 		titleH2 = document.createElement('span')
 		titleH2.classList.add('header')
@@ -1403,7 +1406,7 @@ function createContent(obj, parent) {
 			if (delayInput) {
 				delay = delayInput
 			}
-			if (pageIndex === 'detectableW') {
+			if (pageIndex !== 'durableW' && pageIndex !== 'protraceT') {
 				paragraph.style.gap = '4vh'
 				paragraph.style.marginTop = '4vh'
 			}
