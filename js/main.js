@@ -122,7 +122,7 @@ const machineButtonLayout = {
 		{
 			textLeft: '15%',
 			textTop: '35%',
-			title: `TriView\u00AE\nMarker Post`,
+			title: `TriView®\nMarker Post`,
 		},
 		{
 			textLeft: '25.5%',
@@ -132,22 +132,22 @@ const machineButtonLayout = {
 		{
 			textLeft: '39%',
 			textBottom: '34%',
-			title: `PRO-TRACE\u00AE\nTracer Wire`,
+			title: `PRO-TRACE®\nTracer Wire`,
 		},
 		{
 			textLeft: '51%',
 			textBottom: '39%',
-			title: `HideOut\u2122\nTest Station`,
+			title: `HideOut™\nTest Station`,
 		},
 		{
 			textRight: '35%',
 			textBottom: '31%',
-			title: `ISO-Switch\u2122`,
+			title: `ISO-Switch™`,
 		},
 		{
 			textRight: '52%',
 			textBottom: '8.5%',
-			title: `PRO-TRACE\u00AE\nGronding Rod`,
+			title: `PRO-TRACE®\nGrounding Rod`,
 		},
 		{
 			textRight: '23%',
@@ -162,7 +162,7 @@ const machineButtonLayout = {
 		{
 			textRight: '17%',
 			textTop: '22%',
-			title: `SoilMarkers\u2122`,
+			title: `SoilMarkers™`,
 		},
 		{
 			textRight: '22%',
@@ -184,7 +184,7 @@ const machineButtonLayout = {
 		{
 			textLeft: '3%',
 			textTop: '22%',
-			title: `Snaparound\u00AE\nCable Marker`,
+			title: `Snaparound®\nCable Marker`,
 		},
 
 		{
@@ -195,17 +195,17 @@ const machineButtonLayout = {
 		{
 			textRight: '71.5%',
 			textBottom: '23%',
-			title: `PRO-TRACE\u00AE\nGronding Rod`,
+			title: `PRO-TRACE\u00AE\nGrounding Rod`,
 		},
 		{
 			textLeft: '34%',
 			textTop: '61%',
-			title: `TriView\u00AE\nMarker Post`,
+			title: `TriView®\nMarker Post`,
 		},
 		{
 			textLeft: '47%',
 			textBottom: '38%',
-			title: `PRO-TRACE\u00AE\nTracer Wire`,
+			title: `PRO-TRACE®\nTracer Wire`,
 		},
 		{
 			textRight: '35%',
@@ -221,6 +221,49 @@ const machineButtonLayout = {
 			textRight: '4%',
 			textTop: '40%',
 			title: `Utility\nMarking Flags`,
+		},
+	],
+	water: [
+		{
+			textLeft: '17%',
+			textTop: '22%',
+			title: `SoilMarkers™`,
+		},
+
+		{
+			textLeft: '22%',
+			textTop: '28%',
+			title: `Utility\nMarking Flags`,
+		},
+		{
+			textLeft: '26%',
+			textTop: '45%',
+			title: `Curb Markers`,
+		},
+		{
+			textLeft: '70%',
+			textTop: '32%',
+			title: `Detectable\nWarning Tape`,
+		},
+		{
+			textLeft: '21%',
+			textTop: '53%',
+			title: `Fire Hidrant `,
+		},
+		{
+			textLeft: '13%',
+			textTop: '12%',
+			title: `TracerLet\nTest Station`,
+		},
+		{
+			textLeft: '47%',
+			textTop: '38%',
+			title: `PRO-TRACE®\nTracer Wire`,
+		},
+		{
+			textLeft: '23%',
+			textTop: '15%',
+			title: `Durable\nWire Connector`,
 		},
 	],
 }
@@ -241,20 +284,20 @@ const machineSvgLayout = {
 		{
 			x1: '41%',
 			y1: '72.5%',
-			x2: '44%',
-			y2: '60%',
+			x2: '43%',
+			y2: '61%',
 		},
 		{
 			x1: '53.8%',
 			y1: '73.5%',
-			x2: '53%',
-			y2: '55%',
+			x2: '53.5%',
+			y2: '56%',
 		},
 		{
 			x1: '53.8%',
 			y1: '76%',
-			x2: '60%',
-			y2: '65%',
+			x2: '61%',
+			y2: '66%',
 		},
 		{
 			x1: '51.3%',
@@ -265,7 +308,7 @@ const machineSvgLayout = {
 		{
 			x1: '59.8%',
 			y1: '83.5%',
-			x2: '68%',
+			x2: '70%',
 			y2: '81%',
 		},
 		{
@@ -294,6 +337,62 @@ const machineSvgLayout = {
 		},
 	],
 	telecom: [
+		{
+			x1: '19%',
+			y1: '9%',
+			x2: '11%',
+			y2: '9.5%',
+		},
+		{
+			x1: '6%',
+			y1: '24%',
+			x2: '6.9%',
+			y2: '8.1%',
+		},
+		{
+			x1: '23%',
+			y1: '54%',
+			x2: '16.2%',
+			y2: '63.6%',
+		},
+		{
+			x1: '23%',
+			y1: '75%',
+			x2: '26.3%',
+			y2: '81.1%',
+		},
+		{
+			x1: '39%',
+			y1: '64%',
+			x2: '31.5%',
+			y2: '73%',
+		},
+		{
+			x1: '53%',
+			y1: '60%',
+			x2: '56%',
+			y2: '67.6%',
+		},
+		{
+			x1: '75%',
+			y1: '65%',
+			x2: '68%',
+			y2: '57.1%',
+		},
+		{
+			x1: '64%',
+			y1: '54%',
+			x2: '71.9%',
+			y2: '46.2%',
+		},
+		{
+			x1: '93%',
+			y1: '42%',
+			x2: '86%',
+			y2: '34%',
+		},
+	],
+	water: [
 		{
 			x1: '19%',
 			y1: '9%',
@@ -664,6 +763,138 @@ const buttonContent = {
 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+		},
+	},
+	water: {
+		textLeft: '0%',
+		textBottom: '0%',
+		title: `WATER`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
+		inputButtonGrid: [
+			`soilM`,
+			`utilityM`,
+			`curbM`,
+			`detectableW`,
+			`fireH`,
+			`tracerletT`,
+			`protraceT`,
+			`durableW`,
+		],
+
+		boxInfo: {
+			soilM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+			utilityM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+			curbM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			detectableW: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			fireH: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			tracerletT: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `TracerLet Test Station`,
+
+				content: [
+					`Above-ground test station head for mounting on new or existing PVC conduit`,
+					`Protects tracer wire ends from corrosion and the elements`,
+					`Made with high strength polycarbonate`,
+					`Use with any 1” PVC conduit`,
+					`Ideal for end of service termination and aesthetics`,
+					`Available with 1-4 terminals`,
+					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+				],
+			},
+			protraceT: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			durableW: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Durable Wire\nConnectors`,
+
+				content: [
+					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
 				],
 			},
 		},
@@ -1404,6 +1635,17 @@ function createContent(obj, parent) {
 			})
 			break
 		case 'WATER':
+			title1.style.padding = '0.25em 0.5em'
+			title1.style.fontSize = globalMediumTitleFontvar
+			title1.style.color = 'black'
+			title1.style.backgroundColor = '#297def'
+			titleH2.style.alignItems = 'flex-end'
+			textContent.style.alignItems = 'flex-start'
+			textContent.style.justifyContent = 'flex-end'
+			subButton.forEach((element) => {
+				element.style.backgroundColor = '#297def'
+			})
+
 			console.log("It's an apple.")
 			break
 		case 'TELECOM':
@@ -1417,7 +1659,7 @@ function createContent(obj, parent) {
 			subButton.forEach((element) => {
 				element.style.backgroundColor = '#efa229'
 			})
-			console.log("It's an orange.")
+
 			break
 		case 'ELECTRIC':
 			console.log("It's an orange.")
