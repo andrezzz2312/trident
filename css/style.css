@@ -331,10 +331,10 @@ video::slotted::-webkit-media-controls-container {
 .subButton {
 	white-space: pre-wrap;
 	text-align: center;
-	border-radius: 1vh;
+	border-radius: 0.5vh;
 	position: absolute;
 	border: none;
-	padding: 0.5% 0.8%;
+	padding: 0.5% 0.5%;
 	color: black;
 	font-family: Helvetica, sans-serif;
 	/* background-color: #ff4500; */
