@@ -203,8 +203,8 @@ const machineButtonLayout = {
 			title: `TriView®\nMarker Post`,
 		},
 		{
-			textLeft: '47%',
-			textBottom: '38%',
+			textLeft: '46%',
+			textBottom: '37%',
 			title: `PRO-TRACE®\nTracer Wire`,
 		},
 		{
@@ -368,16 +368,16 @@ const machineSvgLayout = {
 			y2: '73%',
 		},
 		{
-			x1: '53%',
-			y1: '60%',
-			x2: '56%',
-			y2: '67.6%',
+			x1: '51%',
+			y1: '62%',
+			x2: '54%',
+			y2: '69%',
 		},
 		{
 			x1: '75%',
 			y1: '65%',
-			x2: '68%',
-			y2: '57.1%',
+			x2: '67%',
+			y2: '57.4%',
 		},
 		{
 			x1: '64%',
@@ -1289,7 +1289,11 @@ function createSubVideos(source1, source2, source3) {
 		// 		subVideo2.loop = true
 		// 	}
 		// }
-		if (pageIndex === 'protraceG' || pageIndex === 'hideoutT') {
+		if (
+			pageIndex === 'protraceG' ||
+			pageIndex === 'hideoutT' ||
+			pageIndex === 'snaparoundC'
+		) {
 			subVideo2.loop = true
 		}
 
@@ -1367,6 +1371,9 @@ function createContent(obj, parent) {
 	if (labelTitle) {
 		pCont = document.createElement('div')
 		pCont.classList.add('pCont')
+		if (pageIndex === 'snaparoundC') {
+			pCont.style.paddingBottom = '40%'
+		}
 
 		titleH2 = document.createElement('span')
 		titleH2.classList.add('header')
@@ -1677,7 +1684,7 @@ function setFontSizes() {
 	const titulo = document.querySelector('.titulo')
 	const mainTextBox = document.querySelector('.mainTextBox')
 
-	globalFontvar = `calc(6px + (18 - 6) * ((${
+	globalFontvar = `calc(5px + (15 - 5) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 	bodyFontvar = `calc(6px + (20 - 6) * ((${
