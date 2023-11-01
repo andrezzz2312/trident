@@ -382,8 +382,8 @@ const machineSvgLayout = {
 		{
 			x1: '64%',
 			y1: '54%',
-			x2: '71.9%',
-			y2: '46.2%',
+			x2: '69.5%',
+			y2: '49.5%',
 		},
 		{
 			x1: '93%',
@@ -1444,11 +1444,11 @@ function createContent(obj, parent) {
 					icon = document.createElement('span')
 					icon.classList.add('icon')
 					icon.textContent = `\u2022`
-					icon.style.fontSize = globalFontvar
+					icon.style.fontSize = bodyFontvar
 
 					element = document.createElement('span')
 					element.textContent = e
-					element.style.fontSize = globalFontvar
+					element.style.fontSize = bodyFontvar
 					if (pageIndex !== 'durableW') {
 						elementContainer.appendChild(icon)
 					}
@@ -1677,24 +1677,26 @@ function setFontSizes() {
 	const titulo = document.querySelector('.titulo')
 	const mainTextBox = document.querySelector('.mainTextBox')
 
-	globalFontvar = `calc(6px + (15 - 6) * ((${
+	globalFontvar = `calc(6px + (18 - 6) * ((${
+		containVideoWidth + 'px'
+	} - 320px) / (1440 - 320)))`
+	bodyFontvar = `calc(6px + (20 - 6) * ((${
+		containVideoWidth + 'px'
+	} - 320px) / (1440 - 320)))`
+	globalTitleFontvar = `calc(8px + (22 - 8) * ((${
+		containVideoWidth + 'px'
+	} - 320px) / (1440 - 320)))`
+	globalMediumTitleFontvar = `calc(7px + (39 - 7) * ((${
+		containVideoWidth + 'px'
+	} - 320px) / (1440 - 320)))`
+	globalBigTitleFontvar = `calc(15px + (44 - 15) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
-	globalTitleFontvar = `calc(8px + (18 - 8) * ((${
+	buttonFontvar = `calc(6px + (22 - 6) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	globalMediumTitleFontvar = `calc(7px + (35 - 7) * ((${
-		containVideoWidth + 'px'
-	} - 320px) / (1440 - 320)))`
-	globalBigTitleFontvar = `calc(15px + (40 - 15) * ((${
-		containVideoWidth + 'px'
-	} - 320px) / (1440 - 320)))`
-
-	buttonFontvar = `calc(6px + (18 - 6) * ((${
-		containVideoWidth + 'px'
-	} - 320px) / (1440 - 320)))`
-	bigButtonFontvar = `calc(8px + (22 - 8) * ((${
+	bigButtonFontvar = `calc(8px + (26 - 8) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
@@ -1931,7 +1933,7 @@ function createBackButton(param) {
 	} else {
 		backButton = document.createElement('button')
 		backButton.classList.add('backButton')
-		backButton.style.fontSize = bigButtonFontvar
+		backButton.style.fontSize = buttonFontvar
 
 		// backButton.style.width = `calc(45px + (140 - 45) * ((${
 		// 	containVideoWidth + 'px'
