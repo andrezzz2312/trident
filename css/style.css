@@ -201,7 +201,7 @@ html {
 	/* height: 15%; */
 }
 .logo {
-	width: 15vw;
+	width: 100%;
 }
 .mainBox {
 	display: flex;

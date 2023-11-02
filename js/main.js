@@ -2461,20 +2461,57 @@ window.addEventListener('resize', function () {
 
 ////////// Event Listeners for the main buttons //////////
 
-fullscreen_button.addEventListener('click', function (e) {
-	expand.classList.toggle('disabledb')
-	contract.classList.toggle('disabledb')
+// fullscreen_button.addEventListener('click', function (e) {
+// 	expand.classList.toggle('disabledb')
+// 	contract.classList.toggle('disabledb')
 
-	if (!document.fullscreenElement) {
-		mainContainer.webkitRequestFullscreen()
-		mainContainer.webkitEnterFullscreen()
-		mainContainer.requestFullscreen()
+// 	if (!document.fullscreenElement) {
+// 		mainContainer.webkitRequestFullscreen()
+// 		mainContainer.webkitEnterFullscreen()
+// 		mainContainer.requestFullscreen()
+// 	} else {
+// 		document.exitFullscreen()
+// 		document.webkitExitFullscreen()
+// 	}
+// })
+const mainTextBox = document.querySelector('.mainTextBox')
+// Event listener for fullscreen button click
+fullscreen_button.addEventListener('click', function (e) {
+	if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+		// Enter fullscreen mode
+		if (mainContainer.requestFullscreen) {
+			mainContainer.requestFullscreen()
+		} else if (mainContainer.webkitRequestFullscreen) {
+			mainContainer.webkitRequestFullscreen()
+		}
 	} else {
-		document.exitFullscreen()
-		document.webkitExitFullscreen()
+		// Exit fullscreen mode
+		if (document.exitFullscreen) {
+			document.exitFullscreen()
+		} else if (document.webkitExitFullscreen) {
+			document.webkitExitFullscreen()
+		}
 	}
 })
 
+// Event listener for fullscreen change
+document.addEventListener('fullscreenchange', function () {
+	if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+		// The document is not in fullscreen mode
+		expand.classList.remove('disabledb')
+		contract.classList.add('disabledb')
+		console.log('Exited fullscreen mode')
+		mainTextBox.textContent = 'Exited fullscreen mode'
+		// Perform actions when exiting fullscreen mode
+	} else {
+		// The document is in fullscreen mode
+		expand.classList.add('disabledb')
+		contract.classList.remove('disabledb')
+		mainTextBox.textContent = 'Entered fullscreen mode'
+		console.log('Entered fullscreen mode')
+		// Perform actions when entering fullscreen mode
+	}
+})
 mainMenuB.forEach((e, i) => {
 	dataId[i] = e.dataset.id
 	dataVariant[i] = e.dataset.variant
