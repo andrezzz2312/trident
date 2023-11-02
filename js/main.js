@@ -266,6 +266,39 @@ const machineButtonLayout = {
 			title: `Durable\nWire Connector`,
 		},
 	],
+	electric: [
+		{
+			textLeft: '5.5%',
+			textTop: '23.5%',
+			title: `Long Range\nMetal Mount\nRFID Tags`,
+		},
+
+		{
+			textLeft: '35.5%',
+			textTop: '64%',
+			title: `Detectable\nWarning Tape`,
+		},
+		{
+			textLeft: '52%',
+			textTop: '56%',
+			title: `Curb Markers`,
+		},
+		{
+			textLeft: '57.5%',
+			textTop: '38%',
+			title: `Utility\nMarking Flags`,
+		},
+		{
+			textLeft: '78%',
+			textTop: '52%',
+			title: `ANSI / NEMA / OSHA\nSafety Labels`,
+		},
+		{
+			textLeft: '87%',
+			textTop: '38.5%',
+			title: `SoilMarkers™`,
+		},
+	],
 }
 const machineSvgLayout = {
 	gas: [
@@ -440,6 +473,44 @@ const machineSvgLayout = {
 			y1: '68%',
 			x2: '77.9%',
 			y2: '80.4%',
+		},
+	],
+	electric: [
+		{
+			x1: '7.5%',
+			y1: '27%',
+			x2: '12.2%',
+			y2: '10%',
+		},
+		{
+			x1: '40%',
+			y1: '68%',
+			x2: '45%',
+			y2: '78.5%',
+		},
+		{
+			x1: '57%',
+			y1: '59%',
+			x2: '63%',
+			y2: '54%',
+		},
+		{
+			x1: '61%',
+			y1: '42%',
+			x2: '65.2%',
+			y2: '50.7%',
+		},
+		{
+			x1: '81%',
+			y1: '54%',
+			x2: '74.5%',
+			y2: '44.2%',
+		},
+		{
+			x1: '90%',
+			y1: '42%',
+			x2: '89.7%',
+			y2: '34.5%',
 		},
 	],
 }
@@ -891,6 +962,109 @@ const buttonContent = {
 					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
 					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
 					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+				],
+			},
+		},
+	},
+	electric: {
+		textLeft: '0%',
+		textBottom: '0%',
+		title: `ELECTRIC`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
+		inputButtonGrid: [
+			`longR`,
+			`detectableW`,
+			`curbM`,
+			`utilityM`,
+			`ansiN`,
+			`soilM`,
+		],
+
+		boxInfo: {
+			longR: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+
+			detectableW: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+
+			curbM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			utilityM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+
+			ansiN: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+			soilM: {
+				textLeft: '0%',
+				textTop: '0%',
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
 				],
 			},
 		},
@@ -1672,7 +1846,16 @@ function createContent(obj, parent) {
 
 			break
 		case 'ELECTRIC':
-			console.log("It's an orange.")
+			title1.style.padding = '0.25em 0.5em'
+			title1.style.fontSize = globalMediumTitleFontvar
+			title1.style.color = 'black'
+			title1.style.backgroundColor = '#bd3737'
+			titleH2.style.alignItems = 'flex-end'
+			textContent.style.alignItems = 'flex-start'
+			textContent.style.justifyContent = 'flex-end'
+			subButton.forEach((element) => {
+				element.style.backgroundColor = '#bd3737'
+			})
 			break
 		default:
 			console.log("It's something else.")
