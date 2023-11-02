@@ -986,15 +986,13 @@ const buttonContent = {
 			longR: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `7-Inch SoilMarkers™`,
+				title: `Long Range Metal\nMount RFID Tags`,
 
 				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-					`7” round disk with a 13” stake that has two barbs`,
-					`Temperature stable/UV stable`,
-					`Impact-resistant polypropylene disk`,
-					`Reinforced polypropylene thermoplastic stake`,
-					`Hot-stamped warning legend is molded into the disk`,
+					`Long read distance of up to 65 feet`,
+					`Conforms to any flat or curved metal surface`,
+					`Tracks overhead assets, storage yard items, etc.`,
+					`Withstands harsh environments`,
 				],
 			},
 
@@ -1042,15 +1040,17 @@ const buttonContent = {
 			ansiN: {
 				textLeft: '0%',
 				textTop: '0%',
-				title: `7-Inch SoilMarkers™`,
+				title: `ANSI / NEMA / OSHA\nSafety Labels`,
 
 				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-					`7” round disk with a 13” stake that has two barbs`,
-					`Temperature stable/UV stable`,
-					`Impact-resistant polypropylene disk`,
-					`Reinforced polypropylene thermoplastic stake`,
-					`Hot-stamped warning legend is molded into the disk`,
+					`Outdoor durable to last for years`,
+					`Abrasion, UV, and chemical resistant`,
+					`ANSI, NEMA, or OSHA compliant`,
+					`Custom sizes, materials, and adhesives available`,
+					`Engineered to withstand extreme temperature ranges`,
+					`Moisture and grease resistant`,
+					`Special adhesives for adherence to a wide variety of surface applications`,
+					`Engineer grade reflective material for low light / nighttime visibility`,
 				],
 			},
 			soilM: {
