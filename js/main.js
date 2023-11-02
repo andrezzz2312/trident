@@ -43,7 +43,8 @@ let videoloop,
 	globalParent,
 	pageIndex,
 	pContent,
-	pContent2
+	pContent2,
+	boxInfo
 
 let boxVideo = []
 let buttonShort = []
@@ -115,7 +116,231 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 } else {
 	isIOS = false
 }
+let buttonContent
+fetch('./assets/editable.json')
+	.then((response) => response.json())
+	.then((data) => {
+		boxInfo = data.boxInfo
+		console.log(boxInfo)
+		buttonContent = {
+			gas: {
+				title: `GAS / OIL`,
+				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+				`,
 
+				inputButtonGrid: [
+					`triviewM`,
+					`detectableW`,
+					`protraceT`,
+					`hideoutT`,
+					`isoS`,
+					`protraceG`,
+					`durableW`,
+					`tracerletT`,
+					`soilM`,
+					`utilityM`,
+					`curbM`,
+				],
+				boxInfo: {
+					triviewM: {
+						title: boxInfo.triviewM.title,
+						content: [...boxInfo.triviewM.content],
+					},
+					detectableW: {
+						title: boxInfo.detectableW.title,
+						content: [...boxInfo.detectableW.content],
+					},
+					protraceT: {
+						title: boxInfo.protraceT.title,
+						content: [...boxInfo.protraceT.content],
+					},
+					hideoutT: {
+						title: boxInfo.hideoutT.title,
+						content: [...boxInfo.hideoutT.content],
+					},
+					isoS: {
+						title: boxInfo.isoS.title,
+						content: [...boxInfo.isoS.content],
+					},
+					protraceG: {
+						title: boxInfo.protraceG.title,
+						content: [...boxInfo.protraceG.content],
+					},
+					durableW: {
+						title: boxInfo.durableW.title,
+						content: [...boxInfo.durableW.content],
+					},
+					curbM: {
+						title: boxInfo.curbM.title,
+						content: [...boxInfo.curbM.content],
+					},
+					utilityM: {
+						title: boxInfo.utilityM.title,
+						content: [...boxInfo.utilityM.content],
+					},
+					soilM: {
+						title: boxInfo.soilM.title,
+						content: [...boxInfo.soilM.content],
+					},
+					tracerletT: {
+						title: boxInfo.tracerletT.title,
+						content: [...boxInfo.tracerletT.content],
+					},
+				},
+			},
+			telecom: {
+				title: `TELECOM`,
+				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+				`,
+
+				inputButtonGrid: [
+					`aerialC`,
+					`snaparoundC`,
+					`aluminumU`,
+					`protraceG`,
+					`triviewM`,
+					`protraceT`,
+					`curbM`,
+					`detectableW`,
+					`utilityM`,
+				],
+
+				boxInfo: {
+					aerialC: {
+						title: boxInfo.aerialC.title,
+						content: [...boxInfo.aerialC.content],
+					},
+					snaparoundC: {
+						title: boxInfo.snaparoundC.title,
+						content: [...boxInfo.snaparoundC.content],
+					},
+					aluminumU: {
+						title: boxInfo.aluminumU.title,
+						content: [...boxInfo.aluminumU.content],
+					},
+					protraceG: {
+						title: boxInfo.protraceG.title,
+						content: [...boxInfo.protraceG.content],
+					},
+					triviewM: {
+						title: boxInfo.triviewM.title,
+						content: [...boxInfo.triviewM.content],
+					},
+					protraceT: {
+						title: boxInfo.protraceT.title,
+						content: [...boxInfo.protraceT.content],
+					},
+					curbM: {
+						title: boxInfo.curbM.title,
+						content: [...boxInfo.curbM.content],
+					},
+					detectableW: {
+						title: boxInfo.detectableW.title,
+						content: [...boxInfo.detectableW.content],
+					},
+					utilityM: {
+						title: boxInfo.utilityM.title,
+						content: [...boxInfo.utilityM.content],
+					},
+				},
+			},
+			water: {
+				title: `WATER`,
+				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+				`,
+
+				inputButtonGrid: [
+					`soilM`,
+					`utilityM`,
+					`curbM`,
+					`detectableW`,
+					`fireH`,
+					`tracerletT`,
+					`protraceT`,
+					`durableW`,
+				],
+
+				boxInfo: {
+					soilM: {
+						title: boxInfo.soilM.title,
+						content: [...boxInfo.soilM.content],
+					},
+					utilityM: {
+						title: boxInfo.utilityM.title,
+						content: [...boxInfo.utilityM.content],
+					},
+					curbM: {
+						title: boxInfo.curbM.title,
+						content: [...boxInfo.curbM.content],
+					},
+					detectableW: {
+						title: boxInfo.detectableW.title,
+						content: [...boxInfo.detectableW.content],
+					},
+					fireH: {
+						title: boxInfo.fireH.title,
+						content: [...boxInfo.fireH.content],
+					},
+					tracerletT: {
+						title: boxInfo.tracerletT.title,
+						content: [...boxInfo.tracerletT.content],
+					},
+					protraceT: {
+						title: boxInfo.protraceT.title,
+						content: [...boxInfo.protraceT.content],
+					},
+					durableW: {
+						title: boxInfo.durableW.title,
+						content: [...boxInfo.durableW.content],
+					},
+				},
+			},
+			electric: {
+				title: `ELECTRIC`,
+				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+				`,
+
+				inputButtonGrid: [
+					`longR`,
+					`detectableW`,
+					`curbM`,
+					`utilityM`,
+					`ansiN`,
+					`soilM`,
+				],
+
+				boxInfo: {
+					longR: {
+						title: boxInfo.longR.title,
+						content: [...boxInfo.longR.content],
+					},
+					detectableW: {
+						title: boxInfo.detectableW.title,
+						content: [...boxInfo.detectableW.content],
+					},
+					curbM: {
+						title: boxInfo.curbM.title,
+						content: [...boxInfo.curbM.content],
+					},
+					utilityM: {
+						title: boxInfo.utilityM.title,
+						content: [...boxInfo.utilityM.content],
+					},
+					ansiN: {
+						title: boxInfo.ansiN.title,
+						content: [...boxInfo.ansiN.content],
+					},
+					soilM: {
+						title: boxInfo.soilM.title,
+						content: [...boxInfo.soilM.content],
+					},
+				},
+			},
+		}
+	})
+	.catch((error) => {
+		console.error('Error loading JSON data:', error)
+	})
 // var buttonsText = []
 const machineButtonLayout = {
 	gas: [
@@ -514,562 +739,486 @@ const machineSvgLayout = {
 		},
 	],
 }
-const buttonContent = {
-	gas: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `GAS / OIL`,
-		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-		`,
+// const buttonContent = {
+// 	gas: {
+// 		title: `GAS / OIL`,
+// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+// 		`,
 
-		inputButtonGrid: [
-			`triviewM`,
-			`detectableW`,
-			`protraceT`,
-			`hideoutT`,
-			`isoS`,
-			`protraceG`,
-			`durableW`,
-			`tracerletT`,
-			`soilM`,
-			`utilityM`,
-			`curbM`,
-		],
-		boxInfo: {
-			triviewM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `TriView® Marker Post`,
+// 		inputButtonGrid: [
+// 			`triviewM`,
+// 			`detectableW`,
+// 			`protraceT`,
+// 			`hideoutT`,
+// 			`isoS`,
+// 			`protraceG`,
+// 			`durableW`,
+// 			`tracerletT`,
+// 			`soilM`,
+// 			`utilityM`,
+// 			`curbM`,
+// 		],
+// 		boxInfo: {
+// 			triviewM: {
+// 				title: boxInfo.aerialC.title,
 
-				content: [
-					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
-					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
-					`360-degree visibility`,
-					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
-					`Patented TriGrip™ Anchor for locking post into ground`,
-					`Performs in temperatures ranging from -40° F to +150° F`,
-					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
-					`Available as a test station with removable cap that offers easy access to tracer wire`,
-				],
-			},
-			detectableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Detectable\nWarning Tape`,
+// 				content: [
+// 					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+// 					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+// 					`360-degree visibility`,
+// 					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+// 					`Patented TriGrip™ Anchor for locking post into ground`,
+// 					`Performs in temperatures ranging from -40° F to +150° F`,
+// 					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+// 					`Available as a test station with removable cap that offers easy access to tracer wire`,
+// 				],
+// 			},
+// 			detectableW: {
+// 				title: `Detectable\nWarning Tape`,
 
-				content: [
-					`Endures temperatures from -60°F to 250°F`,
-					`Permanently imprinted with black ink to last the lifetime of the product`,
-					`Incredibly strong and promises long-term durability`,
-					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-					`Aluminum core is detected through means of inductive locating`,
-				],
-			},
-			protraceT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Pro-Trace® CCS\nTracer Wire`,
+// 				content: [
+// 					`Endures temperatures from -60°F to 250°F`,
+// 					`Permanently imprinted with black ink to last the lifetime of the product`,
+// 					`Incredibly strong and promises long-term durability`,
+// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+// 					`Aluminum core is detected through means of inductive locating`,
+// 				],
+// 			},
+// 			protraceT: {
+// 				title: `Pro-Trace® CCS\nTracer Wire`,
 
-				content: [
-					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-					`Equal to copper in signal performance, lower in cost, and great price stability`,
-					`RoHS Compliant and works with connectors you already use`,
-					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-				],
-			},
-			hideoutT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `HideOut™\nTest Station`,
+// 				content: [
+// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
+// 					`RoHS Compliant and works with connectors you already use`,
+// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+// 				],
+// 			},
+// 			hideoutT: {
+// 				title: `HideOut™\nTest Station`,
 
-				content: [
-					`Provides easy access to tracer wire in spots where upright posts are not practical`,
-					`Flush-mounted test station ideal for areas where mowers are prevalent`,
-					`Telescoping terminal board provides easy access to terminals for locators`,
-					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
-					`Locking lid with metal plate makes HideOut™ easy to locate`,
-					`Hot-stamped graphics`,
-					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
-				],
-			},
-			isoS: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `ISO-Switch™`,
+// 				content: [
+// 					`Provides easy access to tracer wire in spots where upright posts are not practical`,
+// 					`Flush-mounted test station ideal for areas where mowers are prevalent`,
+// 					`Telescoping terminal board provides easy access to terminals for locators`,
+// 					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
+// 					`Locking lid with metal plate makes HideOut™ easy to locate`,
+// 					`Hot-stamped graphics`,
+// 					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
+// 				],
+// 			},
+// 			isoS: {
+// 				title: `ISO-Switch™`,
 
-				content: [
-					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
-					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
-					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
-					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
-				],
-			},
-			protraceG: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `PRO-TRACE®\nGrounding Rod`,
+// 				content: [
+// 					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
+// 					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
+// 					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
+// 					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
+// 				],
+// 			},
+// 			protraceG: {
+// 				title: `PRO-TRACE®\nGrounding Rod`,
 
-				content: [
-					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
-					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
-					`Twist-on connector included to splice lead wire to tracer wire`,
-					`20 feet of built-in lead wire allows for placement flexibility`,
-					`HDPW cap improves drivability into the earth and is simple to install`,
-				],
-			},
-			durableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Durable Wire\nConnectors`,
+// 				content: [
+// 					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+// 					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+// 					`Twist-on connector included to splice lead wire to tracer wire`,
+// 					`20 feet of built-in lead wire allows for placement flexibility`,
+// 					`HDPW cap improves drivability into the earth and is simple to install`,
+// 				],
+// 			},
+// 			durableW: {
+// 				title: `Durable Wire\nConnectors`,
 
-				content: [
-					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
-					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
-					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
-					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
-					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
-					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
-					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
-					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
-				],
-			},
-			curbM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Curb Markers`,
+// 				content: [
+// 					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+// 					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+// 					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+// 					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+// 					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+// 					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+// 					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+// 					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+// 				],
+// 			},
+// 			curbM: {
+// 				title: `Curb Markers`,
 
-				content: [
-					`Durable surface markers that can be attached to almost any surface`,
-					`Can be printed on reflective or non-reflective substrates`,
-					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-					`Easily installed with our industrial adhesive`,
-					`Temperature and UV stable`,
-					`Impact and abrasion resistant`,
-				],
-			},
-			utilityM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Utility Marking Flags`,
+// 				content: [
+// 					`Durable surface markers that can be attached to almost any surface`,
+// 					`Can be printed on reflective or non-reflective substrates`,
+// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+// 					`Easily installed with our industrial adhesive`,
+// 					`Temperature and UV stable`,
+// 					`Impact and abrasion resistant`,
+// 				],
+// 			},
+// 			utilityM: {
+// 				title: `Utility Marking Flags`,
 
-				content: [
-					`Ensure consistent communication and long-lasting visibility for your project`,
-					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-				],
-			},
-			soilM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `7-Inch SoilMarkers™`,
+// 				content: [
+// 					`Ensure consistent communication and long-lasting visibility for your project`,
+// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+// 				],
+// 			},
+// 			soilM: {
+// 				title: `7-Inch SoilMarkers™`,
 
-				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-					`7” round disk with a 13” stake that has two barbs`,
-					`Temperature stable/UV stable`,
-					`Impact-resistant polypropylene disk`,
-					`Reinforced polypropylene thermoplastic stake`,
-					`Hot-stamped warning legend is molded into the disk`,
-				],
-			},
-			tracerletT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `TracerLet Test Station`,
+// 				content: [
+// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+// 					`7” round disk with a 13” stake that has two barbs`,
+// 					`Temperature stable/UV stable`,
+// 					`Impact-resistant polypropylene disk`,
+// 					`Reinforced polypropylene thermoplastic stake`,
+// 					`Hot-stamped warning legend is molded into the disk`,
+// 				],
+// 			},
+// 			tracerletT: {
+// 				title: `TracerLet Test Station`,
 
-				content: [
-					`Above-ground test station head for mounting on new or existing PVC conduit`,
-					`Protects tracer wire ends from corrosion and the elements`,
-					`Made with high strength polycarbonate`,
-					`Use with any 1” PVC conduit`,
-					`Ideal for end of service termination and aesthetics`,
-					`Available with 1-4 terminals`,
-					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
-				],
-			},
-		},
-	},
-	telecom: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `TELECOM`,
-		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-		`,
+// 				content: [
+// 					`Above-ground test station head for mounting on new or existing PVC conduit`,
+// 					`Protects tracer wire ends from corrosion and the elements`,
+// 					`Made with high strength polycarbonate`,
+// 					`Use with any 1” PVC conduit`,
+// 					`Ideal for end of service termination and aesthetics`,
+// 					`Available with 1-4 terminals`,
+// 					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+// 				],
+// 			},
+// 		},
+// 	},
+// 	telecom: {
+// 		title: `TELECOM`,
+// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+// 		`,
 
-		inputButtonGrid: [
-			`aerialC`,
-			`snaparoundC`,
-			`aluminumU`,
-			`protraceG`,
-			`triviewM`,
-			`protraceT`,
-			`curbM`,
-			`detectableW`,
-			`utilityM`,
-		],
+// 		inputButtonGrid: [
+// 			`aerialC`,
+// 			`snaparoundC`,
+// 			`aluminumU`,
+// 			`protraceG`,
+// 			`triviewM`,
+// 			`protraceT`,
+// 			`curbM`,
+// 			`detectableW`,
+// 			`utilityM`,
+// 		],
 
-		boxInfo: {
-			aerialC: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Aerial Cable Markers`,
+// 		boxInfo: {
+// 			aerialC: {
+// 				title: `Aerial Cable Markers`,
 
-				content: [
-					`Easily identify aerial cables from the ground`,
-					`UV stable and outdoor durable PVC marker and label`,
-					`Adhesive strip along inside of clip ensures the marker won’t spin`,
-					`Telecommunications Orange — dimensions: 6”W x 1.625”H`,
-				],
-			},
-			snaparoundC: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Snaparound®\nCable Markers`,
+// 				content: [
+// 					`Easily identify aerial cables from the ground`,
+// 					`UV stable and outdoor durable PVC marker and label`,
+// 					`Adhesive strip along inside of clip ensures the marker won’t spin`,
+// 					`Telecommunications Orange — dimensions: 6”W x 1.625”H`,
+// 				],
+// 			},
+// 			snaparoundC: {
+// 				title: `Snaparound®\nCable Markers`,
 
-				content: [
-					`Outdoor durable, UV, solvent, and water resistant`,
-					`Custom sizes, colors, and messaging`,
-					`Mount around metal pipes, wires, and cables`,
-					`RFID available`,
-				],
-			},
-			aluminumU: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Aluminum\nUtility Pole Tags`,
+// 				content: [
+// 					`Outdoor durable, UV, solvent, and water resistant`,
+// 					`Custom sizes, colors, and messaging`,
+// 					`Mount around metal pipes, wires, and cables`,
+// 					`RFID available`,
+// 				],
+// 			},
+// 			aluminumU: {
+// 				title: `Aluminum\nUtility Pole Tags`,
 
-				content: [
-					`Clearly identify your utility poles with embossed metal characters`,
-					`Aluminum construction for outdoor durability`,
-					`Common character height: 1”, 3” and 6” tall`,
-					`1” vertical or horizontal orientation available`,
-				],
-			},
-			protraceG: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `PRO-TRACE®\nGrounding Rod`,
+// 				content: [
+// 					`Clearly identify your utility poles with embossed metal characters`,
+// 					`Aluminum construction for outdoor durability`,
+// 					`Common character height: 1”, 3” and 6” tall`,
+// 					`1” vertical or horizontal orientation available`,
+// 				],
+// 			},
+// 			protraceG: {
+// 				title: `PRO-TRACE®\nGrounding Rod`,
 
-				content: [
-					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
-					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
-					`Twist-on connector included to splice lead wire to tracer wire`,
-					`20 feet of built-in lead wire allows for placement flexibility`,
-					`HDPW cap improves drivability into the earth and is simple to install`,
-				],
-			},
-			triviewM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `TriView® Marker Post`,
+// 				content: [
+// 					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+// 					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+// 					`Twist-on connector included to splice lead wire to tracer wire`,
+// 					`20 feet of built-in lead wire allows for placement flexibility`,
+// 					`HDPW cap improves drivability into the earth and is simple to install`,
+// 				],
+// 			},
+// 			triviewM: {
+// 				title: `TriView® Marker Post`,
 
-				content: [
-					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
-					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
-					`360-degree visibility`,
-					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
-					`Patented TriGrip™ Anchor for locking post into ground`,
-					`Performs in temperatures ranging from -40° F to +150° F`,
-					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
-					`Available as a test station with removable cap that offers easy access to tracer wire`,
-				],
-			},
-			protraceT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Pro-Trace® CCS\nTracer Wire`,
+// 				content: [
+// 					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+// 					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+// 					`360-degree visibility`,
+// 					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+// 					`Patented TriGrip™ Anchor for locking post into ground`,
+// 					`Performs in temperatures ranging from -40° F to +150° F`,
+// 					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+// 					`Available as a test station with removable cap that offers easy access to tracer wire`,
+// 				],
+// 			},
+// 			protraceT: {
+// 				title: `Pro-Trace® CCS\nTracer Wire`,
 
-				content: [
-					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-					`Equal to copper in signal performance, lower in cost, and great price stability`,
-					`RoHS Compliant and works with connectors you already use`,
-					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-				],
-			},
-			curbM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Curb Markers`,
+// 				content: [
+// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
+// 					`RoHS Compliant and works with connectors you already use`,
+// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+// 				],
+// 			},
+// 			curbM: {
+// 				title: `Curb Markers`,
 
-				content: [
-					`Durable surface markers that can be attached to almost any surface`,
-					`Can be printed on reflective or non-reflective substrates`,
-					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-					`Easily installed with our industrial adhesive`,
-					`Temperature and UV stable`,
-					`Impact and abrasion resistant`,
-				],
-			},
-			detectableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Detectable\nWarning Tape`,
+// 				content: [
+// 					`Durable surface markers that can be attached to almost any surface`,
+// 					`Can be printed on reflective or non-reflective substrates`,
+// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+// 					`Easily installed with our industrial adhesive`,
+// 					`Temperature and UV stable`,
+// 					`Impact and abrasion resistant`,
+// 				],
+// 			},
+// 			detectableW: {
+// 				title: `Detectable\nWarning Tape`,
 
-				content: [
-					`Endures temperatures from -60°F to 250°F`,
-					`Permanently imprinted with black ink to last the lifetime of the product`,
-					`Incredibly strong and promises long-term durability`,
-					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-					`Aluminum core is detected through means of inductive locating`,
-				],
-			},
-			utilityM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Utility Marking Flags`,
+// 				content: [
+// 					`Endures temperatures from -60°F to 250°F`,
+// 					`Permanently imprinted with black ink to last the lifetime of the product`,
+// 					`Incredibly strong and promises long-term durability`,
+// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+// 					`Aluminum core is detected through means of inductive locating`,
+// 				],
+// 			},
+// 			utilityM: {
+// 				title: `Utility Marking Flags`,
 
-				content: [
-					`Ensure consistent communication and long-lasting visibility for your project`,
-					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-				],
-			},
-		},
-	},
-	water: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `WATER`,
-		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-		`,
+// 				content: [
+// 					`Ensure consistent communication and long-lasting visibility for your project`,
+// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+// 				],
+// 			},
+// 		},
+// 	},
+// 	water: {
+// 		title: `WATER`,
+// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+// 		`,
 
-		inputButtonGrid: [
-			`soilM`,
-			`utilityM`,
-			`curbM`,
-			`detectableW`,
-			`fireH`,
-			`tracerletT`,
-			`protraceT`,
-			`durableW`,
-		],
+// 		inputButtonGrid: [
+// 			`soilM`,
+// 			`utilityM`,
+// 			`curbM`,
+// 			`detectableW`,
+// 			`fireH`,
+// 			`tracerletT`,
+// 			`protraceT`,
+// 			`durableW`,
+// 		],
 
-		boxInfo: {
-			soilM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `7-Inch SoilMarkers™`,
+// 		boxInfo: {
+// 			soilM: {
+// 				title: `7-Inch SoilMarkers™`,
 
-				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-					`7” round disk with a 13” stake that has two barbs`,
-					`Temperature stable/UV stable`,
-					`Impact-resistant polypropylene disk`,
-					`Reinforced polypropylene thermoplastic stake`,
-					`Hot-stamped warning legend is molded into the disk`,
-				],
-			},
-			utilityM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Utility Marking Flags`,
+// 				content: [
+// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+// 					`7” round disk with a 13” stake that has two barbs`,
+// 					`Temperature stable/UV stable`,
+// 					`Impact-resistant polypropylene disk`,
+// 					`Reinforced polypropylene thermoplastic stake`,
+// 					`Hot-stamped warning legend is molded into the disk`,
+// 				],
+// 			},
+// 			utilityM: {
+// 				title: `Utility Marking Flags`,
 
-				content: [
-					`Ensure consistent communication and long-lasting visibility for your project`,
-					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-				],
-			},
-			curbM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Curb Markers`,
+// 				content: [
+// 					`Ensure consistent communication and long-lasting visibility for your project`,
+// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+// 				],
+// 			},
+// 			curbM: {
+// 				title: `Curb Markers`,
 
-				content: [
-					`Durable surface markers that can be attached to almost any surface`,
-					`Can be printed on reflective or non-reflective substrates`,
-					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-					`Easily installed with our industrial adhesive`,
-					`Temperature and UV stable`,
-					`Impact and abrasion resistant`,
-				],
-			},
-			detectableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Detectable\nWarning Tape`,
+// 				content: [
+// 					`Durable surface markers that can be attached to almost any surface`,
+// 					`Can be printed on reflective or non-reflective substrates`,
+// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+// 					`Easily installed with our industrial adhesive`,
+// 					`Temperature and UV stable`,
+// 					`Impact and abrasion resistant`,
+// 				],
+// 			},
+// 			detectableW: {
+// 				title: `Detectable\nWarning Tape`,
 
-				content: [
-					`Endures temperatures from -60°F to 250°F`,
-					`Permanently imprinted with black ink to last the lifetime of the product`,
-					`Incredibly strong and promises long-term durability`,
-					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-					`Aluminum core is detected through means of inductive locating`,
-				],
-			},
-			fireH: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Fire Hydrant Rings`,
+// 				content: [
+// 					`Endures temperatures from -60°F to 250°F`,
+// 					`Permanently imprinted with black ink to last the lifetime of the product`,
+// 					`Incredibly strong and promises long-term durability`,
+// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+// 					`Aluminum core is detected through means of inductive locating`,
+// 				],
+// 			},
+// 			fireH: {
+// 				title: `Fire Hydrant Rings`,
 
-				content: [
-					`Provide important information to firefighters regarding the functionality and ownership of hydrants`,
-					`Durable plastic disks resistant to weather, UV, tears, and scratches`,
-					`NFPA color-coded Flow Rings to indicate water flow capacity`,
-					`Reflective option for nighttime visibility`,
-					`Various inner opening diameters to accommodate a range of valve sizes`,
-					`Two stock legends: “For Fire Department Use Only” and “Out of Service”`,
-					`Customized legends available`,
-				],
-			},
-			tracerletT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `TracerLet Test Station`,
+// 				content: [
+// 					`Provide important information to firefighters regarding the functionality and ownership of hydrants`,
+// 					`Durable plastic disks resistant to weather, UV, tears, and scratches`,
+// 					`NFPA color-coded Flow Rings to indicate water flow capacity`,
+// 					`Reflective option for nighttime visibility`,
+// 					`Various inner opening diameters to accommodate a range of valve sizes`,
+// 					`Two stock legends: “For Fire Department Use Only” and “Out of Service”`,
+// 					`Customized legends available`,
+// 				],
+// 			},
+// 			tracerletT: {
+// 				title: `TracerLet Test Station`,
 
-				content: [
-					`Above-ground test station head for mounting on new or existing PVC conduit`,
-					`Protects tracer wire ends from corrosion and the elements`,
-					`Made with high strength polycarbonate`,
-					`Use with any 1” PVC conduit`,
-					`Ideal for end of service termination and aesthetics`,
-					`Available with 1-4 terminals`,
-					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
-				],
-			},
-			protraceT: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Pro-Trace® CCS\nTracer Wire`,
+// 				content: [
+// 					`Above-ground test station head for mounting on new or existing PVC conduit`,
+// 					`Protects tracer wire ends from corrosion and the elements`,
+// 					`Made with high strength polycarbonate`,
+// 					`Use with any 1” PVC conduit`,
+// 					`Ideal for end of service termination and aesthetics`,
+// 					`Available with 1-4 terminals`,
+// 					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+// 				],
+// 			},
+// 			protraceT: {
+// 				title: `Pro-Trace® CCS\nTracer Wire`,
 
-				content: [
-					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-					`Equal to copper in signal performance, lower in cost, and great price stability`,
-					`RoHS Compliant and works with connectors you already use`,
-					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-				],
-			},
-			durableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Durable Wire\nConnectors`,
+// 				content: [
+// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
+// 					`RoHS Compliant and works with connectors you already use`,
+// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+// 				],
+// 			},
+// 			durableW: {
+// 				title: `Durable Wire\nConnectors`,
 
-				content: [
-					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
-					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
-					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
-					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
-					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
-					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
-					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
-					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
-				],
-			},
-		},
-	},
-	electric: {
-		textLeft: '0%',
-		textBottom: '0%',
-		title: `ELECTRIC`,
-		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-		`,
+// 				content: [
+// 					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+// 					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+// 					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+// 					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+// 					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+// 					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+// 					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+// 					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+// 				],
+// 			},
+// 		},
+// 	},
+// 	electric: {
+// 		title: `ELECTRIC`,
+// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+// 		`,
 
-		inputButtonGrid: [
-			`longR`,
-			`detectableW`,
-			`curbM`,
-			`utilityM`,
-			`ansiN`,
-			`soilM`,
-		],
+// 		inputButtonGrid: [
+// 			`longR`,
+// 			`detectableW`,
+// 			`curbM`,
+// 			`utilityM`,
+// 			`ansiN`,
+// 			`soilM`,
+// 		],
 
-		boxInfo: {
-			longR: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Long Range Metal\nMount RFID Tags`,
+// 		boxInfo: {
+// 			longR: {
+// 				title: `Long Range Metal\nMount RFID Tags`,
 
-				content: [
-					`Long read distance of up to 65 feet`,
-					`Conforms to any flat or curved metal surface`,
-					`Tracks overhead assets, storage yard items, etc.`,
-					`Withstands harsh environments`,
-				],
-			},
+// 				content: [
+// 					`Long read distance of up to 65 feet`,
+// 					`Conforms to any flat or curved metal surface`,
+// 					`Tracks overhead assets, storage yard items, etc.`,
+// 					`Withstands harsh environments`,
+// 				],
+// 			},
 
-			detectableW: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Detectable\nWarning Tape`,
+// 			detectableW: {
+// 				title: `Detectable\nWarning Tape`,
 
-				content: [
-					`Endures temperatures from -60°F to 250°F`,
-					`Permanently imprinted with black ink to last the lifetime of the product`,
-					`Incredibly strong and promises long-term durability`,
-					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-					`Aluminum core is detected through means of inductive locating`,
-				],
-			},
+// 				content: [
+// 					`Endures temperatures from -60°F to 250°F`,
+// 					`Permanently imprinted with black ink to last the lifetime of the product`,
+// 					`Incredibly strong and promises long-term durability`,
+// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+// 					`Aluminum core is detected through means of inductive locating`,
+// 				],
+// 			},
 
-			curbM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Curb Markers`,
+// 			curbM: {
+// 				title: `Curb Markers`,
 
-				content: [
-					`Durable surface markers that can be attached to almost any surface`,
-					`Can be printed on reflective or non-reflective substrates`,
-					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-					`Easily installed with our industrial adhesive`,
-					`Temperature and UV stable`,
-					`Impact and abrasion resistant`,
-				],
-			},
-			utilityM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `Utility Marking Flags`,
+// 				content: [
+// 					`Durable surface markers that can be attached to almost any surface`,
+// 					`Can be printed on reflective or non-reflective substrates`,
+// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+// 					`Easily installed with our industrial adhesive`,
+// 					`Temperature and UV stable`,
+// 					`Impact and abrasion resistant`,
+// 				],
+// 			},
+// 			utilityM: {
+// 				title: `Utility Marking Flags`,
 
-				content: [
-					`Ensure consistent communication and long-lasting visibility for your project`,
-					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-				],
-			},
+// 				content: [
+// 					`Ensure consistent communication and long-lasting visibility for your project`,
+// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+// 				],
+// 			},
 
-			ansiN: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `ANSI / NEMA / OSHA\nSafety Labels`,
+// 			ansiN: {
+// 				title: `ANSI / NEMA / OSHA\nSafety Labels`,
 
-				content: [
-					`Outdoor durable to last for years`,
-					`Abrasion, UV, and chemical resistant`,
-					`ANSI, NEMA, or OSHA compliant`,
-					`Custom sizes, materials, and adhesives available`,
-					`Engineered to withstand extreme temperature ranges`,
-					`Moisture and grease resistant`,
-					`Special adhesives for adherence to a wide variety of surface applications`,
-					`Engineer grade reflective material for low light / nighttime visibility`,
-				],
-			},
-			soilM: {
-				textLeft: '0%',
-				textTop: '0%',
-				title: `7-Inch SoilMarkers™`,
+// 				content: [
+// 					`Outdoor durable to last for years`,
+// 					`Abrasion, UV, and chemical resistant`,
+// 					`ANSI, NEMA, or OSHA compliant`,
+// 					`Custom sizes, materials, and adhesives available`,
+// 					`Engineered to withstand extreme temperature ranges`,
+// 					`Moisture and grease resistant`,
+// 					`Special adhesives for adherence to a wide variety of surface applications`,
+// 					`Engineer grade reflective material for low light / nighttime visibility`,
+// 				],
+// 			},
+// 			soilM: {
+// 				title: `7-Inch SoilMarkers™`,
 
-				content: [
-					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-					`7” round disk with a 13” stake that has two barbs`,
-					`Temperature stable/UV stable`,
-					`Impact-resistant polypropylene disk`,
-					`Reinforced polypropylene thermoplastic stake`,
-					`Hot-stamped warning legend is molded into the disk`,
-				],
-			},
-		},
-	},
-}
+// 				content: [
+// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+// 					`7” round disk with a 13” stake that has two barbs`,
+// 					`Temperature stable/UV stable`,
+// 					`Impact-resistant polypropylene disk`,
+// 					`Reinforced polypropylene thermoplastic stake`,
+// 					`Hot-stamped warning legend is molded into the disk`,
+// 				],
+// 			},
+// 		},
+// 	},
+// }
 
 const rotationContent = {
 	turnlock10:
@@ -1497,10 +1646,10 @@ function createContent(obj, parent) {
 	console.trace()
 	delay = ''
 	console.log(obj)
-	textLeft = obj.textLeft
-	textTop = obj.textTop
-	textRight = obj.textRight
-	textBottom = obj.textBottom
+	// textLeft = obj.textLeft
+	// textTop = obj.textTop
+	// textRight = obj.textRight
+	// textBottom = obj.textBottom
 	labelTitle = obj.title
 	pContent = obj.content
 	pContent2 = obj.content2
@@ -1520,10 +1669,10 @@ function createContent(obj, parent) {
 	firstPage = document.createElement('div')
 	firstPage.classList.add('firstPage')
 
-	firstPage.style.right = textRight
-	firstPage.style.top = textTop
-	firstPage.style.left = textLeft
-	firstPage.style.bottom = textBottom
+	// firstPage.style.right = textRight
+	// firstPage.style.top = textTop
+	// firstPage.style.left = textLeft
+	// firstPage.style.bottom = textBottom
 
 	textContent = document.createElement('div')
 	textContent.classList.add('text')
