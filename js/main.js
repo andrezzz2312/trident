@@ -1288,36 +1288,73 @@ function createSvgs(e, i) {
 		'http://www.w3.org/2000/svg',
 		'svg'
 	)
-	const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
-	// const circle = document.createElementNS(
-	// 	'http://www.w3.org/2000/svg',
-	// 	'circle'
-	// )
+	const mainLine = document.createElementNS(
+		'http://www.w3.org/2000/svg',
+		'line'
+	)
+	const borderLine = document.createElementNS(
+		'http://www.w3.org/2000/svg',
+		'line'
+	)
+	// const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
 
 	centerContainer.classList.add('centerContainer')
 	svgContainer.classList.add('svgContainer')
 	createdSvg.classList.add('svg')
+
 	createdSvg.style.width = '100%'
 	createdSvg.style.height = '100%'
 
-	line.setAttribute('stroke', '#ffff')
-	line.setAttribute('stroke-width', '3')
-	line.setAttribute('x1', e.x1)
-	line.setAttribute('y1', e.y1)
-	line.setAttribute('x2', e.x2)
-	line.setAttribute('y2', e.y2)
+	const strokeWidth = calculateResponsiveStrokeWidth()
+	const borderStrokeWidth = strokeWidth + 2 // Adjust the border width as needed
 
-	// circle.classList.add('svgDot')
-	// circle.setAttribute('r', '6px')
-	// circle.setAttribute('fill', '#f04923')
-	// circle.setAttribute('
-	// circle.setAttribute('cy', e.cy)
+	const mainStrokeColor = '#ffff' // Main stroke color (white in this example)
+	const borderStrokeColor = '#ff0000'
+
+	mainLine.setAttribute('stroke', mainStrokeColor)
+	mainLine.setAttribute('stroke-width', strokeWidth)
+	mainLine.setAttribute('x1', e.x1)
+	mainLine.setAttribute('y1', e.y1)
+	mainLine.setAttribute('x2', e.x2)
+	mainLine.setAttribute('y2', e.y2)
+
+	// Calculate border coordinates based on main line coordinates and stroke width
+
+	// const x1 = `${parseFloat(e.x1) - borderStrokeWidth / 2}%`
+	// const x2 = `${parseFloat(e.x2) - borderStrokeWidth / 2}%`
+	// const y1 = `${parseFloat(e.y1) - borderStrokeWidth / 2}%`
+	// const y2 = `${parseFloat(e.y2) - borderStrokeWidth / 2}%`
+
+	borderLine.setAttribute('stroke', borderStrokeColor)
+	borderLine.setAttribute('stroke-width', borderStrokeWidth)
+	borderLine.setAttribute('x1', e.x1)
+	borderLine.setAttribute('y1', e.y1)
+	borderLine.setAttribute('x2', e.x2)
+	borderLine.setAttribute('y2', e.y2)
 
 	buttonGridContainer.appendChild(centerContainer)
 	centerContainer.appendChild(svgContainer)
 	svgContainer.appendChild(createdSvg)
-	createdSvg.appendChild(line)
-	// createdSvg.appendChild(circle)
+	createdSvg.appendChild(borderLine) // Add border line before main line
+	createdSvg.appendChild(mainLine)
+	// buttonGridContainer.appendChild(centerContainer)
+	// centerContainer.appendChild(svgContainer)
+	// svgContainer.appendChild(createdSvg)
+	// createdSvg.appendChild(line)
+}
+function calculateResponsiveStrokeWidth() {
+	// You can adjust this logic based on your specific requirements
+	const viewportWidth = window.innerWidth
+	const baseStrokeWidth = 5 // Default stroke width for larger screens
+	const maxWidth = 2000 // Maximum width where stroke width remains constant
+
+	// Calculate responsive stroke width based on viewport width
+	const responsiveStrokeWidth = Math.min(
+		baseStrokeWidth,
+		(baseStrokeWidth * viewportWidth) / maxWidth
+	)
+
+	return responsiveStrokeWidth
 }
 function InterpolateVideo(videoToPause, videoToVanish, videoToPlay) {
 	if (videoToPause) {
@@ -2022,7 +2059,7 @@ function setFontSizes() {
 	globalFontvar = `calc(5px + (15 - 5) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	bodyFontvar = `calc(6px + (20 - 6) * ((${
+	bodyFontvar = `calc(5px + (20 - 5) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 	globalTitleFontvar = `calc(8px + (22 - 8) * ((${
