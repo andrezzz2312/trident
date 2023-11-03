@@ -2474,7 +2474,7 @@ window.addEventListener('resize', function () {
 // 		document.webkitExitFullscreen()
 // 	}
 // })
-const mainTextBox = document.querySelector('.mainTextBox')
+
 // Event listener for fullscreen button click
 fullscreen_button.addEventListener('click', function (e) {
 	if (!document.fullscreenElement && !document.webkitFullscreenElement) {
@@ -2500,15 +2500,13 @@ document.addEventListener('fullscreenchange', function () {
 		// The document is not in fullscreen mode
 		expand.classList.remove('disabledb')
 		contract.classList.add('disabledb')
-		console.log('Exited fullscreen mode')
-		mainTextBox.textContent = 'Exited fullscreen mode'
+
 		// Perform actions when exiting fullscreen mode
 	} else {
 		// The document is in fullscreen mode
 		expand.classList.add('disabledb')
 		contract.classList.remove('disabledb')
-		mainTextBox.textContent = 'Entered fullscreen mode'
-		console.log('Entered fullscreen mode')
+
 		// Perform actions when entering fullscreen mode
 	}
 })
