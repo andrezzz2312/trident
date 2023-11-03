@@ -2142,6 +2142,7 @@ function createContent(obj, parent) {
 			textContent.style.alignItems = 'flex-start'
 			subButton.forEach((element) => {
 				element.style.backgroundColor = mainButtonsColor.gas
+				element.style.color = subButtonsColor.gas
 			})
 			break
 		case 'WATER':
@@ -2154,6 +2155,7 @@ function createContent(obj, parent) {
 			textContent.style.justifyContent = 'flex-end'
 			subButton.forEach((element) => {
 				element.style.backgroundColor = mainButtonsColor.water
+				element.style.color = subButtonsColor.water
 			})
 
 			console.log("It's an apple.")
@@ -2168,6 +2170,7 @@ function createContent(obj, parent) {
 			textContent.style.justifyContent = 'flex-end'
 			subButton.forEach((element) => {
 				element.style.backgroundColor = mainButtonsColor.telecom
+				element.style.color = subButtonsColor.telecom
 			})
 
 			break
