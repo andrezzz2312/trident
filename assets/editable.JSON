@@ -189,5 +189,11 @@
 		"electric": "#bd3737",
 		"gas": "#efe329"
 	},
+	"subButtons": {
+		"water": "#000000",
+		"telecom": "#000000",
+		"electric": "#ffff",
+		"gas": "#000000"
+	},
 	"_comment": " In order to change the contents of the sub button's information, you have to change the text on title or one of the lines of content, you can also add new lines to the content, but cannot guarantee that if it has more lines it will fit as it did previously. If you want to set a line skip for esthetic reasons, you can use a '\n' like in some of the examples. And ultimately you have to save the file and refresh the hosting so it can read the new information of the JSON file."
 }

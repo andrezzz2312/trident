@@ -45,7 +45,8 @@ let videoloop,
 	pContent,
 	pContent2,
 	boxInfo,
-	mainButtonsColor
+	mainButtonsColor,
+	subButtonsColor
 
 let boxVideo = []
 let buttonShort = []
@@ -123,6 +124,7 @@ fetch('./assets/editable.json')
 	.then((data) => {
 		boxInfo = data.boxInfo
 		mainButtonsColor = data.mainButtons
+		subButtonsColor = data.subButtons
 		console.log(boxInfo)
 		buttonContent = {
 			gas: {
@@ -2179,6 +2181,7 @@ function createContent(obj, parent) {
 			textContent.style.justifyContent = 'flex-end'
 			subButton.forEach((element) => {
 				element.style.backgroundColor = mainButtonsColor.electric
+				element.style.color = subButtonsColor.electric
 			})
 			break
 		default:
