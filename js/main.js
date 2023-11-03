@@ -1306,10 +1306,10 @@ function createSvgs(e, i) {
 	createdSvg.style.height = '100%'
 
 	const strokeWidth = calculateResponsiveStrokeWidth()
-	const borderStrokeWidth = strokeWidth + 2 // Adjust the border width as needed
+	// const borderStrokeWidth = strokeWidth + 2 // Adjust the border width as needed
 
 	const mainStrokeColor = '#ffff' // Main stroke color (white in this example)
-	const borderStrokeColor = '#ff0000'
+	// const borderStrokeColor = '#ff0000'
 
 	mainLine.setAttribute('stroke', mainStrokeColor)
 	mainLine.setAttribute('stroke-width', strokeWidth)
@@ -1325,17 +1325,17 @@ function createSvgs(e, i) {
 	// const y1 = `${parseFloat(e.y1) - borderStrokeWidth / 2}%`
 	// const y2 = `${parseFloat(e.y2) - borderStrokeWidth / 2}%`
 
-	borderLine.setAttribute('stroke', borderStrokeColor)
-	borderLine.setAttribute('stroke-width', borderStrokeWidth)
-	borderLine.setAttribute('x1', e.x1)
-	borderLine.setAttribute('y1', e.y1)
-	borderLine.setAttribute('x2', e.x2)
-	borderLine.setAttribute('y2', e.y2)
+	// borderLine.setAttribute('stroke', borderStrokeColor)
+	// borderLine.setAttribute('stroke-width', borderStrokeWidth)
+	// borderLine.setAttribute('x1', e.x1)
+	// borderLine.setAttribute('y1', e.y1)
+	// borderLine.setAttribute('x2', e.x2)
+	// borderLine.setAttribute('y2', e.y2)
 
 	buttonGridContainer.appendChild(centerContainer)
 	centerContainer.appendChild(svgContainer)
 	svgContainer.appendChild(createdSvg)
-	createdSvg.appendChild(borderLine) // Add border line before main line
+	// createdSvg.appendChild(borderLine) // Add border line before main line
 	createdSvg.appendChild(mainLine)
 	// buttonGridContainer.appendChild(centerContainer)
 	// centerContainer.appendChild(svgContainer)
@@ -1345,8 +1345,8 @@ function createSvgs(e, i) {
 function calculateResponsiveStrokeWidth() {
 	// You can adjust this logic based on your specific requirements
 	const viewportWidth = window.innerWidth
-	const baseStrokeWidth = 5 // Default stroke width for larger screens
-	const maxWidth = 2000 // Maximum width where stroke width remains constant
+	const baseStrokeWidth = 2 // Default stroke width for larger screens
+	const maxWidth = 2400 // Maximum width where stroke width remains constant
 
 	// Calculate responsive stroke width based on viewport width
 	const responsiveStrokeWidth = Math.min(
