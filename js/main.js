@@ -577,7 +577,7 @@ mainButtonsColor = {
 subButtonsColor = {
 	water: '#000000',
 	telecom: '#000000',
-	electric: '#ffff',
+	electric: '#000000',
 	gas: '#000000',
 }
 
