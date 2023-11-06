@@ -1701,7 +1701,7 @@ function createContent(obj, parent) {
 		})
 	}
 	// machineButtonLayout[parent].forEach((element, i) => {
-	console.log(element)
+	// console.log(element)
 	// 	// createButtons(element, i)
 	// })
 	// machineSvgLayout[parent].forEach((element, i) => {
