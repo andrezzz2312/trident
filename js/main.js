@@ -88,14 +88,499 @@ const modalalert = document.querySelector('.modalalert')
 const quality = document.querySelector('#quality_button')
 const mainMenuB = document.querySelectorAll('.mainMenuB')
 const titulo = document.querySelectorAll('.titulo')
+const buttonContent = {
+	gas: {
+		title: `GAS / OIL`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
 
-// let details = navigator.userAgent
-// let regexp = /android|iphone|kindle|ipad/i
-// let ios = /iphone|ipad/i
-// let macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i
-// let isMobileDevice = regexp.test(details)
-// let isIOS = ios.test(details)
-// let isMac = macosPlatforms.test(details)
+		inputButtonGrid: [
+			`triviewM`,
+			`detectableW`,
+			`protraceT`,
+			`hideoutT`,
+			`isoS`,
+			`protraceG`,
+			`durableW`,
+			`tracerletT`,
+			`soilM`,
+			`utilityM`,
+			`curbM`,
+		],
+		boxInfo: {
+			triviewM: {
+				title: 'TriView® Marker Post',
+
+				content: [
+					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+					`360-degree visibility`,
+					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+					`Patented TriGrip™ Anchor for locking post into ground`,
+					`Performs in temperatures ranging from -40° F to +150° F`,
+					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+					`Available as a test station with removable cap that offers easy access to tracer wire`,
+				],
+			},
+			detectableW: {
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			protraceT: {
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			hideoutT: {
+				title: `HideOut™\nTest Station`,
+
+				content: [
+					`Provides easy access to tracer wire in spots where upright posts are not practical`,
+					`Flush-mounted test station ideal for areas where mowers are prevalent`,
+					`Telescoping terminal board provides easy access to terminals for locators`,
+					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
+					`Locking lid with metal plate makes HideOut™ easy to locate`,
+					`Hot-stamped graphics`,
+					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
+				],
+			},
+			isoS: {
+				title: `ISO-Switch™`,
+
+				content: [
+					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
+					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
+					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
+					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
+				],
+			},
+			protraceG: {
+				title: `PRO-TRACE®\nGrounding Rod`,
+
+				content: [
+					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+					`Twist-on connector included to splice lead wire to tracer wire`,
+					`20 feet of built-in lead wire allows for placement flexibility`,
+					`HDPW cap improves drivability into the earth and is simple to install`,
+				],
+			},
+			durableW: {
+				title: `Durable Wire\nConnectors`,
+
+				content: [
+					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+				],
+			},
+			curbM: {
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			utilityM: {
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+			soilM: {
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+			tracerletT: {
+				title: `TracerLet Test Station`,
+
+				content: [
+					`Above-ground test station head for mounting on new or existing PVC conduit`,
+					`Protects tracer wire ends from corrosion and the elements`,
+					`Made with high strength polycarbonate`,
+					`Use with any 1” PVC conduit`,
+					`Ideal for end of service termination and aesthetics`,
+					`Available with 1-4 terminals`,
+					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+				],
+			},
+		},
+	},
+	telecom: {
+		title: `TELECOM`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
+		inputButtonGrid: [
+			`aerialC`,
+			`snaparoundC`,
+			`aluminumU`,
+			`protraceG`,
+			`triviewM`,
+			`protraceT`,
+			`curbM`,
+			`detectableW`,
+			`utilityM`,
+		],
+
+		boxInfo: {
+			aerialC: {
+				title: `Aerial Cable Markers`,
+
+				content: [
+					`Easily identify aerial cables from the ground`,
+					`UV stable and outdoor durable PVC marker and label`,
+					`Adhesive strip along inside of clip ensures the marker won’t spin`,
+					`Telecommunications Orange — dimensions: 6”W x 1.625”H`,
+				],
+			},
+			snaparoundC: {
+				title: `Snaparound®\nCable Markers`,
+
+				content: [
+					`Outdoor durable, UV, solvent, and water resistant`,
+					`Custom sizes, colors, and messaging`,
+					`Mount around metal pipes, wires, and cables`,
+					`RFID available`,
+				],
+			},
+			aluminumU: {
+				title: `Aluminum\nUtility Pole Tags`,
+
+				content: [
+					`Clearly identify your utility poles with embossed metal characters`,
+					`Aluminum construction for outdoor durability`,
+					`Common character height: 1”, 3” and 6” tall`,
+					`1” vertical or horizontal orientation available`,
+				],
+			},
+			protraceG: {
+				title: `PRO-TRACE®\nGrounding Rod`,
+
+				content: [
+					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+					`Twist-on connector included to splice lead wire to tracer wire`,
+					`20 feet of built-in lead wire allows for placement flexibility`,
+					`HDPW cap improves drivability into the earth and is simple to install`,
+				],
+			},
+			triviewM: {
+				title: `TriView® Marker Post`,
+
+				content: [
+					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+					`360-degree visibility`,
+					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+					`Patented TriGrip™ Anchor for locking post into ground`,
+					`Performs in temperatures ranging from -40° F to +150° F`,
+					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+					`Available as a test station with removable cap that offers easy access to tracer wire`,
+				],
+			},
+			protraceT: {
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			curbM: {
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			detectableW: {
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			utilityM: {
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+		},
+	},
+	water: {
+		title: `WATER`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
+		inputButtonGrid: [
+			`soilM`,
+			`utilityM`,
+			`curbM`,
+			`detectableW`,
+			`fireH`,
+			`tracerletT`,
+			`protraceT`,
+			`durableW`,
+		],
+
+		boxInfo: {
+			soilM: {
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+			utilityM: {
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+			curbM: {
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			detectableW: {
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			fireH: {
+				title: `Fire Hydrant Rings`,
+
+				content: [
+					`Provide important information to firefighters regarding the functionality and ownership of hydrants`,
+					`Durable plastic disks resistant to weather, UV, tears, and scratches`,
+					`NFPA color-coded Flow Rings to indicate water flow capacity`,
+					`Reflective option for nighttime visibility`,
+					`Various inner opening diameters to accommodate a range of valve sizes`,
+					`Two stock legends: “For Fire Department Use Only” and “Out of Service”`,
+					`Customized legends available`,
+				],
+			},
+			tracerletT: {
+				title: `TracerLet Test Station`,
+
+				content: [
+					`Above-ground test station head for mounting on new or existing PVC conduit`,
+					`Protects tracer wire ends from corrosion and the elements`,
+					`Made with high strength polycarbonate`,
+					`Use with any 1” PVC conduit`,
+					`Ideal for end of service termination and aesthetics`,
+					`Available with 1-4 terminals`,
+					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+				],
+			},
+			protraceT: {
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			durableW: {
+				title: `Durable Wire\nConnectors`,
+
+				content: [
+					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+				],
+			},
+		},
+	},
+	electric: {
+		title: `ELECTRIC`,
+		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		`,
+
+		inputButtonGrid: [
+			`longR`,
+			`detectableW`,
+			`curbM`,
+			`utilityM`,
+			`ansiN`,
+			`soilM`,
+		],
+
+		boxInfo: {
+			longR: {
+				title: `Long Range Metal\nMount RFID Tags`,
+
+				content: [
+					`Long read distance of up to 65 feet`,
+					`Conforms to any flat or curved metal surface`,
+					`Tracks overhead assets, storage yard items, etc.`,
+					`Withstands harsh environments`,
+				],
+			},
+
+			detectableW: {
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+
+			curbM: {
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			utilityM: {
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+
+			ansiN: {
+				title: `ANSI / NEMA / OSHA\nSafety Labels`,
+
+				content: [
+					`Outdoor durable to last for years`,
+					`Abrasion, UV, and chemical resistant`,
+					`ANSI, NEMA, or OSHA compliant`,
+					`Custom sizes, materials, and adhesives available`,
+					`Engineered to withstand extreme temperature ranges`,
+					`Moisture and grease resistant`,
+					`Special adhesives for adherence to a wide variety of surface applications`,
+					`Engineer grade reflective material for low light / nighttime visibility`,
+				],
+			},
+			soilM: {
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+		},
+	},
+}
+mainButtonsColor = {
+	water: '#297def',
+	telecom: '#efa229',
+	electric: '#bd3737',
+	gas: '#efe329',
+}
+subButtonsColor = {
+	water: '#000000',
+	telecom: '#000000',
+	electric: '#ffff',
+	gas: '#000000',
+}
+
 let isMobile = false
 window.mobileCheck = function () {
 	let mobile = (function (a) {
@@ -109,7 +594,7 @@ window.mobileCheck = function () {
 		)
 			isMobile = true
 	})(navigator.userAgent || window.opera)
-	console.log(isMobile)
+	// console.log(isMobile)
 }
 mobileCheck()
 let isIOS
@@ -118,369 +603,7 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 } else {
 	isIOS = false
 }
-let buttonContent
-fetch('./assets/editable.json')
-	.then((response) => response.json())
-	.then((data) => {
-		boxInfo = data.boxInfo
-		mainButtonsColor = data.mainButtons
-		subButtonsColor = data.subButtons
-		console.log(boxInfo)
-		buttonContent = {
-			gas: {
-				title: `GAS / OIL`,
-				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-				`,
 
-				inputButtonGrid: [
-					`triviewM`,
-					`detectableW`,
-					`protraceT`,
-					`hideoutT`,
-					`isoS`,
-					`protraceG`,
-					`durableW`,
-					`tracerletT`,
-					`soilM`,
-					`utilityM`,
-					`curbM`,
-				],
-				boxInfo: {
-					triviewM: {
-						title: boxInfo.triviewM.title,
-						content: [...boxInfo.triviewM.content],
-					},
-					detectableW: {
-						title: boxInfo.detectableW.title,
-						content: [...boxInfo.detectableW.content],
-					},
-					protraceT: {
-						title: boxInfo.protraceT.title,
-						content: [...boxInfo.protraceT.content],
-					},
-					hideoutT: {
-						title: boxInfo.hideoutT.title,
-						content: [...boxInfo.hideoutT.content],
-					},
-					isoS: {
-						title: boxInfo.isoS.title,
-						content: [...boxInfo.isoS.content],
-					},
-					protraceG: {
-						title: boxInfo.protraceG.title,
-						content: [...boxInfo.protraceG.content],
-					},
-					durableW: {
-						title: boxInfo.durableW.title,
-						content: [...boxInfo.durableW.content],
-					},
-					curbM: {
-						title: boxInfo.curbM.title,
-						content: [...boxInfo.curbM.content],
-					},
-					utilityM: {
-						title: boxInfo.utilityM.title,
-						content: [...boxInfo.utilityM.content],
-					},
-					soilM: {
-						title: boxInfo.soilM.title,
-						content: [...boxInfo.soilM.content],
-					},
-					tracerletT: {
-						title: boxInfo.tracerletT.title,
-						content: [...boxInfo.tracerletT.content],
-					},
-				},
-			},
-			telecom: {
-				title: `TELECOM`,
-				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-				`,
-
-				inputButtonGrid: [
-					`aerialC`,
-					`snaparoundC`,
-					`aluminumU`,
-					`protraceG`,
-					`triviewM`,
-					`protraceT`,
-					`curbM`,
-					`detectableW`,
-					`utilityM`,
-				],
-
-				boxInfo: {
-					aerialC: {
-						title: boxInfo.aerialC.title,
-						content: [...boxInfo.aerialC.content],
-					},
-					snaparoundC: {
-						title: boxInfo.snaparoundC.title,
-						content: [...boxInfo.snaparoundC.content],
-					},
-					aluminumU: {
-						title: boxInfo.aluminumU.title,
-						content: [...boxInfo.aluminumU.content],
-					},
-					protraceG: {
-						title: boxInfo.protraceG.title,
-						content: [...boxInfo.protraceG.content],
-					},
-					triviewM: {
-						title: boxInfo.triviewM.title,
-						content: [...boxInfo.triviewM.content],
-					},
-					protraceT: {
-						title: boxInfo.protraceT.title,
-						content: [...boxInfo.protraceT.content],
-					},
-					curbM: {
-						title: boxInfo.curbM.title,
-						content: [...boxInfo.curbM.content],
-					},
-					detectableW: {
-						title: boxInfo.detectableW.title,
-						content: [...boxInfo.detectableW.content],
-					},
-					utilityM: {
-						title: boxInfo.utilityM.title,
-						content: [...boxInfo.utilityM.content],
-					},
-				},
-			},
-			water: {
-				title: `WATER`,
-				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-				`,
-
-				inputButtonGrid: [
-					`soilM`,
-					`utilityM`,
-					`curbM`,
-					`detectableW`,
-					`fireH`,
-					`tracerletT`,
-					`protraceT`,
-					`durableW`,
-				],
-
-				boxInfo: {
-					soilM: {
-						title: boxInfo.soilM.title,
-						content: [...boxInfo.soilM.content],
-					},
-					utilityM: {
-						title: boxInfo.utilityM.title,
-						content: [...boxInfo.utilityM.content],
-					},
-					curbM: {
-						title: boxInfo.curbM.title,
-						content: [...boxInfo.curbM.content],
-					},
-					detectableW: {
-						title: boxInfo.detectableW.title,
-						content: [...boxInfo.detectableW.content],
-					},
-					fireH: {
-						title: boxInfo.fireH.title,
-						content: [...boxInfo.fireH.content],
-					},
-					tracerletT: {
-						title: boxInfo.tracerletT.title,
-						content: [...boxInfo.tracerletT.content],
-					},
-					protraceT: {
-						title: boxInfo.protraceT.title,
-						content: [...boxInfo.protraceT.content],
-					},
-					durableW: {
-						title: boxInfo.durableW.title,
-						content: [...boxInfo.durableW.content],
-					},
-				},
-			},
-			electric: {
-				title: `ELECTRIC`,
-				subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-				`,
-
-				inputButtonGrid: [
-					`longR`,
-					`detectableW`,
-					`curbM`,
-					`utilityM`,
-					`ansiN`,
-					`soilM`,
-				],
-
-				boxInfo: {
-					longR: {
-						title: boxInfo.longR.title,
-						content: [...boxInfo.longR.content],
-					},
-					detectableW: {
-						title: boxInfo.detectableW.title,
-						content: [...boxInfo.detectableW.content],
-					},
-					curbM: {
-						title: boxInfo.curbM.title,
-						content: [...boxInfo.curbM.content],
-					},
-					utilityM: {
-						title: boxInfo.utilityM.title,
-						content: [...boxInfo.utilityM.content],
-					},
-					ansiN: {
-						title: boxInfo.ansiN.title,
-						content: [...boxInfo.ansiN.content],
-					},
-					soilM: {
-						title: boxInfo.soilM.title,
-						content: [...boxInfo.soilM.content],
-					},
-				},
-			},
-		}
-		mainMenuB.forEach((e, i) => {
-			dataId[i] = e.dataset.id
-			console.log(dataId[i])
-			switch (dataId[i]) {
-				case 'water':
-					console.log('asd')
-					console.log(mainButtonsColor)
-					e.style.backgroundColor = mainButtonsColor.water
-					break
-				case 'telecom':
-					e.style.backgroundColor = mainButtonsColor.telecom
-					break
-				case 'electric':
-					e.style.backgroundColor = mainButtonsColor.electric
-					break
-				case 'gas':
-					e.style.backgroundColor = mainButtonsColor.gas
-					break
-
-				default:
-					break
-			}
-			console.log(e)
-			dataVariant[i] = e.dataset.variant
-
-			e.addEventListener('click', function (e) {
-				pageIndex = 'mainMenuFront'
-				currentButton = dataId[i]
-				HideShowMainButtons()
-				if (dataVariant[i]) {
-					createVideos(
-						`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}1.mp4`,
-						`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}2.mp4`,
-						`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}3.mp4`
-					)
-				} else {
-					createVideos(
-						`assets/${dataId[i]}/${dataId[i]}1.mp4`,
-						`assets/${dataId[i]}/${dataId[i]}2.mp4`,
-						`assets/${dataId[i]}/${dataId[i]}3.mp4`
-					)
-				}
-
-				if (showCont.innerHTML !== '') {
-					setTimeout(() => {
-						showCont.innerHTML = ''
-					}, 0)
-				}
-
-				createContent(buttonContent[dataId[i]], dataId[i])
-				console.log(dataId[i])
-				window.addEventListener('resize', function (e) {
-					if (showCont.hasChildNodes()) {
-						const textContainer = document.querySelector(
-							'#centerContainer_text'
-						)
-
-						const backButtonContainer = document.querySelector(
-							'#centerContainer_backButton'
-						)
-						textContainer.remove()
-						showCont.innerHTML = ''
-
-						console.log(pageIndex)
-						if (pageIndex === 'mainMenuFront') {
-							console.log(globalParent)
-							console.log(buttonContent[globalParent])
-							createContent(buttonContent[dataId[i]], dataId[i])
-						} else {
-							createContent(
-								buttonContent[globalParent].boxInfo[pageIndex],
-								dataId[i]
-							)
-						}
-
-						animations()
-						if (subVideo2) {
-							subVideo2.currentTime = 0
-							subVideo2.play()
-						}
-					}
-				})
-				check1()
-				let videoscheck = false
-				function check1() {
-					clearcheck = setInterval(repeatcheck, 600)
-					function repeatcheck() {
-						if (video1.readyState === 4) {
-							videoscheck = true
-						}
-
-						setTimeout(() => {
-							if (!videoscheck) {
-								loader.style.zIndex = '200'
-								loader.classList.add('show')
-							}
-						}, 3000)
-
-						if (videoscheck) {
-							loader.classList.remove('show')
-							loader.classList.add('short-vanish')
-							loader.style.zIndex = '-200'
-
-							clearInterval(clearcheck)
-
-							loop.classList.add('short-vanish')
-							loop.classList.remove('show')
-							video1.style.opacity = 1
-
-							setTimeout(() => {
-								video1.play()
-								video1.addEventListener('ended', () => {
-									animations()
-
-									InterpolateVideo(loop, video1, video2)
-									if (
-										dataId[i] === 'whyF' ||
-										dataId[i] === 'in-houseT' ||
-										dataId[i] === 'useC'
-									) {
-										console.log(video2, video3)
-										video2.loop = false
-										video2.addEventListener('ended', () => {
-											console.log('se ha hecho ')
-
-											backButtonFunction()
-										})
-									}
-									HideShowCont()
-								})
-							}, 0)
-						}
-					}
-				}
-			})
-		})
-	})
-	.catch((error) => {
-		console.error('Error loading JSON data:', error)
-	})
 // var buttonsText = []
 const machineButtonLayout = {
 	gas: [
@@ -879,486 +1002,6 @@ const machineSvgLayout = {
 		},
 	],
 }
-// const buttonContent = {
-// 	gas: {
-// 		title: `GAS / OIL`,
-// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-// 		`,
-
-// 		inputButtonGrid: [
-// 			`triviewM`,
-// 			`detectableW`,
-// 			`protraceT`,
-// 			`hideoutT`,
-// 			`isoS`,
-// 			`protraceG`,
-// 			`durableW`,
-// 			`tracerletT`,
-// 			`soilM`,
-// 			`utilityM`,
-// 			`curbM`,
-// 		],
-// 		boxInfo: {
-// 			triviewM: {
-// 				title: boxInfo.aerialC.title,
-
-// 				content: [
-// 					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
-// 					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
-// 					`360-degree visibility`,
-// 					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
-// 					`Patented TriGrip™ Anchor for locking post into ground`,
-// 					`Performs in temperatures ranging from -40° F to +150° F`,
-// 					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
-// 					`Available as a test station with removable cap that offers easy access to tracer wire`,
-// 				],
-// 			},
-// 			detectableW: {
-// 				title: `Detectable\nWarning Tape`,
-
-// 				content: [
-// 					`Endures temperatures from -60°F to 250°F`,
-// 					`Permanently imprinted with black ink to last the lifetime of the product`,
-// 					`Incredibly strong and promises long-term durability`,
-// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-// 					`Aluminum core is detected through means of inductive locating`,
-// 				],
-// 			},
-// 			protraceT: {
-// 				title: `Pro-Trace® CCS\nTracer Wire`,
-
-// 				content: [
-// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
-// 					`RoHS Compliant and works with connectors you already use`,
-// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-// 				],
-// 			},
-// 			hideoutT: {
-// 				title: `HideOut™\nTest Station`,
-
-// 				content: [
-// 					`Provides easy access to tracer wire in spots where upright posts are not practical`,
-// 					`Flush-mounted test station ideal for areas where mowers are prevalent`,
-// 					`Telescoping terminal board provides easy access to terminals for locators`,
-// 					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
-// 					`Locking lid with metal plate makes HideOut™ easy to locate`,
-// 					`Hot-stamped graphics`,
-// 					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
-// 				],
-// 			},
-// 			isoS: {
-// 				title: `ISO-Switch™`,
-
-// 				content: [
-// 					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
-// 					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
-// 					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
-// 					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
-// 				],
-// 			},
-// 			protraceG: {
-// 				title: `PRO-TRACE®\nGrounding Rod`,
-
-// 				content: [
-// 					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
-// 					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
-// 					`Twist-on connector included to splice lead wire to tracer wire`,
-// 					`20 feet of built-in lead wire allows for placement flexibility`,
-// 					`HDPW cap improves drivability into the earth and is simple to install`,
-// 				],
-// 			},
-// 			durableW: {
-// 				title: `Durable Wire\nConnectors`,
-
-// 				content: [
-// 					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
-// 					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
-// 					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
-// 					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
-// 					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
-// 					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
-// 					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
-// 					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
-// 				],
-// 			},
-// 			curbM: {
-// 				title: `Curb Markers`,
-
-// 				content: [
-// 					`Durable surface markers that can be attached to almost any surface`,
-// 					`Can be printed on reflective or non-reflective substrates`,
-// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-// 					`Easily installed with our industrial adhesive`,
-// 					`Temperature and UV stable`,
-// 					`Impact and abrasion resistant`,
-// 				],
-// 			},
-// 			utilityM: {
-// 				title: `Utility Marking Flags`,
-
-// 				content: [
-// 					`Ensure consistent communication and long-lasting visibility for your project`,
-// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-// 				],
-// 			},
-// 			soilM: {
-// 				title: `7-Inch SoilMarkers™`,
-
-// 				content: [
-// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-// 					`7” round disk with a 13” stake that has two barbs`,
-// 					`Temperature stable/UV stable`,
-// 					`Impact-resistant polypropylene disk`,
-// 					`Reinforced polypropylene thermoplastic stake`,
-// 					`Hot-stamped warning legend is molded into the disk`,
-// 				],
-// 			},
-// 			tracerletT: {
-// 				title: `TracerLet Test Station`,
-
-// 				content: [
-// 					`Above-ground test station head for mounting on new or existing PVC conduit`,
-// 					`Protects tracer wire ends from corrosion and the elements`,
-// 					`Made with high strength polycarbonate`,
-// 					`Use with any 1” PVC conduit`,
-// 					`Ideal for end of service termination and aesthetics`,
-// 					`Available with 1-4 terminals`,
-// 					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
-// 				],
-// 			},
-// 		},
-// 	},
-// 	telecom: {
-// 		title: `TELECOM`,
-// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-// 		`,
-
-// 		inputButtonGrid: [
-// 			`aerialC`,
-// 			`snaparoundC`,
-// 			`aluminumU`,
-// 			`protraceG`,
-// 			`triviewM`,
-// 			`protraceT`,
-// 			`curbM`,
-// 			`detectableW`,
-// 			`utilityM`,
-// 		],
-
-// 		boxInfo: {
-// 			aerialC: {
-// 				title: `Aerial Cable Markers`,
-
-// 				content: [
-// 					`Easily identify aerial cables from the ground`,
-// 					`UV stable and outdoor durable PVC marker and label`,
-// 					`Adhesive strip along inside of clip ensures the marker won’t spin`,
-// 					`Telecommunications Orange — dimensions: 6”W x 1.625”H`,
-// 				],
-// 			},
-// 			snaparoundC: {
-// 				title: `Snaparound®\nCable Markers`,
-
-// 				content: [
-// 					`Outdoor durable, UV, solvent, and water resistant`,
-// 					`Custom sizes, colors, and messaging`,
-// 					`Mount around metal pipes, wires, and cables`,
-// 					`RFID available`,
-// 				],
-// 			},
-// 			aluminumU: {
-// 				title: `Aluminum\nUtility Pole Tags`,
-
-// 				content: [
-// 					`Clearly identify your utility poles with embossed metal characters`,
-// 					`Aluminum construction for outdoor durability`,
-// 					`Common character height: 1”, 3” and 6” tall`,
-// 					`1” vertical or horizontal orientation available`,
-// 				],
-// 			},
-// 			protraceG: {
-// 				title: `PRO-TRACE®\nGrounding Rod`,
-
-// 				content: [
-// 					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
-// 					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
-// 					`Twist-on connector included to splice lead wire to tracer wire`,
-// 					`20 feet of built-in lead wire allows for placement flexibility`,
-// 					`HDPW cap improves drivability into the earth and is simple to install`,
-// 				],
-// 			},
-// 			triviewM: {
-// 				title: `TriView® Marker Post`,
-
-// 				content: [
-// 					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
-// 					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
-// 					`360-degree visibility`,
-// 					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
-// 					`Patented TriGrip™ Anchor for locking post into ground`,
-// 					`Performs in temperatures ranging from -40° F to +150° F`,
-// 					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
-// 					`Available as a test station with removable cap that offers easy access to tracer wire`,
-// 				],
-// 			},
-// 			protraceT: {
-// 				title: `Pro-Trace® CCS\nTracer Wire`,
-
-// 				content: [
-// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
-// 					`RoHS Compliant and works with connectors you already use`,
-// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-// 				],
-// 			},
-// 			curbM: {
-// 				title: `Curb Markers`,
-
-// 				content: [
-// 					`Durable surface markers that can be attached to almost any surface`,
-// 					`Can be printed on reflective or non-reflective substrates`,
-// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-// 					`Easily installed with our industrial adhesive`,
-// 					`Temperature and UV stable`,
-// 					`Impact and abrasion resistant`,
-// 				],
-// 			},
-// 			detectableW: {
-// 				title: `Detectable\nWarning Tape`,
-
-// 				content: [
-// 					`Endures temperatures from -60°F to 250°F`,
-// 					`Permanently imprinted with black ink to last the lifetime of the product`,
-// 					`Incredibly strong and promises long-term durability`,
-// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-// 					`Aluminum core is detected through means of inductive locating`,
-// 				],
-// 			},
-// 			utilityM: {
-// 				title: `Utility Marking Flags`,
-
-// 				content: [
-// 					`Ensure consistent communication and long-lasting visibility for your project`,
-// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-// 				],
-// 			},
-// 		},
-// 	},
-// 	water: {
-// 		title: `WATER`,
-// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-// 		`,
-
-// 		inputButtonGrid: [
-// 			`soilM`,
-// 			`utilityM`,
-// 			`curbM`,
-// 			`detectableW`,
-// 			`fireH`,
-// 			`tracerletT`,
-// 			`protraceT`,
-// 			`durableW`,
-// 		],
-
-// 		boxInfo: {
-// 			soilM: {
-// 				title: `7-Inch SoilMarkers™`,
-
-// 				content: [
-// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-// 					`7” round disk with a 13” stake that has two barbs`,
-// 					`Temperature stable/UV stable`,
-// 					`Impact-resistant polypropylene disk`,
-// 					`Reinforced polypropylene thermoplastic stake`,
-// 					`Hot-stamped warning legend is molded into the disk`,
-// 				],
-// 			},
-// 			utilityM: {
-// 				title: `Utility Marking Flags`,
-
-// 				content: [
-// 					`Ensure consistent communication and long-lasting visibility for your project`,
-// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-// 				],
-// 			},
-// 			curbM: {
-// 				title: `Curb Markers`,
-
-// 				content: [
-// 					`Durable surface markers that can be attached to almost any surface`,
-// 					`Can be printed on reflective or non-reflective substrates`,
-// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-// 					`Easily installed with our industrial adhesive`,
-// 					`Temperature and UV stable`,
-// 					`Impact and abrasion resistant`,
-// 				],
-// 			},
-// 			detectableW: {
-// 				title: `Detectable\nWarning Tape`,
-
-// 				content: [
-// 					`Endures temperatures from -60°F to 250°F`,
-// 					`Permanently imprinted with black ink to last the lifetime of the product`,
-// 					`Incredibly strong and promises long-term durability`,
-// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-// 					`Aluminum core is detected through means of inductive locating`,
-// 				],
-// 			},
-// 			fireH: {
-// 				title: `Fire Hydrant Rings`,
-
-// 				content: [
-// 					`Provide important information to firefighters regarding the functionality and ownership of hydrants`,
-// 					`Durable plastic disks resistant to weather, UV, tears, and scratches`,
-// 					`NFPA color-coded Flow Rings to indicate water flow capacity`,
-// 					`Reflective option for nighttime visibility`,
-// 					`Various inner opening diameters to accommodate a range of valve sizes`,
-// 					`Two stock legends: “For Fire Department Use Only” and “Out of Service”`,
-// 					`Customized legends available`,
-// 				],
-// 			},
-// 			tracerletT: {
-// 				title: `TracerLet Test Station`,
-
-// 				content: [
-// 					`Above-ground test station head for mounting on new or existing PVC conduit`,
-// 					`Protects tracer wire ends from corrosion and the elements`,
-// 					`Made with high strength polycarbonate`,
-// 					`Use with any 1” PVC conduit`,
-// 					`Ideal for end of service termination and aesthetics`,
-// 					`Available with 1-4 terminals`,
-// 					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
-// 				],
-// 			},
-// 			protraceT: {
-// 				title: `Pro-Trace® CCS\nTracer Wire`,
-
-// 				content: [
-// 					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
-// 					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
-// 					`For installation in open-trench, plow-in, or inside conduit using one wire`,
-// 					`Equal to copper in signal performance, lower in cost, and great price stability`,
-// 					`RoHS Compliant and works with connectors you already use`,
-// 					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
-// 				],
-// 			},
-// 			durableW: {
-// 				title: `Durable Wire\nConnectors`,
-
-// 				content: [
-// 					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
-// 					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
-// 					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
-// 					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
-// 					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
-// 					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
-// 					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
-// 					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
-// 				],
-// 			},
-// 		},
-// 	},
-// 	electric: {
-// 		title: `ELECTRIC`,
-// 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
-// 		`,
-
-// 		inputButtonGrid: [
-// 			`longR`,
-// 			`detectableW`,
-// 			`curbM`,
-// 			`utilityM`,
-// 			`ansiN`,
-// 			`soilM`,
-// 		],
-
-// 		boxInfo: {
-// 			longR: {
-// 				title: `Long Range Metal\nMount RFID Tags`,
-
-// 				content: [
-// 					`Long read distance of up to 65 feet`,
-// 					`Conforms to any flat or curved metal surface`,
-// 					`Tracks overhead assets, storage yard items, etc.`,
-// 					`Withstands harsh environments`,
-// 				],
-// 			},
-
-// 			detectableW: {
-// 				title: `Detectable\nWarning Tape`,
-
-// 				content: [
-// 					`Endures temperatures from -60°F to 250°F`,
-// 					`Permanently imprinted with black ink to last the lifetime of the product`,
-// 					`Incredibly strong and promises long-term durability`,
-// 					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
-// 					`Aluminum core is detected through means of inductive locating`,
-// 				],
-// 			},
-
-// 			curbM: {
-// 				title: `Curb Markers`,
-
-// 				content: [
-// 					`Durable surface markers that can be attached to almost any surface`,
-// 					`Can be printed on reflective or non-reflective substrates`,
-// 					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
-// 					`Easily installed with our industrial adhesive`,
-// 					`Temperature and UV stable`,
-// 					`Impact and abrasion resistant`,
-// 				],
-// 			},
-// 			utilityM: {
-// 				title: `Utility Marking Flags`,
-
-// 				content: [
-// 					`Ensure consistent communication and long-lasting visibility for your project`,
-// 					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
-// 					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
-// 					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
-// 				],
-// 			},
-
-// 			ansiN: {
-// 				title: `ANSI / NEMA / OSHA\nSafety Labels`,
-
-// 				content: [
-// 					`Outdoor durable to last for years`,
-// 					`Abrasion, UV, and chemical resistant`,
-// 					`ANSI, NEMA, or OSHA compliant`,
-// 					`Custom sizes, materials, and adhesives available`,
-// 					`Engineered to withstand extreme temperature ranges`,
-// 					`Moisture and grease resistant`,
-// 					`Special adhesives for adherence to a wide variety of surface applications`,
-// 					`Engineer grade reflective material for low light / nighttime visibility`,
-// 				],
-// 			},
-// 			soilM: {
-// 				title: `7-Inch SoilMarkers™`,
-
-// 				content: [
-// 					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
-// 					`7” round disk with a 13” stake that has two barbs`,
-// 					`Temperature stable/UV stable`,
-// 					`Impact-resistant polypropylene disk`,
-// 					`Reinforced polypropylene thermoplastic stake`,
-// 					`Hot-stamped warning legend is molded into the disk`,
-// 				],
-// 			},
-// 		},
-// 	},
-// }
 
 const rotationContent = {
 	turnlock10:
@@ -1537,11 +1180,11 @@ function animations() {
 		let counter = 0.3
 
 		if (delay) {
-			console.log(delay)
+			// console.log(delay)
 			let inputArray = []
 			let bool = false
 			subVideo2.addEventListener('timeupdate', function () {
-				console.log(subVideo2.currentTime)
+				// console.log(subVideo2.currentTime)
 				//currentTime use second, if you want min *60
 
 				delay.forEach((element, i) => {
@@ -1551,7 +1194,7 @@ function animations() {
 								'fadein 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards'
 
 							inputArray.push(Math.floor(subVideo2.currentTime))
-							console.log(inputArray)
+							// console.log(inputArray)
 						} else {
 							if (
 								element ===
@@ -1564,7 +1207,7 @@ function animations() {
 									if (Math.floor(subVideo2.currentTime) === 36) {
 										const elementContainersId =
 											document.querySelectorAll('#pCont1')
-										console.log(elementContainersId)
+										// console.log(elementContainersId)
 										elementContainersId.forEach((element) => {
 											element.style.animation =
 												'vanishpCont 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards '
@@ -1591,7 +1234,7 @@ function animations() {
 									if (Math.floor(subVideo2.currentTime) === 35) {
 										const elementContainersId =
 											document.querySelectorAll('#pCont1')
-										console.log(elementContainersId)
+										// console.log(elementContainersId)
 										elementContainersId.forEach((element) => {
 											element.style.animation =
 												'vanishpCont 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards '
@@ -1618,7 +1261,7 @@ function animations() {
 									if (Math.floor(subVideo2.currentTime) === 30) {
 										const elementContainersId =
 											document.querySelectorAll('#pCont1')
-										console.log(elementContainersId)
+										// console.log(elementContainersId)
 										elementContainersId.forEach((element) => {
 											element.style.animation =
 												'vanishpCont 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards '
@@ -1647,7 +1290,7 @@ function animations() {
 									inputArray.push(Math.floor(subVideo2.currentTime))
 								}
 
-								console.log(inputArray)
+								// console.log(inputArray)
 							}
 						}
 					}
@@ -1670,8 +1313,8 @@ function animations() {
 				}
 			})
 		} else {
-			console.log('else delay')
-			console.log(pageIndex)
+			// console.log('else delay')
+			// console.log(pageIndex)
 			if (pageIndex === 'mainMenuFront') {
 				titleH2.style.animation = 'show 0.5s ease-out forwards'
 			} else {
@@ -1822,7 +1465,7 @@ function createSubVideos(source1, source2, source3) {
 function createContent(obj, parent) {
 	console.trace()
 	delay = ''
-	console.log(obj)
+	// console.log(obj)
 	// textLeft = obj.textLeft
 	// textTop = obj.textTop
 	// textRight = obj.textRight
@@ -1853,7 +1496,7 @@ function createContent(obj, parent) {
 
 	textContent = document.createElement('div')
 	textContent.classList.add('text')
-	console.log(pageIndex)
+	// console.log(pageIndex)
 	if (pageIndex !== 'mainMenuFront') {
 		textContent.style.justifyContent = 'flex-end'
 	}
@@ -1861,8 +1504,8 @@ function createContent(obj, parent) {
 	buttonGridContainer = document.createElement('div')
 	buttonGridContainer.classList.add('buttonGridContainer')
 
-	console.log(parent)
-	console.log(machineButtonLayout[parent])
+	// console.log(parent)
+	// console.log(machineButtonLayout[parent])
 
 	if (labelTitle) {
 		pCont = document.createElement('div')
@@ -1906,7 +1549,7 @@ function createContent(obj, parent) {
 				paragraph.style.gap = '4vh'
 				paragraph.style.marginTop = '4vh'
 			}
-			console.log(currentButton)
+			// console.log(currentButton)
 			pContent.forEach((e) => {
 				if (Number.isInteger(e)) {
 					elementContainer = document.createElement('span')
@@ -1975,7 +1618,7 @@ function createContent(obj, parent) {
 				if (delayInput) {
 					delay = delayInput
 				}
-				console.log(currentButton)
+				// console.log(currentButton)
 				pContent2.forEach((e) => {
 					if (Number.isInteger(e)) {
 						elementContainer = document.createElement('span')
@@ -2012,7 +1655,7 @@ function createContent(obj, parent) {
 							paragraph.appendChild(elementContainer)
 						}
 					} else {
-						console.log('else')
+						// console.log('else')
 						elementContainer = document.createElement('span')
 						elementContainer.classList.add('elementContainer')
 						elementContainer.setAttribute('id', 'pCont2')
@@ -2050,7 +1693,7 @@ function createContent(obj, parent) {
 
 	if (inputButtonGrid) {
 		machineButtonLayout[parent].forEach((e, i) => {
-			console.log(e)
+			// console.log(e)
 			createButtons(e, i)
 		})
 		machineSvgLayout[parent].forEach((element, i) => {
@@ -2058,14 +1701,14 @@ function createContent(obj, parent) {
 		})
 	}
 	// machineButtonLayout[parent].forEach((element, i) => {
-	// 	// console.log(element)
+	console.log(element)
 	// 	// createButtons(element, i)
 	// })
 	// machineSvgLayout[parent].forEach((element, i) => {
 	// 	createSvgs(element, i)
 	// })
 	const subButtons = document.querySelectorAll('.subButton')
-	console.log(subButtons)
+	// console.log(subButtons)
 	subButtons.forEach((element, i) => {
 		element.addEventListener('click', function () {
 			HideShowCont()
@@ -2077,7 +1720,7 @@ function createContent(obj, parent) {
 			buttonShort[i] = inputButtonGrid[i]
 			pageIndex = buttonShort[i]
 			// 	// Con esto veo que boton es /////////////////////////////////
-			console.log(buttonShort[i])
+			// console.log(buttonShort[i])
 			createSubVideos(
 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}1.mp4`,
 				`assets/${parent}/${buttonShort[i]}/${buttonShort[i]}2.mp4`,
@@ -2117,7 +1760,7 @@ function createContent(obj, parent) {
 						setTimeout(() => {
 							subVideo1.play()
 							subVideo1.addEventListener('ended', () => {
-								console.log('subVideo1 ending')
+								// console.log('subVideo1 ending')
 
 								animations()
 								InterpolateVideo(video3, subVideo1, subVideo2)
@@ -2158,7 +1801,7 @@ function createContent(obj, parent) {
 				element.style.color = subButtonsColor.water
 			})
 
-			console.log("It's an apple.")
+			// console.log("It's an apple.")
 			break
 		case 'TELECOM':
 			title1.style.padding = '0.25em 0.5em'
@@ -2188,7 +1831,7 @@ function createContent(obj, parent) {
 			})
 			break
 		default:
-			console.log("It's something else.")
+		// console.log("It's something else.")
 	}
 }
 // asd
@@ -2235,8 +1878,8 @@ function setFontSizes() {
 }
 
 function createRotation() {
-	console.log(currentButton)
-	console.log(pageIndex)
+	// console.log(currentButton)
+	// console.log(pageIndex)
 
 	loader.classList.remove('short-vanish')
 	loader.style.zIndex = '2'
@@ -2281,7 +1924,7 @@ function exitRotation() {
 	ArreglarLineas()
 	backButtonRotation.style.pointerEvents = 'none'
 
-	console.log('remove show')
+	// console.log('remove show')
 	rotation.classList.remove('show')
 	rotation.classList.add('short-vanish')
 	createContent(buttonContent[currentButton], currentButton)
@@ -2329,7 +1972,7 @@ function backButtonFunction() {
 	})
 }
 function backButtonFunctionFromBack() {
-	console.log('working')
+	// console.log('working')
 	ArreglarLineas()
 
 	subVideoTurn.play()
@@ -2338,7 +1981,7 @@ function backButtonFunctionFromBack() {
 	loop.currentTime = 0
 	loop.pause()
 	subVideoTurn.addEventListener('ended', () => {
-		console.log('subVideoTurn ending')
+		// console.log('subVideoTurn ending')
 		loop.classList.remove('short-vanish')
 		loop.classList.add('show')
 
@@ -2346,7 +1989,7 @@ function backButtonFunctionFromBack() {
 			loop.play()
 		}, 0)
 		subVideoTurn.classList.add('short-vanish')
-		console.log(pageIndex)
+		// console.log(pageIndex)
 		loop.style.zIndex = '-1'
 		if (subVideo1) {
 			subVideo1.remove()
@@ -2370,7 +2013,7 @@ function backButtonFunctionFromBack() {
 function backButtonFunctionFront() {
 	ArreglarLineas()
 
-	console.log('backbuttonfunctionfront')
+	// console.log('backbuttonfunctionfront')
 	backButton.style.pointerEvents = 'none'
 
 	InterpolateVideo(subVideo2, subVideo2, subVideo3)
@@ -2379,11 +2022,11 @@ function backButtonFunctionFront() {
 		subVideo3.classList.add('short-vanish')
 		video2.classList.remove('short-vanish')
 		showCont.innerHTML = ''
-		console.log('back from back')
+		// console.log('back from back')
 
 		video2.currentTime = 0
 		pageIndex = 'mainMenuFront'
-		console.log(currentButton)
+		// console.log(currentButton)
 		createContent(buttonContent[currentButton], currentButton)
 
 		animations()
@@ -2414,7 +2057,7 @@ function backButtonFunctionBack() {
 }
 
 function createBackButton(param) {
-	console.log(pageIndex)
+	// console.log(pageIndex)
 	if (param === 'rotationPage') {
 		const centerContainerMade = document.createElement('div')
 		centerContainerMade.classList.add('centerContainer')
@@ -2436,7 +2079,7 @@ function createBackButton(param) {
 
 		backButtonRotation.classList.add('button')
 		backButtonRotation.addEventListener('click', exitRotation)
-		console.log(backButtonRotation)
+		// console.log(backButtonRotation)
 		backButtonRotation.textContent = 'Back'
 		backButtonRotation.style.pointerEvents = 'all'
 		backButtonContainer = document.createElement('div')
@@ -2470,7 +2113,7 @@ function createBackButton(param) {
 		brandIcon.src = 'assets/icons/tridentLogoW.png'
 		brandIcon.classList.add('brandIcon')
 		backButtonContainer.classList.add('backButtonContainer')
-		console.log(pageIndex)
+		// console.log(pageIndex)
 		if (pageIndex !== 'mainMenuFront') {
 			backButtonContainer.style.height = '100%'
 			backButtonContainer.style.width = '90%'
@@ -2482,7 +2125,7 @@ function createBackButton(param) {
 		backButtonContainer.appendChild(brandIcon)
 		backButtonContainer.appendChild(backButton)
 		if (pageIndex !== 'mainMenuFront') {
-			console.log('submenu')
+			// console.log('submenu')
 			backButton.addEventListener('click', backButtonFunctionFront)
 		} else if (pageIndex === 'mainMenuFront') {
 			backButton.addEventListener('click', backButtonFunction)
@@ -2605,20 +2248,6 @@ window.addEventListener('resize', function () {
 
 ////////// Event Listeners for the main buttons //////////
 
-// fullscreen_button.addEventListener('click', function (e) {
-// 	expand.classList.toggle('disabledb')
-// 	contract.classList.toggle('disabledb')
-
-// 	if (!document.fullscreenElement) {
-// 		mainContainer.webkitRequestFullscreen()
-// 		mainContainer.webkitEnterFullscreen()
-// 		mainContainer.requestFullscreen()
-// 	} else {
-// 		document.exitFullscreen()
-// 		document.webkitExitFullscreen()
-// 	}
-// })
-
 // Event listener for fullscreen button click
 fullscreen_button.addEventListener('click', function (e) {
 	if (!document.fullscreenElement && !document.webkitFullscreenElement) {
@@ -2638,6 +2267,139 @@ fullscreen_button.addEventListener('click', function (e) {
 	}
 })
 
+mainMenuB.forEach((e, i) => {
+	dataId[i] = e.dataset.id
+	// console.log(dataId[i])
+	// switch (dataId[i]) {
+	// 	case 'water':
+	console.log(mainButtonsColor)
+	// 		e.style.backgroundColor = mainButtonsColor.water
+	// 		break
+	// 	case 'telecom':
+	// 		e.style.backgroundColor = mainButtonsColor.telecom
+	// 		break
+	// 	case 'electric':
+	// 		e.style.backgroundColor = mainButtonsColor.electric
+	// 		break
+	// 	case 'gas':
+	// 		e.style.backgroundColor = mainButtonsColor.gas
+	// 		break
+
+	// 	default:
+	// 		break
+	// }
+	// console.log(e)
+	dataVariant[i] = e.dataset.variant
+
+	e.addEventListener('click', function (e) {
+		pageIndex = 'mainMenuFront'
+		currentButton = dataId[i]
+		HideShowMainButtons()
+		if (dataVariant[i]) {
+			createVideos(
+				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}1.mp4`,
+				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}2.mp4`,
+				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}3.mp4`
+			)
+		} else {
+			createVideos(
+				`assets/${dataId[i]}/${dataId[i]}1.mp4`,
+				`assets/${dataId[i]}/${dataId[i]}2.mp4`,
+				`assets/${dataId[i]}/${dataId[i]}3.mp4`
+			)
+		}
+
+		if (showCont.innerHTML !== '') {
+			setTimeout(() => {
+				showCont.innerHTML = ''
+			}, 0)
+		}
+
+		createContent(buttonContent[dataId[i]], dataId[i])
+		// console.log(dataId[i])
+		window.addEventListener('resize', function (e) {
+			if (showCont.hasChildNodes()) {
+				const textContainer = document.querySelector('#centerContainer_text')
+
+				const backButtonContainer = document.querySelector(
+					'#centerContainer_backButton'
+				)
+				textContainer.remove()
+				showCont.innerHTML = ''
+
+				// console.log(pageIndex)
+				if (pageIndex === 'mainMenuFront') {
+					// console.log(globalParent)
+					// console.log(buttonContent[globalParent])
+					createContent(buttonContent[dataId[i]], dataId[i])
+				} else {
+					createContent(
+						buttonContent[globalParent].boxInfo[pageIndex],
+						dataId[i]
+					)
+				}
+
+				animations()
+				if (subVideo2) {
+					subVideo2.currentTime = 0
+					subVideo2.play()
+				}
+			}
+		})
+		check1()
+		let videoscheck = false
+		function check1() {
+			clearcheck = setInterval(repeatcheck, 600)
+			function repeatcheck() {
+				if (video1.readyState === 4) {
+					videoscheck = true
+				}
+
+				setTimeout(() => {
+					if (!videoscheck) {
+						loader.style.zIndex = '200'
+						loader.classList.add('show')
+					}
+				}, 3000)
+
+				if (videoscheck) {
+					loader.classList.remove('show')
+					loader.classList.add('short-vanish')
+					loader.style.zIndex = '-200'
+
+					clearInterval(clearcheck)
+
+					loop.classList.add('short-vanish')
+					loop.classList.remove('show')
+					video1.style.opacity = 1
+
+					setTimeout(() => {
+						video1.play()
+						video1.addEventListener('ended', () => {
+							animations()
+
+							InterpolateVideo(loop, video1, video2)
+							if (
+								dataId[i] === 'whyF' ||
+								dataId[i] === 'in-houseT' ||
+								dataId[i] === 'useC'
+							) {
+								// console.log(video2, video3)
+								video2.loop = false
+								video2.addEventListener('ended', () => {
+									// console.log('se ha hecho ')
+
+									backButtonFunction()
+								})
+							}
+							HideShowCont()
+						})
+					}, 0)
+				}
+			}
+		}
+	})
+})
 // Event listener for fullscreen change
 document.addEventListener('fullscreenchange', function () {
 	if (!document.fullscreenElement && !document.webkitFullscreenElement) {
@@ -2656,11 +2418,11 @@ document.addEventListener('fullscreenchange', function () {
 })
 // mainMenuB.forEach((e, i) => {
 // 	dataId[i] = e.dataset.id
-// 	console.log(dataId[i])
+// console.log(dataId[i])
 // 	switch (dataId[i]) {
 // 		case 'water':
-// 			console.log('asd')
-// 			console.log(mainButtonsColor)
+// console.log('asd')
+// console.log(mainButtonsColor)
 // 			e.style.backgroundColor = mainButtonsColor.water
 // 			break
 // 		case 'telecom':
@@ -2676,7 +2438,7 @@ document.addEventListener('fullscreenchange', function () {
 // 		default:
 // 			break
 // 	}
-// 	console.log(e)
+// console.log(e)
 // 	dataVariant[i] = e.dataset.variant
 
 // 	e.addEventListener('click', function (e) {
@@ -2704,7 +2466,7 @@ document.addEventListener('fullscreenchange', function () {
 // 		}
 
 // 		createContent(buttonContent[dataId[i]], dataId[i])
-// 		console.log(dataId[i])
+// console.log(dataId[i])
 // 		window.addEventListener('resize', function (e) {
 // 			if (showCont.hasChildNodes()) {
 // 				const textContainer = document.querySelector('#centerContainer_text')
@@ -2715,10 +2477,10 @@ document.addEventListener('fullscreenchange', function () {
 // 				textContainer.remove()
 // 				showCont.innerHTML = ''
 
-// 				console.log(pageIndex)
+// console.log(pageIndex)
 // 				if (pageIndex === 'mainMenuFront') {
-// 					console.log(globalParent)
-// 					console.log(buttonContent[globalParent])
+// console.log(globalParent)
+// console.log(buttonContent[globalParent])
 // 					createContent(buttonContent[dataId[i]], dataId[i])
 // 				} else {
 // 					createContent(
@@ -2772,10 +2534,10 @@ document.addEventListener('fullscreenchange', function () {
 // 								dataId[i] === 'in-houseT' ||
 // 								dataId[i] === 'useC'
 // 							) {
-// 								console.log(video2, video3)
+// console.log(video2, video3)
 // 								video2.loop = false
 // 								video2.addEventListener('ended', () => {
-// 									console.log('se ha hecho ')
+// console.log('se ha hecho ')
 
 // 									backButtonFunction()
 // 								})
