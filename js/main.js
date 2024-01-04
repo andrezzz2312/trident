@@ -2269,26 +2269,9 @@ fullscreen_button.addEventListener('click', function (e) {
 
 mainMenuB.forEach((e, i) => {
 	dataId[i] = e.dataset.id
-	// console.log(dataId[i])
-	// switch (dataId[i]) {
-	// 	case 'water':
-	console.log(mainButtonsColor)
-	// 		e.style.backgroundColor = mainButtonsColor.water
-	// 		break
-	// 	case 'telecom':
-	// 		e.style.backgroundColor = mainButtonsColor.telecom
-	// 		break
-	// 	case 'electric':
-	// 		e.style.backgroundColor = mainButtonsColor.electric
-	// 		break
-	// 	case 'gas':
-	// 		e.style.backgroundColor = mainButtonsColor.gas
-	// 		break
 
-	// 	default:
-	// 		break
-	// }
-	// console.log(e)
+	console.log(mainButtonsColor)
+
 	dataVariant[i] = e.dataset.variant
 
 	e.addEventListener('click', function (e) {
@@ -2416,140 +2399,6 @@ document.addEventListener('fullscreenchange', function () {
 		// Perform actions when entering fullscreen mode
 	}
 })
-// mainMenuB.forEach((e, i) => {
-// 	dataId[i] = e.dataset.id
-// console.log(dataId[i])
-// 	switch (dataId[i]) {
-// 		case 'water':
-// console.log('asd')
-// console.log(mainButtonsColor)
-// 			e.style.backgroundColor = mainButtonsColor.water
-// 			break
-// 		case 'telecom':
-// 			e.style.backgroundColor = mainButtonsColor.telecom
-// 			break
-// 		case 'electric':
-// 			e.style.backgroundColor = mainButtonsColor.electric
-// 			break
-// 		case 'gas':
-// 			e.style.backgroundColor = mainButtonsColor.gas
-// 			break
-
-// 		default:
-// 			break
-// 	}
-// console.log(e)
-// 	dataVariant[i] = e.dataset.variant
-
-// 	e.addEventListener('click', function (e) {
-// 		pageIndex = 'mainMenuFront'
-// 		currentButton = dataId[i]
-// 		HideShowMainButtons()
-// 		if (dataVariant[i]) {
-// 			createVideos(
-// 				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}1.mp4`,
-// 				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}2.mp4`,
-// 				`assets/${dataId[i]}${dataVariant[i]}/${dataId[i]}3.mp4`
-// 			)
-// 		} else {
-// 			createVideos(
-// 				`assets/${dataId[i]}/${dataId[i]}1.mp4`,
-// 				`assets/${dataId[i]}/${dataId[i]}2.mp4`,
-// 				`assets/${dataId[i]}/${dataId[i]}3.mp4`
-// 			)
-// 		}
-
-// 		if (showCont.innerHTML !== '') {
-// 			setTimeout(() => {
-// 				showCont.innerHTML = ''
-// 			}, 0)
-// 		}
-
-// 		createContent(buttonContent[dataId[i]], dataId[i])
-// console.log(dataId[i])
-// 		window.addEventListener('resize', function (e) {
-// 			if (showCont.hasChildNodes()) {
-// 				const textContainer = document.querySelector('#centerContainer_text')
-
-// 				const backButtonContainer = document.querySelector(
-// 					'#centerContainer_backButton'
-// 				)
-// 				textContainer.remove()
-// 				showCont.innerHTML = ''
-
-// console.log(pageIndex)
-// 				if (pageIndex === 'mainMenuFront') {
-// console.log(globalParent)
-// console.log(buttonContent[globalParent])
-// 					createContent(buttonContent[dataId[i]], dataId[i])
-// 				} else {
-// 					createContent(
-// 						buttonContent[globalParent].boxInfo[pageIndex],
-// 						dataId[i]
-// 					)
-// 				}
-
-// 				animations()
-// 				if (subVideo2) {
-// 					subVideo2.currentTime = 0
-// 					subVideo2.play()
-// 				}
-// 			}
-// 		})
-// 		check1()
-// 		let videoscheck = false
-// 		function check1() {
-// 			clearcheck = setInterval(repeatcheck, 600)
-// 			function repeatcheck() {
-// 				if (video1.readyState === 4) {
-// 					videoscheck = true
-// 				}
-
-// 				setTimeout(() => {
-// 					if (!videoscheck) {
-// 						loader.style.zIndex = '200'
-// 						loader.classList.add('show')
-// 					}
-// 				}, 3000)
-
-// 				if (videoscheck) {
-// 					loader.classList.remove('show')
-// 					loader.classList.add('short-vanish')
-// 					loader.style.zIndex = '-200'
-
-// 					clearInterval(clearcheck)
-
-// 					loop.classList.add('short-vanish')
-// 					loop.classList.remove('show')
-// 					video1.style.opacity = 1
-
-// 					setTimeout(() => {
-// 						video1.play()
-// 						video1.addEventListener('ended', () => {
-// 							animations()
-
-// 							InterpolateVideo(loop, video1, video2)
-// 							if (
-// 								dataId[i] === 'whyF' ||
-// 								dataId[i] === 'in-houseT' ||
-// 								dataId[i] === 'useC'
-// 							) {
-// console.log(video2, video3)
-// 								video2.loop = false
-// 								video2.addEventListener('ended', () => {
-// console.log('se ha hecho ')
-
-// 									backButtonFunction()
-// 								})
-// 							}
-// 							HideShowCont()
-// 						})
-// 					}, 0)
-// 				}
-// 			}
-// 		}
-// 	})
-// })
 
 // Check when the spinner is fully loaded
 var SirvOptions = {
