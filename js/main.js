@@ -24,11 +24,10 @@ let videoloop,
 	createdSubTitle,
 	span,
 	line,
-	svg1,
 	circle,
 	backButton,
 	backButtonRotation,
-	brandIcon,
+	filler,
 	backButtonContainer,
 	backButtonContainerRotation,
 	buttonGridContainer,
@@ -72,7 +71,7 @@ const rotationContainer = document.querySelector('#rotationContainer')
 const videoHolder = document.querySelector('#videoHolder')
 const mainButtons = document.querySelector('#mainButtons')
 const showCont = document.querySelector('#showCont')
-const svgContainer = document.querySelectorAll('.svgContainer')
+
 // const buttonContainer = document.querySelectorAll('.buttonContainer')
 const mainContainer = document.querySelector('.container')
 const loader = document.querySelector('.loader')
@@ -86,9 +85,162 @@ const close = document.querySelector('#close')
 const alertdiv = document.querySelector('.alertdiv')
 const modalalert = document.querySelector('.modalalert')
 const quality = document.querySelector('#quality_button')
-const mainMenuB = document.querySelectorAll('.mainMenuB')
+const mainMenuB = document.querySelectorAll('.mainB')
 const titulo = document.querySelectorAll('.titulo')
 const buttonContent = {
+	vb1: {
+		// title: `asd`,
+		// subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
+		// `,
+
+		inputButtonGrid: [
+			`triviewM`,
+			`detectableW`,
+			`protraceT`,
+			`hideoutT`,
+			`isoS`,
+			`protraceG`,
+			`durableW`,
+			`tracerletT`,
+			`soilM`,
+			`utilityM`,
+			`curbM`,
+		],
+		boxInfo: {
+			triviewM: {
+				title: 'TriView® Marker Post',
+
+				content: [
+					`The industry’s best marker for creating awareness of buried facilities and reminding excavators to call before they dig`,
+					`Triangular profile combined with internal Flex PLUS™ rod makes the TriView®­ the most durable marker post available`,
+					`360-degree visibility`,
+					`Made with RhinoPoly® — our proprietary blend of thermoplastics`,
+					`Patented TriGrip™ Anchor for locking post into ground`,
+					`Performs in temperatures ranging from -40° F to +150° F`,
+					`UV stable, designed for 10+ years of outdoor use with our 10-year warranty`,
+					`Available as a test station with removable cap that offers easy access to tracer wire`,
+				],
+			},
+			detectableW: {
+				title: `Detectable\nWarning Tape`,
+
+				content: [
+					`Endures temperatures from -60°F to 250°F`,
+					`Permanently imprinted with black ink to last the lifetime of the product`,
+					`Incredibly strong and promises long-term durability`,
+					`Wide variety of APEA colors, allowing you to select the ideal hue for your needs`,
+					`Aluminum core is detected through means of inductive locating`,
+				],
+			},
+			protraceT: {
+				title: `Pro-Trace® CCS\nTracer Wire`,
+
+				content: [
+					`Used for tracer wire applications to conductively locate buried utility lines for gas, water, sewer, telecommunication, and electrical markets. Designed to embody the flexibility, memory, and feel of copper`,
+					`Has a 50% higher break-load, minimizing damage during installation and while in service`,
+					`For installation in open-trench, plow-in, or inside conduit using one wire`,
+					`Equal to copper in signal performance, lower in cost, and great price stability`,
+					`RoHS Compliant and works with connectors you already use`,
+					`Various tracer wire options available to meet different applications including open cut, horizontal directional drilling, and pipe bursting`,
+				],
+			},
+			hideoutT: {
+				title: `HideOut™\nTest Station`,
+
+				content: [
+					`Provides easy access to tracer wire in spots where upright posts are not practical`,
+					`Flush-mounted test station ideal for areas where mowers are prevalent`,
+					`Telescoping terminal board provides easy access to terminals for locators`,
+					`Comes standard with two terminals and features industry-standard 11-hole pattern`,
+					`Locking lid with metal plate makes HideOut™ easy to locate`,
+					`Hot-stamped graphics`,
+					`Patented TriGrip Anchor™ for securing HideOut™ into the ground`,
+				],
+			},
+			isoS: {
+				title: `ISO-Switch™`,
+
+				content: [
+					`Can significantly speed up locating by allowing the locator tech to connect to all the facilities at one time with the flick of a switch`,
+					`Shunts or jumps each one of the laterals with the ground without the need for any external hardware`,
+					`Simplifies the locating setup, saving time and labor without the hassles of manipulating terminal hardware`,
+					`Can be integrated into a variety of access points: Tri-View Test Station, RhinoDome Test Station, HideOut, Tracer Pit Handholes, and more`,
+				],
+			},
+			protraceG: {
+				title: `PRO-TRACE®\nGrounding Rod`,
+
+				content: [
+					`Grounds the dead end of tracer wire to complete the circuit for accurate location`,
+					`1.5-pound, drive-in, magnesium ground rod designed for tracer wire systems`,
+					`Twist-on connector included to splice lead wire to tracer wire`,
+					`20 feet of built-in lead wire allows for placement flexibility`,
+					`HDPW cap improves drivability into the earth and is simple to install`,
+				],
+			},
+			durableW: {
+				title: `Durable Wire\nConnectors`,
+
+				content: [
+					`A locate system is only as good as its weakest connection, so it’s imperative to use waterproof and corrosion-proof connectors to protect your tracer wire splices. Different scenarios call for different connectors, which is why Trident has a variety of options to best fit your needs`,
+					`1. PRO-TRACE TW CONNECTORS: Used to splice or branch-off multiple tracer wires`,
+					`2. TRACERLOCK CONNECTORS: Engineered for direct-bury applications, no stripping required`,
+					`3. LOCKING BARREL CONNECTORS: Innovative twist and lock design allows for efficient connecting`,
+					`4. TWIST CONNECTORS: Waterproof connectors that are fast and easy to install`,
+					`5. MTS CONNECTORS: Mainline-to-service connectors eliminate the need to cut the mainline`,
+					`6. WIRE NUT & TUBE CONNECTORS: Snap-fit lid provides maximum strain relief on wire splices`,
+					`7. TWIST ON WITH STRAIN RELIEF CONNECTORS: Ideal for connecting wire in direct-bury applications`,
+				],
+			},
+			curbM: {
+				title: `Curb Markers`,
+
+				content: [
+					`Durable surface markers that can be attached to almost any surface`,
+					`Can be printed on reflective or non-reflective substrates`,
+					`Printed with UV stable inks on a rigid, calendered vinyl and then given a polyurethane dome`,
+					`Easily installed with our industrial adhesive`,
+					`Temperature and UV stable`,
+					`Impact and abrasion resistant`,
+				],
+			},
+			utilityM: {
+				title: `Utility Marking Flags`,
+
+				content: [
+					`Ensure consistent communication and long-lasting visibility for your project`,
+					`Can be custom printed to include company logos or generic warning legends to enhance communication for your project`,
+					`Available in 2” x 3” and 4” x 5” sizes, with staffs available in steel`,
+					`Staffs are constructed of high-carbon alloy steel and available in a wide range of lengths`,
+				],
+			},
+			soilM: {
+				title: `7-Inch SoilMarkers™`,
+
+				content: [
+					`Flush mounted, highly visible, and low-profile for where upright markers are not practical. Walk on it, mow over it, or even drive over it`,
+					`7” round disk with a 13” stake that has two barbs`,
+					`Temperature stable/UV stable`,
+					`Impact-resistant polypropylene disk`,
+					`Reinforced polypropylene thermoplastic stake`,
+					`Hot-stamped warning legend is molded into the disk`,
+				],
+			},
+			tracerletT: {
+				title: `TracerLet Test Station`,
+
+				content: [
+					`Above-ground test station head for mounting on new or existing PVC conduit`,
+					`Protects tracer wire ends from corrosion and the elements`,
+					`Made with high strength polycarbonate`,
+					`Use with any 1” PVC conduit`,
+					`Ideal for end of service termination and aesthetics`,
+					`Available with 1-4 terminals`,
+					`Fire hydrant flange mounting kit available (adapter, bracket, and fasteners)`,
+				],
+			},
+		},
+	},
 	gas: {
 		title: `GAS / OIL`,
 		subTitle: `Select a product to learn more about Trident’s suite of solutions for location and marking.
@@ -606,6 +758,26 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 
 // var buttonsText = []
 const machineButtonLayout = {
+	vb1: [
+		{
+			title: `BEAM-FORMING MICROPHONE ARRAY`,
+		},
+		{
+			title: `4K ULTRA-HD CAMERA`,
+		},
+		{
+			title: `PROPRIETARY TRANSDUCER`,
+		},
+		{
+			title: `CONNECTIVITY`,
+		},
+		{
+			title: `SOFTWARE SUITE`,
+		},
+		{
+			title: `COMPATIBILITY`,
+		},
+	],
 	gas: [
 		{
 			textLeft: '15%',
@@ -788,220 +960,6 @@ const machineButtonLayout = {
 		},
 	],
 }
-const machineSvgLayout = {
-	gas: [
-		{
-			x1: '11%',
-			y1: '43%',
-			x2: '18%',
-			y2: '38%',
-		},
-		{
-			x1: '28%',
-			y1: '65.5%',
-			x2: '30%',
-			y2: '54%',
-		},
-		{
-			x1: '41%',
-			y1: '72.5%',
-			x2: '43%',
-			y2: '61%',
-		},
-		{
-			x1: '53.8%',
-			y1: '73.5%',
-			x2: '53.5%',
-			y2: '56%',
-		},
-		{
-			x1: '53.8%',
-			y1: '76%',
-			x2: '61%',
-			y2: '66%',
-		},
-		{
-			x1: '51.3%',
-			y1: '83%',
-			x2: '46%',
-			y2: '90%',
-		},
-		{
-			x1: '59.8%',
-			y1: '83.5%',
-			x2: '70%',
-			y2: '81%',
-		},
-		{
-			x1: '77.8%',
-			y1: '43.2%',
-			x2: '73%',
-			y2: '47%',
-		},
-		{
-			x1: '82%',
-			y1: '34.7%',
-			x2: '77%',
-			y2: '32%',
-		},
-		{
-			x1: '87.5%',
-			y1: '24.5%',
-			x2: '81%',
-			y2: '24%',
-		},
-		{
-			x1: '90%',
-			y1: '18%',
-			x2: '85%',
-			y2: '15%',
-		},
-	],
-	telecom: [
-		{
-			x1: '19%',
-			y1: '9%',
-			x2: '11%',
-			y2: '9.5%',
-		},
-		{
-			x1: '6%',
-			y1: '24%',
-			x2: '6.9%',
-			y2: '8.1%',
-		},
-		{
-			x1: '23%',
-			y1: '54%',
-			x2: '16.2%',
-			y2: '63.6%',
-		},
-		{
-			x1: '23%',
-			y1: '75%',
-			x2: '26.3%',
-			y2: '81.1%',
-		},
-		{
-			x1: '39%',
-			y1: '64%',
-			x2: '31.5%',
-			y2: '73%',
-		},
-		{
-			x1: '51%',
-			y1: '62%',
-			x2: '54%',
-			y2: '69%',
-		},
-		{
-			x1: '75%',
-			y1: '65%',
-			x2: '67%',
-			y2: '57.4%',
-		},
-		{
-			x1: '64%',
-			y1: '54%',
-			x2: '69.5%',
-			y2: '49.5%',
-		},
-		{
-			x1: '93%',
-			y1: '42%',
-			x2: '86%',
-			y2: '34%',
-		},
-	],
-	water: [
-		{
-			x1: '32%',
-			y1: '26%',
-			x2: '27.5%',
-			y2: '31.3%',
-		},
-		{
-			x1: '48%',
-			y1: '31%',
-			x2: '40.7%',
-			y2: '36.5%',
-		},
-		{
-			x1: '68%',
-			y1: '46%',
-			x2: '63.5%',
-			y2: '55%',
-		},
-		{
-			x1: '90%',
-			y1: '57%',
-			x2: '92%',
-			y2: '73.3%',
-		},
-		{
-			x1: '20%',
-			y1: '54%',
-			x2: '27.6%',
-			y2: '58.2%',
-		},
-		{
-			x1: '39%',
-			y1: '62.5%',
-			x2: '31.7%',
-			y2: '63.5%',
-		},
-		{
-			x1: '54%',
-			y1: '76%',
-			x2: '60%',
-			y2: '66%',
-		},
-		{
-			x1: '80%',
-			y1: '68%',
-			x2: '77.9%',
-			y2: '80.4%',
-		},
-	],
-	electric: [
-		{
-			x1: '7.5%',
-			y1: '27%',
-			x2: '12.2%',
-			y2: '10%',
-		},
-		{
-			x1: '40%',
-			y1: '68%',
-			x2: '45%',
-			y2: '78.5%',
-		},
-		{
-			x1: '57%',
-			y1: '59%',
-			x2: '63%',
-			y2: '54%',
-		},
-		{
-			x1: '61%',
-			y1: '42%',
-			x2: '65.2%',
-			y2: '50.7%',
-		},
-		{
-			x1: '81%',
-			y1: '54%',
-			x2: '74.5%',
-			y2: '44.2%',
-		},
-		{
-			x1: '90%',
-			y1: '42%',
-			x2: '89.7%',
-			y2: '34.5%',
-		},
-	],
-}
 
 const rotationContent = {
 	turnlock10:
@@ -1028,103 +986,27 @@ if (!isMobile) {
 	fullscreen_button.style.display = 'none'
 }
 
-// else {
-// if (isIOS) {
-// 	fullscreen_button.style.display = 'none'
-// }
-// }
-
-// if (isMac) {
-// 	alertdiv.style.display = 'flex'
-// }
-
-// Set which videos are going to swap
-
-function createButtons(e, i) {
-	const centerContainer = document.createElement('div')
-	const buttonContainer = document.createElement('div')
+function createButtons(e, i, buttonContainer) {
+	// const centerContainer = document.createElement('div')
+	// const buttonContainer = document.createElement('div')
 	const createdButton = document.createElement('button')
 
-	centerContainer.classList.add('centerContainer')
-	buttonContainer.classList.add('buttonContainer')
-	createdButton.classList.add(
-		'subButton'
-		// , 'mainMenuB'
-	)
-	createdButton.style.fontSize = globalFontvar
+	// centerContainer.classList.add('centerContainer')
+	// buttonContainer.classList.add('buttonContainer')
+	createdButton.classList.add('button')
+	createdButton.classList.add('subButton')
+	createdButton.style.fontSize = bigButtonFontvar
 	createdButton.textContent = e.title
-	createdButton.style.left = e.textLeft
-	createdButton.style.right = e.textRight
-	createdButton.style.top = e.textTop
-	createdButton.style.bottom = e.textBottom
+	// createdButton.style.left = e.textLeft
+	// createdButton.style.right = e.textRight
+	// createdButton.style.top = e.textTop
+	// createdButton.style.bottom = e.textBottom
 
-	buttonGridContainer.appendChild(centerContainer)
-	centerContainer.appendChild(buttonContainer)
+	// buttonGridContainer.appendChild(centerContainer)
+	// centerContainer.appendChild(buttonContainer)
 	buttonContainer.appendChild(createdButton)
 }
 
-function createSvgs(e, i) {
-	const centerContainer = document.createElement('div')
-	centerContainer.setAttribute('id', 'svg')
-	const svgContainer = document.createElement('div')
-	const createdSvg = document.createElementNS(
-		'http://www.w3.org/2000/svg',
-		'svg'
-	)
-	const mainLine = document.createElementNS(
-		'http://www.w3.org/2000/svg',
-		'line'
-	)
-	const borderLine = document.createElementNS(
-		'http://www.w3.org/2000/svg',
-		'line'
-	)
-	// const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
-
-	centerContainer.classList.add('centerContainer')
-	svgContainer.classList.add('svgContainer')
-	createdSvg.classList.add('svg')
-
-	createdSvg.style.width = '100%'
-	createdSvg.style.height = '100%'
-
-	const strokeWidth = calculateResponsiveStrokeWidth()
-	// const borderStrokeWidth = strokeWidth + 2 // Adjust the border width as needed
-
-	const mainStrokeColor = '#ffff' // Main stroke color (white in this example)
-	// const borderStrokeColor = '#ff0000'
-
-	mainLine.setAttribute('stroke', mainStrokeColor)
-	mainLine.setAttribute('stroke-width', strokeWidth)
-	mainLine.setAttribute('x1', e.x1)
-	mainLine.setAttribute('y1', e.y1)
-	mainLine.setAttribute('x2', e.x2)
-	mainLine.setAttribute('y2', e.y2)
-
-	// Calculate border coordinates based on main line coordinates and stroke width
-
-	// const x1 = `${parseFloat(e.x1) - borderStrokeWidth / 2}%`
-	// const x2 = `${parseFloat(e.x2) - borderStrokeWidth / 2}%`
-	// const y1 = `${parseFloat(e.y1) - borderStrokeWidth / 2}%`
-	// const y2 = `${parseFloat(e.y2) - borderStrokeWidth / 2}%`
-
-	// borderLine.setAttribute('stroke', borderStrokeColor)
-	// borderLine.setAttribute('stroke-width', borderStrokeWidth)
-	// borderLine.setAttribute('x1', e.x1)
-	// borderLine.setAttribute('y1', e.y1)
-	// borderLine.setAttribute('x2', e.x2)
-	// borderLine.setAttribute('y2', e.y2)
-
-	buttonGridContainer.appendChild(centerContainer)
-	centerContainer.appendChild(svgContainer)
-	svgContainer.appendChild(createdSvg)
-	// createdSvg.appendChild(borderLine) // Add border line before main line
-	createdSvg.appendChild(mainLine)
-	// buttonGridContainer.appendChild(centerContainer)
-	// centerContainer.appendChild(svgContainer)
-	// svgContainer.appendChild(createdSvg)
-	// createdSvg.appendChild(line)
-}
 function calculateResponsiveStrokeWidth() {
 	// You can adjust this logic based on your specific requirements
 	const viewportWidth = window.innerWidth
@@ -1153,11 +1035,22 @@ function InterpolateVideo(videoToPause, videoToVanish, videoToPlay) {
 }
 
 // loop.currentTime = 60
-// Vanish/show the main buttons and svgs
+
+let isShowMB = 0
 function HideShowMainButtons() {
-	mainButtons.classList.toggle('show')
-	mainButtons.classList.toggle('disabled')
-	mainButtons.classList.toggle('short-vanish')
+	// Replace with the actual ID
+
+	if (isShowMB === 0) {
+		mainButtons.classList.add('vanishFromTop', 'disabled')
+		mainButtons.classList.remove('show')
+	} else if (isShowMB % 2 === 1) {
+		mainButtons.classList.add('showFromBottom')
+	} else {
+		mainButtons.classList.remove('showFromBottom')
+		mainButtons.classList.add('vanishFromBottom', 'disabled')
+	}
+
+	isShowMB++
 }
 
 // Vanish/show when a main button is pressed
@@ -1336,11 +1229,12 @@ function animations() {
 		// buttonGridContainer.style.animation = 'show 0.5s ease-out forwards'
 		// buttonGridContainer.style.animationDelay = `${counter}s`
 		backButtonContainer.style.animation = 'show 0.5s ease-out forwards'
-		brandIcon.style.animation = 'show 0.5s ease-out forwards'
-		// brandIcon.style.animationDelay = `${counter}s`
+		filler.style.animation = 'show 0.5s ease-out forwards'
+		// filler.style.animationDelay = `${counter}s`
 		// backButtonContainer.style.animationDelay = `${counter}s`
 	}
-
+	backButtonContainer.style.animation = 'show 0.5s ease-out forwards'
+	filler.style.animation = 'show 0.5s ease-out forwards'
 	if (boxVideo) {
 		boxVideo.forEach((e, i) => {
 			boxVideo[i].style.animation =
@@ -1465,17 +1359,13 @@ function createSubVideos(source1, source2, source3) {
 function createContent(obj, parent) {
 	console.trace()
 	delay = ''
-	// console.log(obj)
-	// textLeft = obj.textLeft
-	// textTop = obj.textTop
-	// textRight = obj.textRight
-	// textBottom = obj.textBottom
+
 	labelTitle = obj.title
 	pContent = obj.content
 	pContent2 = obj.content2
 	subTitle = obj.subTitle
 	inputButtonGrid = obj.inputButtonGrid
-	// inputButtonId = obj.inputButtonId
+
 	delayInput = obj.delay
 
 	const centerContainerMade = document.createElement('div')
@@ -1489,11 +1379,6 @@ function createContent(obj, parent) {
 	firstPage = document.createElement('div')
 	firstPage.classList.add('firstPage')
 
-	// firstPage.style.right = textRight
-	// firstPage.style.top = textTop
-	// firstPage.style.left = textLeft
-	// firstPage.style.bottom = textBottom
-
 	textContent = document.createElement('div')
 	textContent.classList.add('text')
 	// console.log(pageIndex)
@@ -1503,9 +1388,6 @@ function createContent(obj, parent) {
 	textContent.style.justifyContent = 'flex-start'
 	buttonGridContainer = document.createElement('div')
 	buttonGridContainer.classList.add('buttonGridContainer')
-
-	// console.log(parent)
-	// console.log(machineButtonLayout[parent])
 
 	if (labelTitle) {
 		pCont = document.createElement('div')
@@ -1692,21 +1574,26 @@ function createContent(obj, parent) {
 	}
 
 	if (inputButtonGrid) {
+		const centerContainer = document.createElement('div')
+		const buttonContainer = document.createElement('div')
+		console.log(parent)
+		if (parent === 'vb1') {
+			buttonContainer.style.top = '50%'
+		}
+		centerContainer.classList.add('centerContainer')
+		buttonContainer.classList.add('buttonContainer')
+		buttonGridContainer.appendChild(centerContainer)
+		centerContainer.appendChild(buttonContainer)
+
 		machineButtonLayout[parent].forEach((e, i) => {
-			// console.log(e)
-			createButtons(e, i)
-		})
-		machineSvgLayout[parent].forEach((element, i) => {
-			createSvgs(element, i)
+			createButtons(e, i, buttonContainer)
 		})
 	}
 	// machineButtonLayout[parent].forEach((element, i) => {
 	// console.log(element)
 	// 	// createButtons(element, i)
 	// })
-	// machineSvgLayout[parent].forEach((element, i) => {
-	// 	createSvgs(element, i)
-	// })
+
 	const subButtons = document.querySelectorAll('.subButton')
 	// console.log(subButtons)
 	subButtons.forEach((element, i) => {
@@ -1835,13 +1722,13 @@ function createContent(obj, parent) {
 	}
 }
 // asd
-// Create the svgs for the showCont div / 4 first parameters are the x and y points of the first and second point respectively, last 2 are the x and y points of the dot
+
 function setFontSizes() {
 	const button = document.querySelectorAll('.button')
-	const mainButtons = document.querySelectorAll('.mainMenuB')
+	const mainButtons = document.querySelectorAll('.mainB')
 
 	const titulo = document.querySelector('.titulo')
-	const mainTextBox = document.querySelector('.mainTextBox')
+	// const mainTextBox = document.querySelector('.mainTextBox')
 
 	globalFontvar = `calc(5px + (15 - 5) * ((${
 		containVideoWidth + 'px'
@@ -1862,11 +1749,11 @@ function setFontSizes() {
 	buttonFontvar = `calc(6px + (22 - 6) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	bigButtonFontvar = `calc(8px + (26 - 8) * ((${
+	bigButtonFontvar = `calc(8px + (22 - 8) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
-	mainTextBox.style.fontSize = globalFontvar
+	// mainTextBox.style.fontSize = globalFontvar
 
 	for (let i = 0; i < button.length; i++) {
 		button[i].style.fontSize = buttonFontvar
@@ -2080,12 +1967,11 @@ function createBackButton(param) {
 		backButtonRotation.classList.add('button')
 		backButtonRotation.addEventListener('click', exitRotation)
 		// console.log(backButtonRotation)
-		backButtonRotation.textContent = 'Back'
+		backButtonRotation.textContent = 'BACK'
 		backButtonRotation.style.pointerEvents = 'all'
 		backButtonContainer = document.createElement('div')
-		brandIcon = document.createElement('img')
-		brandIcon.src = 'assets/icons/tridentLogoW.png'
-		brandIcon.classList.add('brandIcon', 'brandIconR')
+		filler = document.createElement('div')
+
 		backButtonContainer.classList.add('viewRContainer')
 
 		rotation.appendChild(centerContainerMade)
@@ -2094,7 +1980,7 @@ function createBackButton(param) {
 		textContainerMade.appendChild(rotationPage)
 		rotationPage.appendChild(backButtonContainer)
 		backButtonContainer.appendChild(backButtonRotation)
-		backButtonContainer.appendChild(brandIcon)
+		backButtonContainer.appendChild(filler)
 		centerContainerMade.setAttribute('id', 'rotation_backButton')
 	} else {
 		backButton = document.createElement('button')
@@ -2105,13 +1991,12 @@ function createBackButton(param) {
 		// 	containVideoWidth + 'px'
 		// } - 320px) / (1440 - 320)))`
 
-		backButton.classList.add('button')
+		// backButton.classList.add('button')
 
-		backButton.textContent = 'Back'
+		backButton.textContent = 'BACK'
 		backButtonContainer = document.createElement('div')
-		brandIcon = document.createElement('img')
-		brandIcon.src = 'assets/icons/tridentLogoW.png'
-		brandIcon.classList.add('brandIcon')
+		filler = document.createElement('div')
+
 		backButtonContainer.classList.add('backButtonContainer')
 		// console.log(pageIndex)
 		if (pageIndex !== 'mainMenuFront') {
@@ -2122,7 +2007,7 @@ function createBackButton(param) {
 		}
 		firstPage.appendChild(backButtonContainer)
 
-		backButtonContainer.appendChild(brandIcon)
+		backButtonContainer.appendChild(filler)
 		backButtonContainer.appendChild(backButton)
 		if (pageIndex !== 'mainMenuFront') {
 			// console.log('submenu')
@@ -2134,12 +2019,7 @@ function createBackButton(param) {
 }
 
 function ArreglarLineas() {
-	const svgContainer = document.querySelectorAll('.svgContainer')
 	const buttonContainer = document.querySelectorAll('.buttonContainer')
-	for (let i = 0; i < svgContainer.length; i++) {
-		svgContainer[i].style.width = containVideoWidth + 'px'
-		svgContainer[i].style.height = containVideoHeight + 'px'
-	}
 
 	for (let i = 0; i < buttonContainer.length; i++) {
 		buttonContainer[i].style.width = containVideoWidth + 'px'
@@ -2277,6 +2157,8 @@ mainMenuB.forEach((e, i) => {
 	e.addEventListener('click', function (e) {
 		pageIndex = 'mainMenuFront'
 		currentButton = dataId[i]
+		// console.log(dataId[i])
+		// console.log(dataVariant[i])
 		HideShowMainButtons()
 		if (dataVariant[i]) {
 			createVideos(
